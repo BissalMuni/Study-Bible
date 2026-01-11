@@ -1,0 +1,41 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 7,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "친구야, 다른 친구를 함부로 판단하면 안 돼!",
+                    "details": "<speak>친구들아<break time=\"700ms\"/> 남을 비판하지 말자<break time=\"700ms\"/> 친구의 작은 잘못을 보기 전에<break time=\"700ms\"/> 내 큰 잘못은 없는지 먼저 봐야 해<break time=\"1400ms\"/> 겉으로만 착한 척하는 건 나쁜 거야<break time=\"700ms\"/> 항상 솔직하게 친구를 대해야 해<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 2,
+                    "title": "하나님께 용감하게 부탁드려 보자!",
+                    "details": "<speak>소중한 걸 함부로 주면 안 돼<break time=\"700ms\"/> 하나님께 간절히 구하고<break time=\"700ms\"/> 찾고<break time=\"700ms\"/> 두드리면 하나님께서 꼭 들어주실 거야<break time=\"1400ms\"/> 나쁜 아빠도 자기 자식에게 좋은 걸 줄 줄 아는데<break time=\"700ms\"/> 하나님께서는 구하는 우리에게 훨씬 더 좋은 것을 주신대<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 3,
+                    "title": "내가 먼저 친구에게 친절하게 대하면, 친구도 나에게 친절하게 대해 줄 거야!",
+                    "details": "<speak>친구에게 칭찬받고 싶은 만큼<break time=\"700ms\"/> 먼저 친구를 칭찬해 줘<break time=\"1400ms\"/> 넓고 쉬운 길보다는<break time=\"700ms\"/> 좁고 어려운 길로 가야 해<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 4,
+                    "title": "착한 척하는 나쁜 사람들을 조심해야 해!",
+                    "details": "<speak>착한 척하는 나쁜 사람들을 조심해야 해<break time=\"700ms\"/> 그들이 하는 행동을 잘 보면 알 수 있어<break time=\"1400ms\"/> 좋은 나무에서는 좋은 열매가 열리고<break time=\"700ms\"/> 나쁜 나무에서는 나쁜 열매가 열린대<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 5,
+                    "title": "하나님 말씀을 잘 들어야 천국에 갈 수 있대!",
+                    "details": "<speak>말로만 “주님<break time=\"700ms\"/> 주님” 하는 사람은 모두 천국에 가는 게 아니야<break time=\"1400ms\"/> 하나님의 말씀을 잘 듣고 그대로 행동하는 사람이 천국에 간대<break time=\"1400ms\"/> 나쁜 짓을 하는 사람은 <emphasis level=\"strong\">예수님</emphasis>께서 모른다고 하실 거야<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 6,
+                    "title": "튼튼한 집을 지으려면 기초를 튼튼하게!",
+                    "details": "<speak>하나님의 말씀을 듣고 그대로 하는 사람은<break time=\"700ms\"/> 튼튼한 반석 위에 집을 지은 똑똑한 사람과 같아<break time=\"1400ms\"/> 하지만 듣기만 하고 행동하지 않는 사람은<break time=\"700ms\"/> 모래 위에 집을 지은 어리석은 사람과 같대<break time=\"1400ms\"/> <emphasis level=\"strong\">예수님</emphasis>의 가르침은 정말 힘이 있어<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}

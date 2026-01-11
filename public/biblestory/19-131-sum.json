@@ -1,0 +1,20 @@
+{
+  "book": {
+    "id": 19,
+    "name": "시편",
+    "contents": {
+      "chapter_number": 131,
+      "paragraph_summary": [
+        {
+          "paragraph": 1,
+          "title": "겸손한 마음과 평안한 영혼",
+          "details": [
+            "교만과 오만함을 버리고 큰 일에 힘쓰지 않음",
+            "젖 뗀 아이처럼 평온한 영혼을 유지함",
+            "영원히 여호와를 바랄 것을 다짐함"
+          ]
+        }
+      ]
+    }
+  }
+}

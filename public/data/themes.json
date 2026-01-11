@@ -1,0 +1,60 @@
+{
+  "themes": [
+    {
+      "id": "creation",
+      "name": "창조와 시작",
+      "icon": "Sparkles",
+      "color": "#10B981",
+      "books": [1],
+      "description": "천지창조부터 족장시대까지"
+    },
+    {
+      "id": "exodus",
+      "name": "구원의 역사",
+      "icon": "Route",
+      "color": "#F59E0B",
+      "books": [2],
+      "description": "출애굽과 광야 40년"
+    },
+    {
+      "id": "law",
+      "name": "율법과 계명",
+      "icon": "Scale",
+      "color": "#8B5CF6",
+      "books": [3, 4, 5],
+      "description": "하나님의 율법과 언약"
+    },
+    {
+      "id": "conquest",
+      "name": "정복과 사사",
+      "icon": "Sword",
+      "color": "#EF4444",
+      "books": [6, 7, 8],
+      "description": "가나안 정복과 사사 시대"
+    },
+    {
+      "id": "kingdom",
+      "name": "왕국의 흥망",
+      "icon": "Crown",
+      "color": "#3B82F6",
+      "books": [9, 10, 11, 12, 13, 14],
+      "description": "이스라엘 왕국의 역사"
+    },
+    {
+      "id": "wisdom",
+      "name": "지혜 문학",
+      "icon": "BookOpen",
+      "color": "#EC4899",
+      "books": [18, 19, 20, 21, 22],
+      "description": "삶의 지혜와 찬양"
+    },
+    {
+      "id": "prophets",
+      "name": "선지서",
+      "icon": "Megaphone",
+      "color": "#14B8A6",
+      "books": [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+      "description": "하나님의 경고와 회복의 약속"
+    }
+  ]
+}

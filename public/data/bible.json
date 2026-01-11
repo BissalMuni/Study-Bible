@@ -1,0 +1,404 @@
+{
+    "성경": {
+      "구약": [
+        {
+          "id": 1,
+          "name": "창세기",
+          "english": "Genesis",
+          "chapters": 50
+        },
+        {
+          "id": 2,
+          "name": "출애굽기",
+          "english": "Exodus",
+          "chapters": 40
+        },
+        {
+          "id": 3,
+          "name": "레위기",
+          "english": "Leviticus",
+          "chapters": 27
+        },
+        {
+          "id": 4,
+          "name": "민수기",
+          "english": "Numbers",
+          "chapters": 36
+        },
+        {
+          "id": 5,
+          "name": "신명기",
+          "english": "Deuteronomy",
+          "chapters": 34
+        },
+        {
+          "id": 6,
+          "name": "여호수아",
+          "english": "Joshua",
+          "chapters": 24
+        },
+        {
+          "id": 7,
+          "name": "사사기",
+          "english": "Judges",
+          "chapters": 21
+        },
+        {
+          "id": 8,
+          "name": "룻기",
+          "english": "Ruth",
+          "chapters": 4
+        },
+        {
+          "id": 9,
+          "name": "사무엘상",
+          "english": "1 Samuel",
+          "chapters": 31
+        },
+        {
+          "id": 10,
+          "name": "사무엘하",
+          "english": "2 Samuel",
+          "chapters": 24
+        },
+        {
+          "id": 11,
+          "name": "열왕기상",
+          "english": "1 Kings",
+          "chapters": 22
+        },
+        {
+          "id": 12,
+          "name": "열왕기하",
+          "english": "2 Kings",
+          "chapters": 25
+        },
+        {
+          "id": 13,
+          "name": "역대상",
+          "english": "1 Chronicles",
+          "chapters": 29
+        },
+        {
+          "id": 14,
+          "name": "역대하",
+          "english": "2 Chronicles",
+          "chapters": 36
+        },
+        {
+          "id": 15,
+          "name": "에스라",
+          "english": "Ezra",
+          "chapters": 10
+        },
+        {
+          "id": 16,
+          "name": "느헤미야",
+          "english": "Nehemiah",
+          "chapters": 13
+        },
+        {
+          "id": 17,
+          "name": "에스더",
+          "english": "Esther",
+          "chapters": 10
+        },
+        {
+          "id": 18,
+          "name": "욥기",
+          "english": "Job",
+          "chapters": 42
+        },
+        {
+          "id": 19,
+          "name": "시편",
+          "english": "Psalms",
+          "chapters": 150
+        },
+        {
+          "id": 20,
+          "name": "잠언",
+          "english": "Proverbs",
+          "chapters": 31
+        },
+        {
+          "id": 21,
+          "name": "전도서",
+          "english": "Ecclesiastes",
+          "chapters": 12
+        },
+        {
+          "id": 22,
+          "name": "아가",
+          "english": "Song of Solomon",
+          "chapters": 8
+        },
+        {
+          "id": 23,
+          "name": "이사야",
+          "english": "Isaiah",
+          "chapters": 66
+        },
+        {
+          "id": 24,
+          "name": "예레미야",
+          "english": "Jeremiah",
+          "chapters": 52
+        },
+        {
+          "id": 25,
+          "name": "예레미야애가",
+          "english": "Lamentations",
+          "chapters": 5
+        },
+        {
+          "id": 26,
+          "name": "에스겔",
+          "english": "Ezekiel",
+          "chapters": 48
+        },
+        {
+          "id": 27,
+          "name": "다니엘",
+          "english": "Daniel",
+          "chapters": 12
+        },
+        {
+          "id": 28,
+          "name": "호세아",
+          "english": "Hosea",
+          "chapters": 14
+        },
+        {
+          "id": 29,
+          "name": "요엘",
+          "english": "Joel",
+          "chapters": 3
+        },
+        {
+          "id": 30,
+          "name": "아모스",
+          "english": "Amos",
+          "chapters": 9
+        },
+        {
+          "id": 31,
+          "name": "오바댜",
+          "english": "Obadiah",
+          "chapters": 1
+        },
+        {
+          "id": 32,
+          "name": "요나",
+          "english": "Jonah",
+          "chapters": 4
+        },
+        {
+          "id": 33,
+          "name": "미가",
+          "english": "Micah",
+          "chapters": 7
+        },
+        {
+          "id": 34,
+          "name": "나훔",
+          "english": "Nahum",
+          "chapters": 3
+        },
+        {
+          "id": 35,
+          "name": "하박국",
+          "english": "Habakkuk",
+          "chapters": 3
+        },
+        {
+          "id": 36,
+          "name": "스바냐",
+          "english": "Zephaniah",
+          "chapters": 3
+        },
+        {
+          "id": 37,
+          "name": "학개",
+          "english": "Haggai",
+          "chapters": 2
+        },
+        {
+          "id": 38,
+          "name": "스가랴",
+          "english": "Zechariah",
+          "chapters": 14
+        },
+        {
+          "id": 39,
+          "name": "말라기",
+          "english": "Malachi",
+          "chapters": 4
+        }
+      ],
+      "신약": [
+        {
+          "id": 40,
+          "name": "마태복음",
+          "english": "Matthew",
+          "chapters": 28
+        },
+        {
+          "id": 41,
+          "name": "마가복음",
+          "english": "Mark",
+          "chapters": 16
+        },
+        {
+          "id": 42,
+          "name": "누가복음",
+          "english": "Luke",
+          "chapters": 24
+        },
+        {
+          "id": 43,
+          "name": "요한복음",
+          "english": "John",
+          "chapters": 21
+        },
+        {
+          "id": 44,
+          "name": "사도행전",
+          "english": "Acts",
+          "chapters": 28
+        },
+        {
+          "id": 45,
+          "name": "로마서",
+          "english": "Romans",
+          "chapters": 16
+        },
+        {
+          "id": 46,
+          "name": "고린도전서",
+          "english": "1 Corinthians",
+          "chapters": 16
+        },
+        {
+          "id": 47,
+          "name": "고린도후서",
+          "english": "2 Corinthians",
+          "chapters": 13
+        },
+        {
+          "id": 48,
+          "name": "갈라디아서",
+          "english": "Galatians",
+          "chapters": 6
+        },
+        {
+          "id": 49,
+          "name": "에베소서",
+          "english": "Ephesians",
+          "chapters": 6
+        },
+        {
+          "id": 50,
+          "name": "빌립보서",
+          "english": "Philippians",
+          "chapters": 4
+        },
+        {
+          "id": 51,
+          "name": "골로새서",
+          "english": "Colossians",
+          "chapters": 4
+        },
+        {
+          "id": 52,
+          "name": "데살로니가전서",
+          "english": "1 Thessalonians",
+          "chapters": 5
+        },
+        {
+          "id": 53,
+          "name": "데살로니가후서",
+          "english": "2 Thessalonians",
+          "chapters": 3
+        },
+        {
+          "id": 54,
+          "name": "디모데전서",
+          "english": "1 Timothy",
+          "chapters": 6
+        },
+        {
+          "id": 55,
+          "name": "디모데후서",
+          "english": "2 Timothy",
+          "chapters": 4
+        },
+        {
+          "id": 56,
+          "name": "디도서",
+          "english": "Titus",
+          "chapters": 3
+        },
+        {
+          "id": 57,
+          "name": "빌레몬서",
+          "english": "Philemon",
+          "chapters": 1
+        },
+        {
+          "id": 58,
+          "name": "히브리서",
+          "english": "Hebrews",
+          "chapters": 13
+        },
+        {
+          "id": 59,
+          "name": "야고보서",
+          "english": "James",
+          "chapters": 5
+        },
+        {
+          "id": 60,
+          "name": "베드로전서",
+          "english": "1 Peter",
+          "chapters": 5
+        },
+        {
+          "id": 61,
+          "name": "베드로후서",
+          "english": "2 Peter",
+          "chapters": 3
+        },
+        {
+          "id": 62,
+          "name": "요한일서",
+          "english": "1 John",
+          "chapters": 5
+        },
+        {
+          "id": 63,
+          "name": "요한이서",
+          "english": "2 John",
+          "chapters": 1
+        },
+        {
+          "id": 64,
+          "name": "요한삼서",
+          "english": "3 John",
+          "chapters": 1
+        },
+        {
+          "id": 65,
+          "name": "유다서",
+          "english": "Jude",
+          "chapters": 1
+        },
+        {
+          "id": 66,
+          "name": "요한계시록",
+          "english": "Revelation",
+          "chapters": 22
+        }
+      ]
+    }
+  }

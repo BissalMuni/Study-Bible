@@ -1,0 +1,16 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 6,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "하나님 마음에 꼭 드는 노아",
+                    "details": "<speak>얘들아<break time=\"700ms\"/> 하나님께서 세상을 보시니<break time=\"700ms\"/> 너무나 나쁜 사람들 때문에 마음이 아프셨대<break time=\"1400ms\"/> 그런데<break time=\"700ms\"/> 노아는 달랐어<break time=\"1400ms\"/> 하나님을 정말 잘 믿고<break time=\"700ms\"/> 착하게 살았거든<break time=\"1400ms\"/> 하나님께서 노아에게 큰 배를 만들라고 하셨어<break time=\"1400ms\"/> 그 배 안에는 노아의 가족들과 모든 동물들을 암수 한 쌍씩 태우라고 하셨지<break time=\"1400ms\"/> 왜냐하면<break time=\"700ms\"/> 곧 큰 홍수가 나서 나쁜 사람들은 모두 벌을 받게 될 거거든<break time=\"1400ms\"/> 하지만<break time=\"700ms\"/> 노아와 그의 가족들<break time=\"700ms\"/> 그리고 동물들은 그 큰 배 안에서 안전하게 지낼 수 있을 거야<break time=\"1400ms\"/> 하나님은 노아를 정말 사랑하셨고<break time=\"700ms\"/> 노아는 하나님의 말씀을 잘 따랐단다<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 3,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "짜잔! 세례 요한 아저씨가 나타나서 회개하라고 외쳤대!",
+                    "details": "<speak>얘들아, 옛날 옛날 아주 먼 옛날에 <break time=\"700ms\"/> 세례 요한 아저씨가 유대 광야에서 큰 소리로 외쳤어<break time=\"700ms\"/> <prosody rate=\"110%\" pitch=\"+5%\">\"천국이 정말 가까이 왔으니까 어서 회개하세요!\"</prosody> 라고 말이야<break time=\"1400ms\"/> 요한 아저씨는 이사야 할아버지의 예언처럼 주의 길을 미리 알려주는 사람이었어<break time=\"1400ms\"/> 메뚜기랑 달콤한 석청을 먹고, 낙타 털로 만든 옷을 입었대<break time=\"1400ms\"/> 예루살렘과 유대에서 많은 사람들이 요한 아저씨에게 와서 죄를 고백하고 세례를 받았어<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 2,
+                    "title": "바리새인이랑 사두개인 아저씨들, 요한 아저씨한테 혼났대!",
+                    "details": "<speak>그런데 말이야<break time=\"700ms\"/> 요한 아저씨는 세례 받으러 온 바리새인 아저씨랑 사두개인 아저씨들한테 화를 냈어<break time=\"1400ms\"/> <prosody rate=\"110%\" pitch=\"+5%\">\"회개했으면 착한 일을 해야지! 아브라함 할아버지의 자손이라고 자랑하지 마세요!\"</prosody> 라고 말했지<break time=\"1400ms\"/> 착한 열매를 맺지 못하는 나무는 불에 던져질 거라고 무섭게 경고했대<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 3,
+                    "title": "<emphasis level=\"strong\">예수</emphasis>님이 세례를 받으셨어!",
+                    "details": "<speak>요한 아저씨는 물로 세례를 줬지만, 자기 뒤에 오시는 분은 성령님과 불로 세례를 줄 거라고 말했어<break time=\"1400ms\"/> 바로 <emphasis level=\"strong\">예수</emphasis>님이셨지<break time=\"1400ms\"/> <emphasis level=\"strong\">예수</emphasis>님께서 요한 아저씨에게 세례를 받으러 오시자, 요한 아저씨는 <prosody rate=\"slow\" pitch=\"-2st\">\"제가 오히려 <emphasis level=\"strong\">예수</emphasis>님께 세례를 받아야 해요!\"</prosody> 라고 말했어<break time=\"1400ms\"/> 하지만 <emphasis level=\"strong\">예수</emphasis>님께서는 모든 것을 다 이루기 위해 세례를 받으셨대<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 4,
+                    "title": "하늘에서 성령님이 내려오시고, 하나님의 음성이 들렸대!",
+                    "details": "<speak><emphasis level=\"strong\">예수</emphasis>님께서 세례를 받으시고 물에서 올라오시자, 갑자기 하늘이 활짝 열리고 성령님이 비둘기처럼 <emphasis level=\"strong\">예수</emphasis>님 위에 내려오셨어<break time=\"1400ms\"/> 그리고 하늘에서 아주 큰 소리가 들렸는데, <prosody rate=\"120%\" volume=\"+6dB\" pitch=\"+10%\">\"이분은 내 사랑하는 아들이고, 내가 정말 좋아하는 아들이라!\"</prosody>는 하나님의 음성이었대<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}

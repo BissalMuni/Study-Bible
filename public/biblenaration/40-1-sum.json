@@ -1,0 +1,21 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 1,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "와! 예수 그리스도의 가족 이야기",
+                    "details": "<speak>얘들아, 오늘은 <emphasis level=\"strong\">예수 그리스도</emphasis> 할아버지의 가족 이야기를 해줄게<break time=\"700ms\"/> 옛날 옛날 아주 먼 옛날 아브라함 할아버지부터 다윗 왕, 그리고 바벨론에 갔다가 다시 돌아온 사람들, 마지막으로 <emphasis level=\"strong\">예수 그리스도</emphasis> 할아버지까지 쭉 이어지는 가족 이야기란다<break time=\"1400ms\"/> 아브라함 할아버지는 이삭 아빠를 낳고<break time=\"700ms\"/> 이삭 아빠는 야곱 아빠를 낳았어<break time=\"700ms\"/> 이렇게 계속 가족이 이어진 거야<break time=\"1400ms\"/> 다윗 왕은 우리야 아저씨의 아내였던 여자분에게서 솔로몬 아빠를 낳았대<break time=\"1400ms\"/> 바벨론에 갔다가 돌아온 후에는 여고냐 아빠가 스알디엘 아빠를 낳고<break time=\"700ms\"/> 스알디엘 아빠는 스룹바벨 아빠를 낳았어<break time=\"700ms\"/> 그리고 야곱 아빠는 마리아 엄마의 남편인 요셉 아빠를 낳았고<break time=\"700ms\"/> 마리아 엄마에게서 드디어 우리의 <emphasis level=\"strong\">예수</emphasis>님이 태어나신 거야<break time=\"1400ms\"/> 이 모든 가족 이야기는 아브라함 할아버지부터 다윗 왕까지 14대<break time=\"700ms\"/> 다윗 왕부터 바벨론에 갔다가 돌아올 때까지 14대<break time=\"700ms\"/> 그리고 바벨론에서 돌아온 후부터 <emphasis level=\"strong\">그리스도</emphasis> 할아버지까지 14대로 딱 맞춰져 있단다<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 2,
+                    "title": "짜잔! 예수 그리스도가 어떻게 태어나셨을까?",
+                    "details": "<speak>자, 이번에는 <emphasis level=\"strong\">예수 그리스도</emphasis>가 어떻게 태어나셨는지 알려줄게<break time=\"1400ms\"/> 마리아 엄마는 요셉 아빠랑 결혼하기 전에 성령님 때문에 아기를 가지게 되었어<break time=\"1400ms\"/> 요셉 아빠는 마리아 엄마를 부끄럽게 만들고 싶지 않아서 조용히 헤어지려고 했지만<break time=\"700ms\"/> 꿈속에서 천사님이 나타나서 '마리아 엄마를 데려오는 걸 무서워하지 마세요'라고 말했어<break time=\"1400ms\"/> 마리아 엄마가 가진 아기는 성령님으로 된 거라서<break time=\"700ms\"/> 아들을 낳으면 이름을 <emphasis level=\"strong\">예수</emphasis>라고 지으라고 했어<break time=\"1400ms\"/> 왜냐하면 <emphasis level=\"strong\">예수</emphasis>님은 우리 모두의 죄를 깨끗하게 해줄 분이거든<break time=\"1400ms\"/> 옛날 선지자 할아버지들이 '처녀가 아기를 낳을 것이고<break time=\"700ms\"/> 그 아기의 이름은 임마누엘이라고 할 것이다'라고 예언했는데<break time=\"700ms\"/> 바로 그 예언이 이루어진 거야<break time=\"1400ms\"/> 요셉 아빠는 천사님의 말씀대로 마리아 엄마를 데려왔고<break time=\"700ms\"/> <emphasis level=\"strong\">예수</emphasis>님이 태어날 때까지 함께 살았어<break time=\"700ms\"/> 그리고 <emphasis level=\"strong\">예수</emphasis>님이 태어나자 천사님이 알려주신 대로 이름을 <emphasis level=\"strong\">예수</emphasis>라고 지었단다<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}

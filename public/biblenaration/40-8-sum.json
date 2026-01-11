@@ -1,0 +1,26 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 8,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "와! <emphasis level=\"strong\">예수님</emphasis>이 아픈 사람을 고쳐주셨대!",
+                    "details": "<speak><emphasis level=\"strong\">예수님</emphasis>께서 문둥병에 걸린 사람을 깨끗하게 고쳐주시고<break time=\"700ms\"/> 백부장 아저씨의 믿음을 칭찬하면서 아픈 하인을 낫게 해주셨어!<break time=\"1400ms\"/> <emphasis level=\"strong\">예수님</emphasis>은 이스라엘 사람들 중에 믿음이 부족한 것을 안타까워하시면서<break time=\"700ms\"/> 동쪽과 서쪽에서 많은 사람들이 천국에 들어올 거라고 말씀하셨대!<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 2,
+                    "title": "<emphasis level=\"strong\">예수님</emphasis>이 무서운 귀신을 쫓아내셨대!",
+                    "details": "<speak><emphasis level=\"strong\">예수님</emphasis>이 귀신 들린 사람들을 고쳐주시고<break time=\"700ms\"/> 제자들에게 <emphasis level=\"strong\">예수님</emphasis>을 따르는게 얼마나 어려운 일인지 말씀해주셨어!<break time=\"1400ms\"/> 심지어 아빠의 장례식보다 <emphasis level=\"strong\">예수님</emphasis>을 따르는게 더 중요하다고 하셨대!<break time=\"1400ms\"/> 어느 날<break time=\"700ms\"/> 배를 타고 가는데 풍랑이 너무 심해서 제자들이 주무시는 <emphasis level=\"strong\">예수님</emphasis>을 깨웠어!<break time=\"1400ms\"/> 그랬더니 <emphasis level=\"strong\">예수님</emphasis>이 바람과 바다를 잠잠하게 만들어주셨대!<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 3,
+                    "title": "가다라 마을에 무시무시한 일이!",
+                    "details": "<speak>가다라 지방에서 <emphasis level=\"strong\">예수님</emphasis>이 귀신 들린 사람들을 만났는데<break time=\"700ms\"/> 그 귀신들을 돼지 떼에게 들어가게 하셨어!<break time=\"1400ms\"/> 그랬더니 돼지 떼가 모두 물에 빠져 죽어버렸대!<break time=\"1400ms\"/> 그래서 그 마을 사람들이 <emphasis level=\"strong\">예수님</emphasis>을 만나서 우리 마을에서 떠나달라고 부탁했대!<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 4,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "예수님의 시험 받으심",
+                    "details": "<speak><emphasis level=\"strong\">예수님</emphasis>께서 성령님의 이끌림을 받아 광야에서 40일 동안 금식하셨어요<break time=\"700ms\"/> 그리고 나서 마귀의 시험을 받으셨대요<break time=\"1400ms\"/> 마귀는 <emphasis level=\"strong\">예수님</emphasis>께 돌멩이로 맛있는 떡을 만들어 배고픔을 달래라고 꼬드겼지만<break time=\"700ms\"/> <emphasis level=\"strong\">예수님</emphasis>께서는 하나님의 말씀으로 살아간다고 말씀하셨답니다<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 2,
+                    "title": "성전에서의 시험과 경배 요구",
+                    "details": "<speak>마귀는 또 <emphasis level=\"strong\">예수님</emphasis>을 성전 꼭대기에 세우고는 뛰어내리라고 시험했어요<break time=\"700ms\"/> 천사들이 <emphasis level=\"strong\">예수님</emphasis>을 안전하게 보호해 줄 거라고 속삭이면서 말이죠<break time=\"1400ms\"/> 하지만 <emphasis level=\"strong\">예수님</emphasis>께서는 하나님을 함부로 시험하지 말라고 딱 잘라 말씀하셨어요<break time=\"1400ms\"/> 게다가 마귀는 높은 산에서 온 세상 모든 나라를 보여주면서 자기를 경배하면 이 모든 것을 다 주겠다고 했지만<break time=\"700ms\"/> <emphasis level=\"strong\">예수님</emphasis>께서는 오직 하나님만 경배해야 한다고 물리치셨답니다<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 3,
+                    "title": "마귀의 떠남과 천사들의 수종",
+                    "details": "<speak>마귀가 드디어 <emphasis level=\"strong\">예수님</emphasis> 곁을 떠나자<break time=\"700ms\"/> 천사들이 나타나 <emphasis level=\"strong\">예수님</emphasis>을 정성껏 섬겼대요<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 4,
+                    "title": "갈릴리로 돌아가심",
+                    "details": "<speak><emphasis level=\"strong\">예수님</emphasis>께서는 요한이 잡혔다는 소식을 듣고 갈릴리로 다시 돌아가셨어요<break time=\"700ms\"/> 그리고 가버나움이라는 마을에 머무시면서 옛날 이사야 선지자님이 했던 예언을 이루셨답니다<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 5,
+                    "title": "회개 촉구와 제자 부르심",
+                    "details": "<speak><emphasis level=\"strong\">예수님</emphasis>께서는 \"잘못을 뉘우치고 하나님께 돌아오세요<break time=\"700ms\"/> 왜냐하면 천국이 아주 가까이 왔거든요<break time=\"1400ms\"/>\" 라고 외치셨어요<break time=\"700ms\"/> 그리고 갈릴리 호숫가에서 베드로와 안드레<break time=\"700ms\"/> 야고보와 요한을 부르셔서 제자로 삼으셨답니다<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 6,
+                    "title": "갈릴리 사역과 병 고침",
+                    "details": "<speak><emphasis level=\"strong\">예수님</emphasis>께서는 갈릴리에서 사람들을 가르치시고<break time=\"700ms\"/> 천국 복음을 널리 전파하시면서<break time=\"700ms\"/> 여러 가지 병과 아픔으로 고생하는 사람들을 깨끗하게 고쳐주셨어요<break time=\"1400ms\"/> 그 소문이 순식간에 온 수리아 땅에 퍼져서<break time=\"700ms\"/> 정말 많은 사람들이 <emphasis level=\"strong\">예수님</emphasis>을 따라다녔대요<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}

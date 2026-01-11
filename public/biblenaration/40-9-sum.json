@@ -1,0 +1,31 @@
+{
+    "book": {
+        "id": 40,
+        "name": "창세기",
+        "contents": {
+            "chapter_number": 9,
+            "paragraph_summary": [
+                {
+                    "paragraph": 1,
+                    "title": "친구들아, 예수님이 아픈 사람을 고쳐주시고 죄를 용서해주셨대!",
+                    "details": "<speak>얘들아<break time=\"700ms\"/> 들어봐<break time=\"700ms\"/> <emphasis level=\"strong\">예수님</emphasis>께서 아픈 친구를 고쳐주시고<break time=\"700ms\"/> 죄를 용서해주시는 아주 놀라운 능력을 보여주셨어<break time=\"1400ms\"/> 그리고 마태라는 친구를 제자로 삼으셨대<break time=\"1400ms\"/> 그런데<break time=\"700ms\"/> 세리랑 죄인들하고 같이 밥을 먹는다고 바리새인 아저씨들이 뭐라고 했대<break time=\"1400ms\"/> 하지만 <emphasis level=\"strong\">예수님</emphasis>은 불쌍한 사람들을 더 생각해야 한다고 말씀하셨어<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 2,
+                    "title": "왜 금식해야 해? 예수님의 재밌는 비유!",
+                    "details": "<speak>친구들<break time=\"700ms\"/> 어느 날 사람들이 <emphasis level=\"strong\">예수님</emphasis>께 왜 금식을 해야 하는지 물어봤어<break time=\"1400ms\"/> 그러자 <emphasis level=\"strong\">예수님</emphasis>은 신랑이랑 결혼 잔치 이야기를 하시면서 재밌는 비유를 들어주셨대<break time=\"1400ms\"/> 또 새 포도주는 새 부대에 넣어야 한다는 말씀을 통해 새로운 가르침이 필요하다는 것을 설명해주셨어<break time=\"1400ms\"/> 그리고 아픈 여자를 고쳐주시고<break time=\"700ms\"/> 죽은 어린 소녀를 다시 살려주셨대<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 3,
+                    "title": "눈먼 친구들의 눈을 번쩍! 귀신 쫓아내기!",
+                    "details": "<speak>이번에는 <emphasis level=\"strong\">예수님</emphasis>께서 두 눈먼 친구의 믿음을 보시고 눈을 뜨게 해주셨대<break time=\"1400ms\"/> 그리고 귀신이 들려서 말을 못 하는 친구를 고쳐주시니까 사람들이 엄청 놀랐어<break time=\"1400ms\"/> 그런데 바리새인 아저씨들은 <emphasis level=\"strong\">예수님</emphasis>이 귀신의 왕의 힘을 빌려서 귀신을 쫓아낸다고 나쁜 말을 했대<break time=\"1400ms\"/></speak>"
+                },
+                {
+                    "paragraph": 4,
+                    "title": "힘들어하는 친구들을 도와줄 사람이 필요해!",
+                    "details": "<speak>얘들아<break time=\"700ms\"/> <emphasis level=\"strong\">예수님</emphasis>께서 힘들어하는 친구들을 보시고 마음 아파하셨어<break time=\"1400ms\"/> 마치 추수할 곡식은 많은데 도와줄 사람이 없는 것 같다고 말씀하셨지<break time=\"1400ms\"/> 그래서 제자들에게 추수할 일꾼들을 보내달라고 하나님께 기도하라고 말씀하셨대<break time=\"1400ms\"/></speak>"
+                }
+            ]
+        }
+    }
+}
