@@ -85,29 +85,57 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
+      {/* Header with navigation */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 z-40 safe-area-top border-b border-gray-200 dark:border-gray-700"
+        className="sticky top-0 bg-white dark:bg-gray-800 z-40 safe-area-top border-b border-gray-200 dark:border-gray-700"
       >
-        <div className="flex items-center justify-between h-14 px-4">
+        <div className="flex items-center justify-between h-14 px-2">
+          {/* 이전 장 버튼 */}
           <motion.button
             whileTap={{ scale: 0.9 }}
-            onClick={onBack}
-            className="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+            onClick={goToPrevChapter}
+            disabled={currentChapter <= 1}
+            className={`p-2 rounded-full ${
+              currentChapter <= 1
+                ? 'text-gray-300 dark:text-gray-600'
+                : 'text-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700'
+            }`}
           >
-            <ArrowLeft size={24} className="text-gray-700 dark:text-gray-200" />
+            <ChevronLeft size={24} />
           </motion.button>
-          <h1 className="text-lg font-bold text-gray-900 dark:text-white">
-            {book.name} {currentChapter}장
-          </h1>
-          <div className="w-10" />
+
+          {/* 중앙: 목록 버튼 + 제목 */}
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={onBack}
+            className="flex items-center gap-2 px-3 py-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            <ArrowLeft size={18} className="text-gray-500" />
+            <h1 className="text-lg font-bold text-gray-900 dark:text-white">
+              {book.name} {currentChapter}장
+            </h1>
+          </motion.button>
+
+          {/* 다음 장 버튼 */}
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={goToNextChapter}
+            disabled={currentChapter >= book.chapters}
+            className={`p-2 rounded-full ${
+              currentChapter >= book.chapters
+                ? 'text-gray-300 dark:text-gray-600'
+                : 'text-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700'
+            }`}
+          >
+            <ChevronRight size={24} />
+          </motion.button>
         </div>
       </motion.div>
 
       {/* Content */}
-      <div className="pt-24 pb-28 px-5">
+      <div className="px-5">
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
             <motion.div
@@ -125,71 +153,31 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
             {verses.length === 0 ? (
               <p className="text-gray-500 text-center py-10">구절을 불러올 수 없습니다.</p>
             ) : (
-              verses.map((verse, idx) => (
-                <motion.p
-                  key={verse.verse}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: Math.min(idx * 0.02, 0.5) }}
-                  onClick={() => handleVerseClick(verse)}
-                  className="mb-3 leading-relaxed text-gray-800 dark:text-gray-200 cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg p-2 -mx-2 transition-colors"
-                  style={{ fontSize }}
-                >
-                  <span className="text-blue-600 dark:text-blue-400 font-bold mr-2">
-                    {verse.verse}
-                  </span>
-                  {verse.content}
-                </motion.p>
-              ))
+              <div className="space-y-4">
+                {verses.map((verse, idx) => (
+                  <motion.p
+                    key={verse.verse}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: Math.min(idx * 0.02, 0.5) }}
+                    onClick={() => handleVerseClick(verse)}
+                    className="leading-relaxed text-gray-800 dark:text-gray-200 cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg p-3 transition-colors"
+                    style={{ fontSize }}
+                  >
+                    <span className="text-blue-600 dark:text-blue-400 font-bold mr-2">
+                      {verse.verse}
+                    </span>
+                    {verse.content}
+                  </motion.p>
+                ))}
+              </div>
             )}
           </motion.div>
         )}
       </div>
 
-      {/* Chapter Navigation */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed bottom-20 left-0 right-0 px-4"
-      >
-        <div className="flex items-center justify-between bg-white dark:bg-gray-800 rounded-xl p-2 shadow-lg">
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={goToPrevChapter}
-            disabled={currentChapter <= 1}
-            className={`flex items-center gap-1 px-4 py-2 rounded-lg ${
-              currentChapter <= 1
-                ? 'text-gray-300 dark:text-gray-600'
-                : 'text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700'
-            }`}
-          >
-            <ChevronLeft size={20} />
-            <span className="font-medium">이전</span>
-          </motion.button>
-
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={onBack}
-            className="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >
-            <span className="font-medium">목록</span>
-          </motion.button>
-
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={goToNextChapter}
-            disabled={currentChapter >= book.chapters}
-            className={`flex items-center gap-1 px-4 py-2 rounded-lg ${
-              currentChapter >= book.chapters
-                ? 'text-gray-300 dark:text-gray-600'
-                : 'text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700'
-            }`}
-          >
-            <span className="font-medium">다음</span>
-            <ChevronRight size={20} />
-          </motion.button>
-        </div>
-      </motion.div>
+      {/* Bottom spacer for BottomNav */}
+      <div className="h-20 safe-area-bottom" />
 
       {/* Verse Popup */}
       <AnimatePresence>
@@ -199,14 +187,14 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closePopup}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-6 py-4"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white dark:bg-gray-800 rounded-2xl w-full max-w-lg max-h-[80vh] overflow-hidden shadow-2xl"
+              className="bg-white dark:bg-gray-800 rounded-2xl w-full max-w-lg max-h-[80vh] overflow-hidden shadow-2xl mx-4"
             >
               {/* Popup Header */}
               <div className="sticky top-0 bg-blue-500 text-white p-4">

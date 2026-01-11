@@ -18,7 +18,11 @@ interface BibleData {
   };
 }
 
-export const BibleReader: React.FC = () => {
+interface BibleReaderProps {
+  onChapterViewChange?: (isReading: boolean) => void;
+}
+
+export const BibleReader: React.FC<BibleReaderProps> = ({ onChapterViewChange }) => {
   const { state } = useGlobalState();
   const [bibleData, setBibleData] = useState<BibleData | null>(null);
   const [expandedTestament, setExpandedTestament] = useState<'구약' | '신약' | null>('구약');
@@ -44,11 +48,13 @@ export const BibleReader: React.FC = () => {
   const handleChapterSelect = (book: BibleBook, chapter: number) => {
     setSelectedBook(book);
     setSelectedChapter(chapter);
+    onChapterViewChange?.(true);
   };
 
   const handleBack = () => {
     setSelectedBook(null);
     setSelectedChapter(null);
+    onChapterViewChange?.(false);
   };
 
   if (!bibleData) {

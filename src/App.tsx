@@ -19,6 +19,7 @@ const pageVariants = {
 function AppContent() {
   const [activeTab, setActiveTab] = useState<TabType>('theme');
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
+  const [isReadingChapter, setIsReadingChapter] = useState(false);
 
   const handleThemeSelect = (theme: Theme) => {
     setSelectedTheme(theme);
@@ -41,9 +42,12 @@ function AppContent() {
     }
   };
 
+  // Header를 숨겨야 하는 경우: 테마 상세 또는 성경 장 읽기 중
+  const shouldHideHeader = selectedTheme || isReadingChapter;
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {!selectedTheme && <Header title={getTitle()} />}
+      {!shouldHideHeader && <Header title={getTitle()} />}
 
       <AnimatePresence mode="wait">
         {activeTab === 'theme' && !selectedTheme && (
@@ -94,7 +98,7 @@ function AppContent() {
             exit="exit"
             transition={{ duration: 0.2 }}
           >
-            <BibleReader />
+            <BibleReader onChapterViewChange={setIsReadingChapter} />
           </motion.div>
         )}
       </AnimatePresence>
