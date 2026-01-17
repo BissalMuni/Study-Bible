@@ -52,7 +52,7 @@ export const AwanaRecital: React.FC = () => {
 
   if (isLoading || !passagesData) {
     return (
-      <div className="pt-16 pb-20 flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center h-full">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
@@ -67,7 +67,7 @@ export const AwanaRecital: React.FC = () => {
     allCollectionsData.find((coll) => coll.id === state.currentCollection) || allCollectionsData[0];
 
   return (
-    <div className="pt-16 pb-20 px-4 min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="pt-4 pb-4 px-4 bg-gray-50 dark:bg-gray-900">
       <SettingsBox />
 
       <CollectionSelector

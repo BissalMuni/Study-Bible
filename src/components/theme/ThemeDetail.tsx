@@ -10,12 +10,12 @@ interface ThemeDetailProps {
 
 export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
   return (
-    <div className="pt-16 pb-20 min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header with back button */}
+    <div className="flex flex-col h-full bg-gray-50 dark:bg-gray-900">
+      {/* Header with back button - 고정 높이 */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 z-40 safe-area-top"
+        className="shrink-0 bg-white dark:bg-gray-800 z-40 safe-area-top"
       >
         <div className="flex items-center h-14 px-4">
           <motion.button
@@ -31,13 +31,15 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
         </div>
       </motion.div>
 
-      {/* Hero section */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="mx-4 mt-4 rounded-2xl overflow-hidden"
-        style={{ backgroundColor: theme.color }}
-      >
+      {/* 스크롤 가능한 콘텐츠 영역 */}
+      <div className="flex-1 overflow-y-auto">
+        {/* Hero section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="mx-2 mt-4 rounded-2xl overflow-hidden"
+          style={{ backgroundColor: theme.color }}
+        >
         <div className="p-6 text-white">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -114,6 +116,7 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
             </motion.button>
           ))}
         </AnimatePresence>
+        </div>
       </div>
     </div>
   );

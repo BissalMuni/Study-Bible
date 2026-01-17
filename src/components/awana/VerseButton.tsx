@@ -22,6 +22,8 @@ export const VerseButton: React.FC<VerseButtonProps> = ({
   const [currentRepeat, setCurrentRepeat] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const repeatRef = useRef(0);
+  const delayTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const [isWaiting, setIsWaiting] = useState(false);
 
   // Update ref when repeatCount changes
   useEffect(() => {
@@ -66,8 +68,15 @@ export const VerseButton: React.FC<VerseButtonProps> = ({
       const nextRepeat = repeatRef.current + 1;
       if (nextRepeat < repeatCount) {
         setCurrentRepeat(nextRepeat);
-        audio.currentTime = 0;
-        audio.play().catch(console.error);
+        setIsWaiting(true);
+        // 5초 휴지 시간 후 다음 반복 재생
+        delayTimerRef.current = setTimeout(() => {
+          setIsWaiting(false);
+          if (audioRef.current) {
+            audio.currentTime = 0;
+            audio.play().catch(console.error);
+          }
+        }, 5000);
       } else {
         setIsPlaying(false);
         setCurrentRepeat(0);

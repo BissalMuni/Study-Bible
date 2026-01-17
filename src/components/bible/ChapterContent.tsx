@@ -135,7 +135,7 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
       </motion.div>
 
       {/* Content */}
-      <div className="px-5">
+      <div className="px-3">
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
             <motion.div
@@ -148,7 +148,7 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm"
+            className="bg-white dark:bg-gray-800 rounded-xl p-1 shadow-sm"
           >
             {verses.length === 0 ? (
               <p className="text-gray-500 text-center py-10">구절을 불러올 수 없습니다.</p>
@@ -187,14 +187,14 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closePopup}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-6 py-4"
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-1 py-4"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white dark:bg-gray-800 rounded-2xl w-full max-w-lg max-h-[80vh] overflow-hidden shadow-2xl mx-4"
+              className="bg-white dark:bg-gray-800 rounded-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden shadow-2xl mx-2"
             >
               {/* Popup Header */}
               <div className="sticky top-0 bg-blue-500 text-white p-4">
@@ -214,7 +214,7 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
               </div>
 
               {/* Popup Content */}
-              <div className="p-8 overflow-y-auto max-h-[60vh]">
+              <div className="p-1 overflow-y-auto max-h-[60vh]">
                 <p
                   className="text-gray-800 dark:text-gray-200 leading-loose"
                   style={{ fontSize: fontSize + 6 }}

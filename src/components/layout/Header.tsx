@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ title, showSettings = true }) =>
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 safe-area-top z-50">
+    <header className="shrink-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 safe-area-top z-50">
       <div className="flex items-center justify-between h-14 px-4">
         <motion.h1
           initial={{ opacity: 0, x: -20 }}

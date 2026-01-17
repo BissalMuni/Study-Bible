@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "오늘 하루는 어땠나요?",
+      "type": "single",
+      "options": [
+        { "id": "day_good", "text": "좋았어요 😊", "tags": ["gratitude", "joy"] },
+        { "id": "day_normal", "text": "보통이었어요", "tags": [] },
+        { "id": "day_tired", "text": "힘들었어요 😔", "tags": ["comfort", "rest"] },
+        { "id": "day_very_hard", "text": "매우 힘들었어요 😢", "tags": ["comfort", "hope", "strength"] }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "지금 가장 크게 느껴지는 감정은 무엇인가요?",
+      "type": "single",
+      "options": [
+        { "id": "emotion_anxiety", "text": "불안해요 😰", "tags": ["peace", "trust"] },
+        { "id": "emotion_lonely", "text": "외로워요 💭", "tags": ["presence", "love"] },
+        { "id": "emotion_exhausted", "text": "지쳤어요 😩", "tags": ["rest", "strength"] },
+        { "id": "emotion_sad", "text": "슬퍼요 😢", "tags": ["comfort", "hope"] },
+        { "id": "emotion_angry", "text": "화가 나요 😤", "tags": ["peace", "patience"] },
+        { "id": "emotion_grateful", "text": "감사해요 🙏", "tags": ["gratitude", "joy"] },
+        { "id": "emotion_peaceful", "text": "평안해요 ☺️", "tags": ["peace", "gratitude"] }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "오늘 어떤 상황이 있었나요?",
+      "type": "single",
+      "options": [
+        { "id": "situation_relationship", "text": "관계에서 어려움이 있었어요", "tags": ["love", "forgiveness", "patience"] },
+        { "id": "situation_work", "text": "일이나 학업이 힘들었어요", "tags": ["strength", "wisdom", "guidance"] },
+        { "id": "situation_health", "text": "건강이 걱정돼요", "tags": ["healing", "trust", "hope"] },
+        { "id": "situation_future", "text": "미래가 불안해요", "tags": ["trust", "guidance", "hope"] },
+        { "id": "situation_loss", "text": "소중한 것을 잃었어요", "tags": ["comfort", "hope", "presence"] },
+        { "id": "situation_none", "text": "특별한 일은 없었어요", "tags": [] }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "지금 가장 필요한 것은 무엇인가요?",
+      "type": "single",
+      "options": [
+        { "id": "need_comfort", "text": "따뜻한 위로 🤗", "tags": ["comfort", "love"] },
+        { "id": "need_courage", "text": "용기와 힘 💪", "tags": ["strength", "courage"] },
+        { "id": "need_peace", "text": "마음의 평안 🕊️", "tags": ["peace", "rest"] },
+        { "id": "need_wisdom", "text": "지혜와 방향 🧭", "tags": ["wisdom", "guidance"] },
+        { "id": "need_hope", "text": "희망과 기대 ✨", "tags": ["hope", "faith"] },
+        { "id": "need_gratitude", "text": "감사의 마음 🙏", "tags": ["gratitude", "joy"] }
+      ]
+    }
+  ],
+  "verses": [
+    {
+      "id": 1,
+      "reference": "마태복음 11:28",
+      "text": "수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+      "tags": ["rest", "comfort", "strength"]
+    },
+    {
+      "id": 2,
+      "reference": "빌립보서 4:6-7",
+      "text": "아무 것도 염려하지 말고 다만 모든 일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라 그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라",
+      "tags": ["peace", "anxiety", "trust"]
+    },
+    {
+      "id": 3,
+      "reference": "시편 23:4",
+      "text": "내가 사망의 음침한 골짜기로 다닐지라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다",
+      "tags": ["comfort", "presence", "fear"]
+    },
+    {
+      "id": 4,
+      "reference": "이사야 41:10",
+      "text": "두려워하지 말라 내가 너와 함께 함이라 놀라지 말라 나는 네 하나님이 됨이라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
+      "tags": ["strength", "courage", "presence", "fear"]
+    },
+    {
+      "id": 5,
+      "reference": "로마서 8:28",
+      "text": "우리가 알거니와 하나님을 사랑하는 자 곧 그의 뜻대로 부르심을 입은 자들에게는 모든 것이 합력하여 선을 이루느니라",
+      "tags": ["hope", "trust", "guidance"]
+    },
+    {
+      "id": 6,
+      "reference": "시편 46:1",
+      "text": "하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라",
+      "tags": ["strength", "comfort", "presence"]
+    },
+    {
+      "id": 7,
+      "reference": "예레미야 29:11",
+      "text": "여호와의 말씀이니라 너희를 향한 나의 생각을 내가 아나니 평안이요 재앙이 아니니라 너희에게 미래와 희망을 주는 것이니라",
+      "tags": ["hope", "future", "guidance", "trust"]
+    },
+    {
+      "id": 8,
+      "reference": "시편 34:18",
+      "text": "여호와는 마음이 상한 자에게 가까이 하시고 충심으로 통회하는 자를 구원하시는도다",
+      "tags": ["comfort", "presence", "healing"]
+    },
+    {
+      "id": 9,
+      "reference": "요한복음 14:27",
+      "text": "평안을 너희에게 끼치노니 곧 나의 평안을 너희에게 주노라 내가 너희에게 주는 것은 세상이 주는 것과 같지 아니하니라 너희는 마음에 근심하지도 말고 두려워하지도 말라",
+      "tags": ["peace", "comfort", "fear"]
+    },
+    {
+      "id": 10,
+      "reference": "고린도후서 1:3-4",
+      "text": "찬송하리로다 그는 우리 주 예수 그리스도의 하나님이시요 자비의 아버지시요 모든 위로의 하나님이시며 우리의 모든 환난 중에서 우리를 위로하사 우리로 하여금 하나님께 받는 위로로써 모든 환난 중에 있는 자들을 능히 위로하게 하시는 이시로다",
+      "tags": ["comfort", "love", "presence"]
+    },
+    {
+      "id": 11,
+      "reference": "시편 91:1-2",
+      "text": "지존자의 은밀한 곳에 거주하는 자는 전능자의 그늘 아래에 살리로다 나는 여호와를 향하여 말하기를 그는 나의 피난처요 나의 요새요 내가 의뢰하는 하나님이라 하리로다",
+      "tags": ["peace", "rest", "trust", "presence"]
+    },
+    {
+      "id": 12,
+      "reference": "잠언 3:5-6",
+      "text": "너는 마음을 다하여 여호와를 신뢰하고 네 명철을 의지하지 말라 너는 범사에 그를 인정하라 그리하면 네 길을 지도하시리라",
+      "tags": ["wisdom", "guidance", "trust"]
+    },
+    {
+      "id": 13,
+      "reference": "이사야 40:31",
+      "text": "오직 여호와를 앙망하는 자는 새 힘을 얻으리니 독수리가 날개치며 올라감 같을 것이요 달음박질하여도 곤비하지 아니하겠고 걸어가도 피곤하지 아니하리로다",
+      "tags": ["strength", "hope", "rest"]
+    },
+    {
+      "id": 14,
+      "reference": "시편 55:22",
+      "text": "네 짐을 여호와께 맡기라 그가 너를 붙드시고 의인의 요동함을 영원히 허락하지 아니하시리로다",
+      "tags": ["rest", "trust", "comfort"]
+    },
+    {
+      "id": 15,
+      "reference": "요한일서 4:18",
+      "text": "사랑 안에 두려움이 없고 온전한 사랑이 두려움을 내쫓나니 두려움에는 형벌이 있음이라 두려워하는 자는 사랑 안에서 온전히 이루지 못하였느니라",
+      "tags": ["love", "peace", "fear"]
+    },
+    {
+      "id": 16,
+      "reference": "시편 27:1",
+      "text": "여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요 여호와는 내 생명의 능력이시니 내가 누구를 무서워하리요",
+      "tags": ["courage", "strength", "fear"]
+    },
+    {
+      "id": 17,
+      "reference": "시편 103:2-4",
+      "text": "내 영혼아 여호와를 송축하며 그의 모든 은택을 잊지 말지어다 그가 네 모든 죄악을 사하시며 네 모든 병을 고치시며 네 생명을 파멸에서 속량하시고 인자와 긍휼로 관을 씌우시며",
+      "tags": ["gratitude", "healing", "forgiveness"]
+    },
+    {
+      "id": 18,
+      "reference": "골로새서 3:13",
+      "text": "누가 누구에게 불만이 있거든 서로 용납하여 피차 용서하되 주께서 너희를 용서하신 것 같이 너희도 그리하고",
+      "tags": ["forgiveness", "love", "patience"]
+    },
+    {
+      "id": 19,
+      "reference": "야고보서 1:5",
+      "text": "너희 중에 누구든지 지혜가 부족하거든 모든 사람에게 후히 주시고 꾸짖지 아니하시는 하나님께 구하라 그리하면 주시리라",
+      "tags": ["wisdom", "guidance"]
+    },
+    {
+      "id": 20,
+      "reference": "시편 147:3",
+      "text": "그가 마음이 상한 자들을 고치시며 그들의 상처를 싸매시는도다",
+      "tags": ["healing", "comfort", "love"]
+    },
+    {
+      "id": 21,
+      "reference": "데살로니가전서 5:16-18",
+      "text": "항상 기뻐하라 쉬지 말고 기도하라 범사에 감사하라 이것이 그리스도 예수 안에서 너희를 향하신 하나님의 뜻이니라",
+      "tags": ["joy", "gratitude", "peace"]
+    },
+    {
+      "id": 22,
+      "reference": "시편 119:105",
+      "text": "주의 말씀은 내 발에 등이요 내 길에 빛이니이다",
+      "tags": ["guidance", "wisdom"]
+    },
+    {
+      "id": 23,
+      "reference": "로마서 15:13",
+      "text": "소망의 하나님이 모든 기쁨과 평강을 믿음 안에서 너희에게 충만하게 하사 성령의 능력으로 소망이 넘치게 하시기를 원하노라",
+      "tags": ["hope", "joy", "peace", "faith"]
+    },
+    {
+      "id": 24,
+      "reference": "베드로전서 5:7",
+      "text": "너희 염려를 다 주께 맡기라 이는 그가 너희를 돌보심이라",
+      "tags": ["trust", "comfort", "peace", "anxiety"]
+    },
+    {
+      "id": 25,
+      "reference": "시편 42:11",
+      "text": "내 영혼아 네가 어찌하여 낙심하며 어찌하여 내 속에서 불안해 하는가 너는 하나님께 소망을 두라 나는 그가 나타나 도우심으로 말미암아 내 하나님을 여전히 찬송하리로다",
+      "tags": ["hope", "comfort", "anxiety"]
+    },
+    {
+      "id": 26,
+      "reference": "빌립보서 4:13",
+      "text": "내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라",
+      "tags": ["strength", "courage", "faith"]
+    },
+    {
+      "id": 27,
+      "reference": "시편 121:1-2",
+      "text": "내가 산을 향하여 눈을 들리라 나의 도움이 어디서 올까 나의 도움은 천지를 지으신 여호와에게서로다",
+      "tags": ["hope", "trust", "presence"]
+    },
+    {
+      "id": 28,
+      "reference": "에베소서 3:20",
+      "text": "우리 가운데서 역사하시는 능력대로 우리가 구하거나 생각하는 모든 것에 더 넘치도록 능히 하실 이에게",
+      "tags": ["faith", "hope", "strength"]
+    },
+    {
+      "id": 29,
+      "reference": "시편 139:14",
+      "text": "내가 주께 감사하옴은 나를 지으심이 심히 기묘하심이라 주께서 하시는 일이 기이함을 내 영혼이 잘 아나이다",
+      "tags": ["gratitude", "love", "joy"]
+    },
+    {
+      "id": 30,
+      "reference": "요한복음 16:33",
+      "text": "이것을 너희에게 이르는 것은 너희로 내 안에서 평안을 누리게 하려 함이라 세상에서는 너희가 환난을 당하나 담대하라 내가 세상을 이기었노라",
+      "tags": ["courage", "peace", "strength", "hope"]
+    }
+  ],
+  "tagDescriptions": {
+    "comfort": "위로",
+    "hope": "희망",
+    "peace": "평안",
+    "strength": "힘",
+    "courage": "용기",
+    "rest": "쉼",
+    "trust": "신뢰",
+    "love": "사랑",
+    "presence": "함께하심",
+    "guidance": "인도",
+    "wisdom": "지혜",
+    "healing": "치유",
+    "forgiveness": "용서",
+    "patience": "인내",
+    "gratitude": "감사",
+    "joy": "기쁨",
+    "faith": "믿음"
+  }
+}

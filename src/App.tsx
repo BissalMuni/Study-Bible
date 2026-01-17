@@ -46,10 +46,13 @@ function AppContent() {
   const shouldHideHeader = selectedTheme || isReadingChapter;
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
+      {/* Header - 고정 높이 */}
       {!shouldHideHeader && <Header title={getTitle()} />}
 
-      <AnimatePresence mode="wait">
+      {/* Main Content - 남은 공간 모두 차지, 스크롤 가능 */}
+      <main className="flex-1 overflow-y-auto">
+        <AnimatePresence mode="wait">
         {activeTab === 'theme' && !selectedTheme && (
           <motion.div
             key="theme-list"
@@ -102,7 +105,9 @@ function AppContent() {
           </motion.div>
         )}
       </AnimatePresence>
+      </main>
 
+      {/* BottomNav - 고정 높이 */}
       <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );

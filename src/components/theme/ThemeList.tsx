@@ -66,7 +66,7 @@ export const ThemeList: React.FC<ThemeListProps> = ({ onThemeSelect }) => {
 
   if (loading) {
     return (
-      <div className="pt-16 pb-20 px-4 flex items-center justify-center min-h-screen">
+      <div className="px-4 flex items-center justify-center min-h-screen">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
@@ -78,25 +78,22 @@ export const ThemeList: React.FC<ThemeListProps> = ({ onThemeSelect }) => {
 
   if (error) {
     return (
-      <div className="pt-16 pb-20 px-4">
+      <div className="pt-4 pb-4 px-4">
         <div className="text-red-500">테마 데이터 로드 실패: {error}</div>
       </div>
     );
   }
 
   return (
-    <div className="pt-16 pb-20 px-4">
+    <div className="pt-4 pb-4 px-4">
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         className="mb-6"
       >
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 p-2">
           테마별 성경 학습
         </h2>
-        <p className="text-gray-500 dark:text-gray-400">
-          구약성경을 테마별로 입체적으로 학습하세요
-        </p>
       </motion.div>
 
       <motion.div
