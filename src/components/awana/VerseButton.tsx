@@ -22,7 +22,7 @@ export const VerseButton: React.FC<VerseButtonProps> = ({
   const [currentRepeat, setCurrentRepeat] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const repeatRef = useRef(0);
-  const delayTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const delayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isWaiting, setIsWaiting] = useState(false);
 
   // Update ref when repeatCount changes
