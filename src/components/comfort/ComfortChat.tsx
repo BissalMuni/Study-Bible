@@ -46,6 +46,18 @@ export const ComfortChat: React.FC = () => {
 
   const handleSelectOption = (option: Option) => {
     setAnswers(prev => ({ ...prev, [currentStep]: option }));
+
+    // 선택하면 자동으로 다음 질문으로 이동
+    if (data && currentStep < data.questions.length - 1) {
+      setTimeout(() => {
+        setCurrentStep(prev => prev + 1);
+      }, 300); // 짧은 딜레이로 선택 애니메이션 보여주기
+    } else if (data && currentStep === data.questions.length - 1) {
+      // 마지막 질문이면 결과 계산 (답변이 저장된 후 실행)
+      setTimeout(() => {
+        calculateResultWithAnswer(option);
+      }, 300);
+    }
   };
 
   const handleNext = () => {
@@ -64,16 +76,26 @@ export const ComfortChat: React.FC = () => {
     }
   };
 
-  const calculateResult = () => {
+  const calculateResultWithAnswer = (lastAnswer: Option) => {
     if (!data) return;
 
-    // Collect all tags from answers
+    // 마지막 답변 포함하여 태그 수집
     const allTags: string[] = [];
-    Object.values(answers).forEach(answer => {
-      if (answer?.tags) {
+    Object.entries(answers).forEach(([step, answer]) => {
+      if (answer?.tags && parseInt(step) !== currentStep) {
         allTags.push(...answer.tags);
       }
     });
+    // 마지막 답변 태그 추가
+    if (lastAnswer?.tags) {
+      allTags.push(...lastAnswer.tags);
+    }
+
+    processTagsAndShowResult(allTags);
+  };
+
+  const processTagsAndShowResult = (allTags: string[]) => {
+    if (!data) return;
 
     // Count tag frequencies
     const tagCounts: Record<string, number> = {};
@@ -117,6 +139,20 @@ export const ComfortChat: React.FC = () => {
 
     setRecommendedVerses(topVerses);
     setShowResult(true);
+  };
+
+  const calculateResult = () => {
+    if (!data) return;
+
+    // Collect all tags from answers
+    const allTags: string[] = [];
+    Object.values(answers).forEach(answer => {
+      if (answer?.tags) {
+        allTags.push(...answer.tags);
+      }
+    });
+
+    processTagsAndShowResult(allTags);
   };
 
   const handleRestart = () => {
@@ -219,40 +255,41 @@ export const ComfortChat: React.FC = () => {
 
       {/* Navigation Buttons */}
       <div className="flex gap-3">
-        {currentStep > 0 && (
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handlePrev}
+          disabled={currentStep === 0}
+          className={`flex-1 py-4 rounded-xl font-medium flex items-center justify-center gap-2 ${
+            currentStep === 0
+              ? 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed'
+              : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200'
+          }`}
+        >
+          <ChevronLeft className="w-5 h-5" />
+          이전
+        </motion.button>
+        {currentStep === data.questions.length - 1 ? (
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={handlePrev}
-            className="flex-1 py-4 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium flex items-center justify-center gap-2"
+            onClick={calculateResult}
+            className="flex-1 py-4 rounded-xl font-medium flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white"
           >
-            <ChevronLeft className="w-5 h-5" />
-            이전
+            결과 보기
+            <Heart className="w-5 h-5" />
+          </motion.button>
+        ) : (
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleNext}
+            className="flex-1 py-4 rounded-xl font-medium flex items-center justify-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+          >
+            다음
+            <ChevronRight className="w-5 h-5" />
           </motion.button>
         )}
-        <motion.button
-          whileHover={{ scale: selectedOption ? 1.05 : 1 }}
-          whileTap={{ scale: selectedOption ? 0.95 : 1 }}
-          onClick={handleNext}
-          disabled={!selectedOption}
-          className={`flex-1 py-4 rounded-xl font-medium flex items-center justify-center gap-2 ${
-            selectedOption
-              ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
-              : 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
-          }`}
-        >
-          {currentStep === data.questions.length - 1 ? (
-            <>
-              결과 보기
-              <Heart className="w-5 h-5" />
-            </>
-          ) : (
-            <>
-              다음
-              <ChevronRight className="w-5 h-5" />
-            </>
-          )}
-        </motion.button>
       </div>
 
       {/* Encouragement Message */}

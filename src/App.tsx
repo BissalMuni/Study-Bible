@@ -7,6 +7,7 @@ import { ThemeList } from './components/theme/ThemeList';
 import { ThemeDetail } from './components/theme/ThemeDetail';
 import { AwanaRecital } from './components/awana/AwanaRecital';
 import { BibleReader } from './components/bible/BibleReader';
+import { ComfortChat } from './components/comfort/ComfortChat';
 import { TabType, Theme } from './types';
 import './index.css';
 
@@ -37,6 +38,8 @@ function AppContent() {
         return '어와나 암송';
       case 'bible':
         return '성경읽기';
+      case 'comfort':
+        return '오늘의 위로';
       default:
         return '';
     }
@@ -102,6 +105,19 @@ function AppContent() {
             transition={{ duration: 0.2 }}
           >
             <BibleReader onChapterViewChange={setIsReadingChapter} />
+          </motion.div>
+        )}
+
+        {activeTab === 'comfort' && (
+          <motion.div
+            key="comfort"
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.2 }}
+          >
+            <ComfortChat />
           </motion.div>
         )}
       </AnimatePresence>

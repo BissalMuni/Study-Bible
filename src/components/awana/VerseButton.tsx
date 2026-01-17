@@ -51,7 +51,12 @@ export const VerseButton: React.FC<VerseButtonProps> = ({
     if (isPlaying && audioRef.current) {
       audioRef.current.pause();
       audioRef.current = null;
+      if (delayTimerRef.current) {
+        clearTimeout(delayTimerRef.current);
+        delayTimerRef.current = null;
+      }
       setIsPlaying(false);
+      setIsWaiting(false);
       setCurrentRepeat(0);
       return;
     }
@@ -102,6 +107,10 @@ export const VerseButton: React.FC<VerseButtonProps> = ({
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;
+      }
+      if (delayTimerRef.current) {
+        clearTimeout(delayTimerRef.current);
+        delayTimerRef.current = null;
       }
     };
   }, []);
@@ -154,14 +163,15 @@ export const VerseButton: React.FC<VerseButtonProps> = ({
         >
           <div className="flex-1 h-1 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-blue-500"
+              className={`h-full ${isWaiting ? 'bg-orange-400' : 'bg-blue-500'}`}
               initial={{ width: '0%' }}
               animate={{ width: '100%' }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: isWaiting ? 5 : 2, repeat: isWaiting ? 0 : Infinity }}
+              key={isWaiting ? 'waiting' : 'playing'}
             />
           </div>
           <span className="text-xs text-gray-500 dark:text-gray-400">
-            {currentRepeat + 1}/{repeatCount}
+            {isWaiting ? '대기중...' : `${currentRepeat + 1}/${repeatCount}`}
           </span>
         </motion.div>
       )}

@@ -48,4 +48,4 @@ export interface GlobalState {
 }
 
 // Navigation types
-export type TabType = 'theme' | 'awana' | 'bible';
+export type TabType = 'theme' | 'awana' | 'bible' | 'comfort';
