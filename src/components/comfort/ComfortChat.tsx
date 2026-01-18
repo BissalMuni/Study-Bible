@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Heart, RefreshCw } from 'lucide-react';
 import { ComfortResult } from './ComfortResult';
+import { useAdContext } from '../../contexts/AdContext';
 
 interface Option {
   id: string;
@@ -47,6 +48,7 @@ interface AnswerState {
 }
 
 export const ComfortChat: React.FC = () => {
+  const { triggerAd } = useAdContext();
   const [data, setData] = useState<ComfortData | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, AnswerState>>({});
@@ -158,6 +160,9 @@ export const ComfortChat: React.FC = () => {
 
   const processTagsAndShowResult = (allTags: string[]) => {
     if (!data) return;
+
+    // 결과 표시 전 광고 확률적 표시
+    triggerAd('COMFORT_RESULT');
 
     let topVerses: Verse[] = [];
     let sortedTags: string[] = [];

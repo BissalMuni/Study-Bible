@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, Book } from 'lucide-react';
 import { useGlobalState } from '../../contexts/GlobalStateContext';
+import { useAdContext } from '../../contexts/AdContext';
 import { SettingsBox } from '../common/SettingsBox';
 import { ChapterContent } from './ChapterContent';
 
@@ -24,6 +25,7 @@ interface BibleReaderProps {
 
 export const BibleReader: React.FC<BibleReaderProps> = ({ onChapterViewChange }) => {
   const { state } = useGlobalState();
+  const { triggerAd } = useAdContext();
   const [bibleData, setBibleData] = useState<BibleData | null>(null);
   const [expandedTestament, setExpandedTestament] = useState<'구약' | '신약' | null>('구약');
   const [selectedBook, setSelectedBook] = useState<BibleBook | null>(null);
@@ -46,6 +48,7 @@ export const BibleReader: React.FC<BibleReaderProps> = ({ onChapterViewChange })
   };
 
   const handleChapterSelect = (book: BibleBook, chapter: number) => {
+    triggerAd('BIBLE_CHAPTER_SELECT');
     setSelectedBook(book);
     setSelectedChapter(chapter);
     onChapterViewChange?.(true);

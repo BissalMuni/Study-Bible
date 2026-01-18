@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GlobalStateProvider } from './contexts/GlobalStateContext';
+import { AdProvider, useAdContext } from './contexts/AdContext';
 import { BottomNav } from './components/layout/BottomNav';
 import { Header } from './components/layout/Header';
 import { ThemeList } from './components/theme/ThemeList';
@@ -24,6 +25,9 @@ function AppContent() {
   const [isReadingChapter, setIsReadingChapter] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
 
+  // 광고 컨텍스트 사용
+  const { triggerAd } = useAdContext();
+
   // 오늘 이미 환영 화면을 본 경우 스킵
   useEffect(() => {
     const lastVisit = localStorage.getItem('bibleApp_lastWelcomeDate');
@@ -41,10 +45,12 @@ function AppContent() {
   };
 
   const handleThemeSelect = (theme: Theme) => {
+    triggerAd('THEME_SELECT');
     setSelectedTheme(theme);
   };
 
   const handleBackFromTheme = () => {
+    triggerAd('THEME_BACK');
     setSelectedTheme(null);
   };
 
@@ -154,7 +160,12 @@ function AppContent() {
       </main>
 
       {/* BottomNav - 고정 높이 */}
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+      <BottomNav activeTab={activeTab} onTabChange={(tab) => {
+        if (tab !== activeTab) {
+          triggerAd('TAB_CHANGE');
+        }
+        setActiveTab(tab);
+      }} />
     </div>
   );
 }
@@ -162,7 +173,9 @@ function AppContent() {
 function App() {
   return (
     <GlobalStateProvider>
-      <AppContent />
+      <AdProvider>
+        <AppContent />
+      </AdProvider>
     </GlobalStateProvider>
   );
 }
