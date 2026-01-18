@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, BookOpen, ChevronDown, ChevronRight } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronDown, ChevronRight, Volume2, VolumeX } from 'lucide-react';
 import { Theme } from '../../types';
+import { useTTS } from '../../hooks/useTTS';
 
 interface PassageRef {
   book: string;
@@ -46,6 +47,12 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
   const [verseContent, setVerseContent] = useState<BibleVerse[]>([]);
   const [loadingVerses, setLoadingVerses] = useState(false);
   const [bibleThemeData, setBibleThemeData] = useState<BibleThemeData | null>(null);
+  const { speak, isSpeaking, currentText } = useTTS();
+
+  const handleTTSClick = (e: React.MouseEvent, text: string) => {
+    e.stopPropagation();
+    speak(text);
+  };
 
   // Load theme passage data
   useEffect(() => {
@@ -268,20 +275,39 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
                                             </p>
                                           ) : verseContent.length > 0 ? (
                                             <div className="space-y-2">
-                                              {verseContent.map((verse) => (
-                                                <p
-                                                  key={verse.verse}
-                                                  className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed"
-                                                >
-                                                  <span
-                                                    className="font-bold mr-1"
-                                                    style={{ color: theme.color }}
+                                              {verseContent.map((verse) => {
+                                                const isCurrentlySpeaking = isSpeaking && currentText === verse.content;
+                                                return (
+                                                  <div
+                                                    key={verse.verse}
+                                                    className={`flex items-start gap-2 p-2 rounded-lg transition-colors ${
+                                                      isCurrentlySpeaking ? 'bg-white/50 dark:bg-gray-700/50' : ''
+                                                    }`}
                                                   >
-                                                    {verse.verse}
-                                                  </span>
-                                                  {verse.content}
-                                                </p>
-                                              ))}
+                                                    <p className="flex-1 text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
+                                                      <span
+                                                        className="font-bold mr-1"
+                                                        style={{ color: theme.color }}
+                                                      >
+                                                        {verse.verse}
+                                                      </span>
+                                                      {verse.content}
+                                                    </p>
+                                                    <motion.button
+                                                      whileTap={{ scale: 0.9 }}
+                                                      onClick={(e) => handleTTSClick(e, verse.content)}
+                                                      className={`p-1.5 rounded-full flex-shrink-0 ${
+                                                        isCurrentlySpeaking
+                                                          ? 'text-white'
+                                                          : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
+                                                      }`}
+                                                      style={isCurrentlySpeaking ? { backgroundColor: theme.color } : {}}
+                                                    >
+                                                      {isCurrentlySpeaking ? <VolumeX size={16} /> : <Volume2 size={16} />}
+                                                    </motion.button>
+                                                  </div>
+                                                );
+                                              })}
                                             </div>
                                           ) : (
                                             <p className="text-center text-gray-500 text-sm">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, RefreshCw, BookOpen, Sparkles } from 'lucide-react';
+import { Heart, RefreshCw, BookOpen, Sparkles, Volume2, VolumeX } from 'lucide-react';
+import { useTTS } from '../../hooks/useTTS';
 
 interface Verse {
   id: number;
@@ -44,6 +45,13 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
   encouragementMessages,
   onRestart,
 }) => {
+  const { speak, isSpeaking, currentText } = useTTS();
+
+  const handleTTSClick = (e: React.MouseEvent, text: string) => {
+    e.stopPropagation();
+    speak(text);
+  };
+
   // Get top 3 tags for display
   const topTags = tags.slice(0, 3);
 
@@ -100,38 +108,56 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
 
       {/* Verses */}
       <div className="space-y-4 mb-8">
-        {verses.map((verse) => (
-          <motion.div
-            key={verse.id}
-            variants={itemVariants}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden"
-          >
-            {/* Verse Header */}
-            <div className="bg-gradient-to-r from-purple-500 to-blue-500 px-4 py-3 flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-white" />
-              <span className="text-white font-medium">{verse.reference}</span>
-            </div>
-
-            {/* Verse Content */}
-            <div className="p-5">
-              <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-base">
-                "{verse.text}"
-              </p>
-
-              {/* Verse Tags */}
-              <div className="flex flex-wrap gap-1 mt-4">
-                {verse.tags.slice(0, 3).map(tag => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full"
-                  >
-                    {tagDescriptions[tag] || tag}
-                  </span>
-                ))}
+        {verses.map((verse) => {
+          const isCurrentlySpeaking = isSpeaking && currentText === verse.text;
+          return (
+            <motion.div
+              key={verse.id}
+              variants={itemVariants}
+              className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden ${
+                isCurrentlySpeaking ? 'ring-2 ring-purple-500' : ''
+              }`}
+            >
+              {/* Verse Header */}
+              <div className="bg-gradient-to-r from-purple-500 to-blue-500 px-4 py-3 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-white" />
+                  <span className="text-white font-medium">{verse.reference}</span>
+                </div>
+                <motion.button
+                  whileTap={{ scale: 0.9 }}
+                  onClick={(e) => handleTTSClick(e, verse.text)}
+                  className={`p-2 rounded-full ${
+                    isCurrentlySpeaking
+                      ? 'bg-white text-purple-500'
+                      : 'bg-white/20 text-white hover:bg-white/30'
+                  }`}
+                >
+                  {isCurrentlySpeaking ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                </motion.button>
               </div>
-            </div>
-          </motion.div>
-        ))}
+
+              {/* Verse Content */}
+              <div className="p-5">
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-base">
+                  "{verse.text}"
+                </p>
+
+                {/* Verse Tags */}
+                <div className="flex flex-wrap gap-1 mt-4">
+                  {verse.tags.slice(0, 3).map(tag => (
+                    <span
+                      key={tag}
+                      className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full"
+                    >
+                      {tagDescriptions[tag] || tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Encouragement Message */}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, X, Volume2, VolumeX } from 'lucide-react';
+import { useTTS } from '../../hooks/useTTS';
 
 interface BibleBook {
   id: number;
@@ -29,6 +30,17 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
   const [verses, setVerses] = useState<VerseData[] | null>(null);
   const [currentChapter, setCurrentChapter] = useState(chapter);
   const [selectedVerse, setSelectedVerse] = useState<VerseData | null>(null);
+  const { speak, stop, isSpeaking, currentText } = useTTS();
+
+  // 장 변경 시 TTS 중지
+  useEffect(() => {
+    stop();
+  }, [currentChapter, stop]);
+
+  const handleTTSClick = (e: React.MouseEvent, text: string) => {
+    e.stopPropagation();
+    speak(text);
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -158,22 +170,42 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
               <p className="text-gray-500 text-center py-10">구절을 불러올 수 없습니다.</p>
             ) : (
               <div className="space-y-4">
-                {verses.map((verse, idx) => (
-                  <motion.p
-                    key={verse.verse}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: Math.min(idx * 0.02, 0.5) }}
-                    onClick={() => handleVerseClick(verse)}
-                    className="leading-relaxed text-gray-800 dark:text-gray-200 cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg p-3 transition-colors"
-                    style={{ fontSize }}
-                  >
-                    <span className="text-blue-600 dark:text-blue-400 font-bold mr-2">
-                      {verse.verse}
-                    </span>
-                    {verse.content}
-                  </motion.p>
-                ))}
+                {verses.map((verse, idx) => {
+                  const isCurrentlySpeaking = isSpeaking && currentText === verse.content;
+                  return (
+                    <motion.div
+                      key={verse.verse}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: Math.min(idx * 0.02, 0.5) }}
+                      className={`leading-relaxed text-gray-800 dark:text-gray-200 rounded-lg p-3 transition-colors flex items-start gap-2 ${
+                        isCurrentlySpeaking ? 'bg-blue-100 dark:bg-blue-900/30' : 'hover:bg-blue-50 dark:hover:bg-gray-700'
+                      }`}
+                      style={{ fontSize }}
+                    >
+                      <div
+                        className="flex-1 cursor-pointer"
+                        onClick={() => handleVerseClick(verse)}
+                      >
+                        <span className="text-blue-600 dark:text-blue-400 font-bold mr-2">
+                          {verse.verse}
+                        </span>
+                        {verse.content}
+                      </div>
+                      <motion.button
+                        whileTap={{ scale: 0.9 }}
+                        onClick={(e) => handleTTSClick(e, verse.content)}
+                        className={`p-2 rounded-full flex-shrink-0 ${
+                          isCurrentlySpeaking
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400'
+                        }`}
+                      >
+                        {isCurrentlySpeaking ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                      </motion.button>
+                    </motion.div>
+                  );
+                })}
               </div>
             )}
           </motion.div>
