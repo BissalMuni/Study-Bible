@@ -1,0 +1,619 @@
+{
+  "ruth": {
+    "title": "룻 - 모압 여인의 충성과 헌신",
+    "sections": [
+      {
+        "title": "나오미와 함께 떠나는 룻",
+        "passages": [
+          { "book": "룻기", "bookId": 8, "chapter": 1, "startVerse": 1, "endVerse": 5, "summary": "나오미 가족의 모압 이주" },
+          { "book": "룻기", "bookId": 8, "chapter": 1, "startVerse": 6, "endVerse": 18, "summary": "룻의 결단 - '어머니의 하나님이 나의 하나님이 되시리라'" },
+          { "book": "룻기", "bookId": 8, "chapter": 1, "startVerse": 19, "endVerse": 22, "summary": "베들레헴 귀환" }
+        ]
+      },
+      {
+        "title": "보아스의 밭에서 이삭을 줍다",
+        "passages": [
+          { "book": "룻기", "bookId": 8, "chapter": 2, "startVerse": 1, "endVerse": 13, "summary": "보아스를 만나다" },
+          { "book": "룻기", "bookId": 8, "chapter": 2, "startVerse": 14, "endVerse": 23, "summary": "보아스의 호의" }
+        ]
+      },
+      {
+        "title": "기업 무를 자 보아스",
+        "passages": [
+          { "book": "룻기", "bookId": 8, "chapter": 3, "startVerse": 1, "endVerse": 18, "summary": "타작마당에서의 만남" },
+          { "book": "룻기", "bookId": 8, "chapter": 4, "startVerse": 1, "endVerse": 12, "summary": "보아스의 기업 무름" },
+          { "book": "룻기", "bookId": 8, "chapter": 4, "startVerse": 13, "endVerse": 22, "summary": "다윗의 증조할머니가 되다" }
+        ]
+      }
+    ]
+  },
+  "esther": {
+    "title": "에스더 - 유대 민족을 구한 왕비",
+    "sections": [
+      {
+        "title": "에스더가 왕비가 되다",
+        "passages": [
+          { "book": "에스더", "bookId": 17, "chapter": 1, "startVerse": 1, "endVerse": 22, "summary": "와스디 왕비의 폐위" },
+          { "book": "에스더", "bookId": 17, "chapter": 2, "startVerse": 1, "endVerse": 18, "summary": "에스더가 왕비로 간택됨" },
+          { "book": "에스더", "bookId": 17, "chapter": 2, "startVerse": 19, "endVerse": 23, "summary": "모르드개가 왕을 구하다" }
+        ]
+      },
+      {
+        "title": "하만의 음모",
+        "passages": [
+          { "book": "에스더", "bookId": 17, "chapter": 3, "startVerse": 1, "endVerse": 15, "summary": "하만의 유대인 멸절 계획" },
+          { "book": "에스더", "bookId": 17, "chapter": 4, "startVerse": 1, "endVerse": 17, "summary": "'죽으면 죽으리이다'" }
+        ]
+      },
+      {
+        "title": "에스더의 용기",
+        "passages": [
+          { "book": "에스더", "bookId": 17, "chapter": 5, "startVerse": 1, "endVerse": 14, "summary": "에스더의 첫 번째 잔치" },
+          { "book": "에스더", "bookId": 17, "chapter": 6, "startVerse": 1, "endVerse": 14, "summary": "모르드개의 존귀" },
+          { "book": "에스더", "bookId": 17, "chapter": 7, "startVerse": 1, "endVerse": 10, "summary": "하만의 몰락" }
+        ]
+      },
+      {
+        "title": "유대인의 구원",
+        "passages": [
+          { "book": "에스더", "bookId": 17, "chapter": 8, "startVerse": 1, "endVerse": 17, "summary": "유대인을 위한 새 조서" },
+          { "book": "에스더", "bookId": 17, "chapter": 9, "startVerse": 1, "endVerse": 32, "summary": "부림절의 제정" }
+        ]
+      }
+    ]
+  },
+  "deborah": {
+    "title": "드보라 - 이스라엘의 여성 사사",
+    "sections": [
+      {
+        "title": "드보라의 지도력",
+        "passages": [
+          { "book": "사사기", "bookId": 7, "chapter": 4, "startVerse": 1, "endVerse": 10, "summary": "드보라가 바락을 부르다" },
+          { "book": "사사기", "bookId": 7, "chapter": 4, "startVerse": 11, "endVerse": 24, "summary": "시스라의 죽음" }
+        ]
+      },
+      {
+        "title": "드보라의 노래",
+        "passages": [
+          { "book": "사사기", "bookId": 7, "chapter": 5, "startVerse": 1, "endVerse": 31, "summary": "승리의 찬양" }
+        ]
+      }
+    ]
+  },
+  "sarah": {
+    "title": "족장들의 아내들",
+    "sections": [
+      {
+        "title": "사라 - 믿음의 어머니",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 12, "startVerse": 10, "endVerse": 20, "summary": "애굽에서의 사라" },
+          { "book": "창세기", "bookId": 1, "chapter": 16, "startVerse": 1, "endVerse": 16, "summary": "하갈과 이스마엘" },
+          { "book": "창세기", "bookId": 1, "chapter": 18, "startVerse": 1, "endVerse": 15, "summary": "이삭 출생 약속" },
+          { "book": "창세기", "bookId": 1, "chapter": 21, "startVerse": 1, "endVerse": 21, "summary": "이삭의 탄생과 하갈의 쫓겨남" },
+          { "book": "창세기", "bookId": 1, "chapter": 23, "startVerse": 1, "endVerse": 20, "summary": "사라의 죽음" }
+        ]
+      },
+      {
+        "title": "리브가 - 이삭의 아내",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 24, "startVerse": 1, "endVerse": 27, "summary": "리브가를 만나다" },
+          { "book": "창세기", "bookId": 1, "chapter": 24, "startVerse": 50, "endVerse": 67, "summary": "리브가의 결혼" },
+          { "book": "창세기", "bookId": 1, "chapter": 25, "startVerse": 19, "endVerse": 28, "summary": "에서와 야곱의 탄생" },
+          { "book": "창세기", "bookId": 1, "chapter": 27, "startVerse": 1, "endVerse": 29, "summary": "야곱이 축복을 받다" }
+        ]
+      },
+      {
+        "title": "라헬과 레아 - 야곱의 아내들",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 29, "startVerse": 1, "endVerse": 30, "summary": "야곱의 결혼" },
+          { "book": "창세기", "bookId": 1, "chapter": 29, "startVerse": 31, "endVerse": 35, "summary": "레아의 아들들" },
+          { "book": "창세기", "bookId": 1, "chapter": 30, "startVerse": 1, "endVerse": 24, "summary": "라헬의 아들 요셉" },
+          { "book": "창세기", "bookId": 1, "chapter": 35, "startVerse": 16, "endVerse": 20, "summary": "라헬의 죽음과 베냐민" }
+        ]
+      }
+    ]
+  },
+  "miriam": {
+    "title": "미리암과 요게벳",
+    "sections": [
+      {
+        "title": "모세를 살리다",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 2, "startVerse": 1, "endVerse": 10, "summary": "갈대 상자의 아기 모세" }
+        ]
+      },
+      {
+        "title": "미리암의 찬양",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 15, "startVerse": 20, "endVerse": 21, "summary": "홍해를 건넌 후 미리암의 노래" }
+        ]
+      },
+      {
+        "title": "미리암의 실수",
+        "passages": [
+          { "book": "민수기", "bookId": 4, "chapter": 12, "startVerse": 1, "endVerse": 16, "summary": "모세를 비방한 미리암" }
+        ]
+      }
+    ]
+  },
+  "hannah": {
+    "title": "한나 - 기도의 여인",
+    "sections": [
+      {
+        "title": "한나의 기도",
+        "passages": [
+          { "book": "사무엘상", "bookId": 9, "chapter": 1, "startVerse": 1, "endVerse": 18, "summary": "한나의 간절한 기도" },
+          { "book": "사무엘상", "bookId": 9, "chapter": 1, "startVerse": 19, "endVerse": 28, "summary": "사무엘의 탄생과 봉헌" }
+        ]
+      },
+      {
+        "title": "한나의 찬양",
+        "passages": [
+          { "book": "사무엘상", "bookId": 9, "chapter": 2, "startVerse": 1, "endVerse": 11, "summary": "한나의 노래" }
+        ]
+      }
+    ]
+  },
+  "cain-abel": {
+    "title": "가인과 아벨",
+    "sections": [
+      {
+        "title": "두 제물",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 4, "startVerse": 1, "endVerse": 7, "summary": "가인과 아벨의 제물" },
+          { "book": "창세기", "bookId": 1, "chapter": 4, "startVerse": 8, "endVerse": 16, "summary": "가인의 살인과 저주" },
+          { "book": "창세기", "bookId": 1, "chapter": 4, "startVerse": 17, "endVerse": 26, "summary": "가인의 후손과 셋의 탄생" }
+        ]
+      }
+    ]
+  },
+  "ishmael-isaac": {
+    "title": "이스마엘과 이삭",
+    "sections": [
+      {
+        "title": "이스마엘의 탄생",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 16, "startVerse": 1, "endVerse": 16, "summary": "하갈과 이스마엘" }
+        ]
+      },
+      {
+        "title": "이삭의 약속",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 17, "startVerse": 15, "endVerse": 22, "summary": "이삭의 약속" },
+          { "book": "창세기", "bookId": 1, "chapter": 18, "startVerse": 1, "endVerse": 15, "summary": "사라가 웃다" },
+          { "book": "창세기", "bookId": 1, "chapter": 21, "startVerse": 1, "endVerse": 7, "summary": "이삭의 탄생" }
+        ]
+      },
+      {
+        "title": "이스마엘이 쫓겨나다",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 21, "startVerse": 8, "endVerse": 21, "summary": "하갈과 이스마엘의 추방" }
+        ]
+      }
+    ]
+  },
+  "esau-jacob": {
+    "title": "에서와 야곱",
+    "sections": [
+      {
+        "title": "쌍둥이의 탄생",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 25, "startVerse": 19, "endVerse": 28, "summary": "에서와 야곱의 탄생" }
+        ]
+      },
+      {
+        "title": "장자권을 판 에서",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 25, "startVerse": 29, "endVerse": 34, "summary": "팥죽 한 그릇에 판 장자권" }
+        ]
+      },
+      {
+        "title": "야곱의 축복 탈취",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 27, "startVerse": 1, "endVerse": 29, "summary": "야곱이 축복을 가로채다" },
+          { "book": "창세기", "bookId": 1, "chapter": 27, "startVerse": 30, "endVerse": 46, "summary": "에서의 분노" }
+        ]
+      }
+    ]
+  },
+  "manasseh-ephraim": {
+    "title": "므낫세와 에브라임",
+    "sections": [
+      {
+        "title": "엇갈린 축복",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 48, "startVerse": 1, "endVerse": 7, "summary": "야곱이 요셉의 아들들을 양자로 삼다" },
+          { "book": "창세기", "bookId": 1, "chapter": 48, "startVerse": 8, "endVerse": 22, "summary": "야곱이 손을 엇갈려 축복하다" }
+        ]
+      }
+    ]
+  },
+  "eliab-david": {
+    "title": "엘리압과 다윗",
+    "sections": [
+      {
+        "title": "하나님의 선택",
+        "passages": [
+          { "book": "사무엘상", "bookId": 9, "chapter": 16, "startVerse": 1, "endVerse": 13, "summary": "막내 다윗이 기름부음 받다" }
+        ]
+      },
+      {
+        "title": "형의 질투",
+        "passages": [
+          { "book": "사무엘상", "bookId": 9, "chapter": 17, "startVerse": 28, "endVerse": 30, "summary": "엘리압의 분노" }
+        ]
+      }
+    ]
+  },
+  "adonijah-solomon": {
+    "title": "아도니야와 솔로몬",
+    "sections": [
+      {
+        "title": "아도니야의 반역",
+        "passages": [
+          { "book": "열왕기상", "bookId": 11, "chapter": 1, "startVerse": 1, "endVerse": 10, "summary": "아도니야가 스스로 왕이 되려 하다" },
+          { "book": "열왕기상", "bookId": 11, "chapter": 1, "startVerse": 11, "endVerse": 27, "summary": "나단과 밧세바의 개입" }
+        ]
+      },
+      {
+        "title": "솔로몬의 즉위",
+        "passages": [
+          { "book": "열왕기상", "bookId": 11, "chapter": 1, "startVerse": 28, "endVerse": 40, "summary": "솔로몬이 왕이 되다" },
+          { "book": "열왕기상", "bookId": 11, "chapter": 1, "startVerse": 41, "endVerse": 53, "summary": "아도니야의 두려움" }
+        ]
+      }
+    ]
+  },
+  "flood": {
+    "title": "노아 홍수",
+    "sections": [
+      {
+        "title": "타락한 세상",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 6, "startVerse": 1, "endVerse": 8, "summary": "세상의 부패와 노아의 은혜" },
+          { "book": "창세기", "bookId": 1, "chapter": 6, "startVerse": 9, "endVerse": 22, "summary": "방주 건조 명령" }
+        ]
+      },
+      {
+        "title": "대홍수",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 7, "startVerse": 1, "endVerse": 24, "summary": "40일 동안의 홍수" }
+        ]
+      },
+      {
+        "title": "새로운 시작",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 8, "startVerse": 1, "endVerse": 22, "summary": "물이 빠지고 방주에서 나오다" },
+          { "book": "창세기", "bookId": 1, "chapter": 9, "startVerse": 1, "endVerse": 17, "summary": "무지개 언약" }
+        ]
+      }
+    ]
+  },
+  "babel": {
+    "title": "바벨탑",
+    "sections": [
+      {
+        "title": "인간의 교만",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 11, "startVerse": 1, "endVerse": 9, "summary": "바벨탑 사건과 언어의 혼잡" }
+        ]
+      }
+    ]
+  },
+  "sodom": {
+    "title": "소돔과 고모라",
+    "sections": [
+      {
+        "title": "아브라함의 중보",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 18, "startVerse": 16, "endVerse": 33, "summary": "아브라함이 소돔을 위해 기도하다" }
+        ]
+      },
+      {
+        "title": "심판",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 19, "startVerse": 1, "endVerse": 14, "summary": "두 천사가 소돔에 오다" },
+          { "book": "창세기", "bookId": 1, "chapter": 19, "startVerse": 15, "endVerse": 29, "summary": "소돔의 멸망과 롯의 아내" }
+        ]
+      }
+    ]
+  },
+  "plagues": {
+    "title": "애굽의 10재앙",
+    "sections": [
+      {
+        "title": "첫 번째 ~ 세 번째 재앙",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 7, "startVerse": 14, "endVerse": 25, "summary": "첫째 재앙: 피" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 8, "startVerse": 1, "endVerse": 15, "summary": "둘째 재앙: 개구리" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 8, "startVerse": 16, "endVerse": 19, "summary": "셋째 재앙: 이" }
+        ]
+      },
+      {
+        "title": "네 번째 ~ 여섯 번째 재앙",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 8, "startVerse": 20, "endVerse": 32, "summary": "넷째 재앙: 파리 떼" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 9, "startVerse": 1, "endVerse": 7, "summary": "다섯째 재앙: 가축 전염병" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 9, "startVerse": 8, "endVerse": 12, "summary": "여섯째 재앙: 악성 종기" }
+        ]
+      },
+      {
+        "title": "일곱 번째 ~ 아홉 번째 재앙",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 9, "startVerse": 13, "endVerse": 35, "summary": "일곱째 재앙: 우박" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 10, "startVerse": 1, "endVerse": 20, "summary": "여덟째 재앙: 메뚜기" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 10, "startVerse": 21, "endVerse": 29, "summary": "아홉째 재앙: 흑암" }
+        ]
+      },
+      {
+        "title": "열 번째 재앙과 유월절",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 11, "startVerse": 1, "endVerse": 10, "summary": "장자의 죽음 예고" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 12, "startVerse": 1, "endVerse": 14, "summary": "유월절 제정" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 12, "startVerse": 29, "endVerse": 42, "summary": "열째 재앙: 장자의 죽음" }
+        ]
+      }
+    ]
+  },
+  "golden-calf": {
+    "title": "금송아지 사건",
+    "sections": [
+      {
+        "title": "우상숭배",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 32, "startVerse": 1, "endVerse": 14, "summary": "금송아지를 만들다" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 32, "startVerse": 15, "endVerse": 29, "summary": "모세의 분노와 레위인의 검" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 32, "startVerse": 30, "endVerse": 35, "summary": "모세의 중보" }
+        ]
+      }
+    ]
+  },
+  "spies": {
+    "title": "12정탐꾼 사건",
+    "sections": [
+      {
+        "title": "정탐",
+        "passages": [
+          { "book": "민수기", "bookId": 4, "chapter": 13, "startVerse": 1, "endVerse": 25, "summary": "가나안 정탐" },
+          { "book": "민수기", "bookId": 4, "chapter": 13, "startVerse": 26, "endVerse": 33, "summary": "정탐꾼들의 보고" }
+        ]
+      },
+      {
+        "title": "불신앙과 심판",
+        "passages": [
+          { "book": "민수기", "bookId": 4, "chapter": 14, "startVerse": 1, "endVerse": 12, "summary": "백성의 원망" },
+          { "book": "민수기", "bookId": 4, "chapter": 14, "startVerse": 13, "endVerse": 25, "summary": "모세의 중보" },
+          { "book": "민수기", "bookId": 4, "chapter": 14, "startVerse": 26, "endVerse": 45, "summary": "40년 광야 방황 선언" }
+        ]
+      }
+    ]
+  },
+  "korah": {
+    "title": "고라의 반역",
+    "sections": [
+      {
+        "title": "반역",
+        "passages": [
+          { "book": "민수기", "bookId": 4, "chapter": 16, "startVerse": 1, "endVerse": 19, "summary": "고라, 다단, 아비람의 반역" },
+          { "book": "민수기", "bookId": 4, "chapter": 16, "startVerse": 20, "endVerse": 35, "summary": "땅이 갈라지다" },
+          { "book": "민수기", "bookId": 4, "chapter": 16, "startVerse": 36, "endVerse": 50, "summary": "염병과 아론의 중보" }
+        ]
+      }
+    ]
+  },
+  "achan": {
+    "title": "아간의 죄",
+    "sections": [
+      {
+        "title": "탐욕과 패배",
+        "passages": [
+          { "book": "여호수아", "bookId": 6, "chapter": 7, "startVerse": 1, "endVerse": 9, "summary": "아이 성에서의 패배" },
+          { "book": "여호수아", "bookId": 6, "chapter": 7, "startVerse": 10, "endVerse": 26, "summary": "아간의 죄 발각과 심판" }
+        ]
+      }
+    ]
+  },
+  "noah": {
+    "title": "노아 - 의인",
+    "sections": [
+      {
+        "title": "의인 노아",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 6, "startVerse": 5, "endVerse": 22, "summary": "하나님이 노아를 선택하시다" }
+        ]
+      },
+      {
+        "title": "순종과 구원",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 7, "startVerse": 1, "endVerse": 16, "summary": "방주에 들어가다" },
+          { "book": "창세기", "bookId": 1, "chapter": 8, "startVerse": 15, "endVerse": 22, "summary": "번제를 드리는 노아" }
+        ]
+      },
+      {
+        "title": "언약",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 9, "startVerse": 1, "endVerse": 17, "summary": "무지개 언약" }
+        ]
+      }
+    ]
+  },
+  "abraham": {
+    "title": "아브라함 - 하나님의 벗",
+    "sections": [
+      {
+        "title": "부르심과 순종",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 12, "startVerse": 1, "endVerse": 9, "summary": "아브람의 소명" }
+        ]
+      },
+      {
+        "title": "믿음과 언약",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 15, "startVerse": 1, "endVerse": 21, "summary": "아브람이 믿으니 의로 여기시다" },
+          { "book": "창세기", "bookId": 1, "chapter": 17, "startVerse": 1, "endVerse": 22, "summary": "할례 언약" }
+        ]
+      },
+      {
+        "title": "최고의 시험",
+        "passages": [
+          { "book": "창세기", "bookId": 1, "chapter": 22, "startVerse": 1, "endVerse": 19, "summary": "이삭을 바치라" }
+        ]
+      }
+    ]
+  },
+  "job": {
+    "title": "욥 - 고난 중의 신실함",
+    "sections": [
+      {
+        "title": "욥의 고난",
+        "passages": [
+          { "book": "욥기", "bookId": 18, "chapter": 1, "startVerse": 1, "endVerse": 22, "summary": "의로운 욥에게 닥친 재앙" },
+          { "book": "욥기", "bookId": 18, "chapter": 2, "startVerse": 1, "endVerse": 13, "summary": "두 번째 시험" }
+        ]
+      },
+      {
+        "title": "욥의 고백",
+        "passages": [
+          { "book": "욥기", "bookId": 18, "chapter": 19, "startVerse": 23, "endVerse": 27, "summary": "'나의 구속자가 살아 계시다'" },
+          { "book": "욥기", "bookId": 18, "chapter": 42, "startVerse": 1, "endVerse": 6, "summary": "욥의 회개" }
+        ]
+      },
+      {
+        "title": "욥의 회복",
+        "passages": [
+          { "book": "욥기", "bookId": 18, "chapter": 42, "startVerse": 7, "endVerse": 17, "summary": "욥의 갑절 회복" }
+        ]
+      }
+    ]
+  },
+  "moses": {
+    "title": "모세 - 충성된 종",
+    "sections": [
+      {
+        "title": "모세의 출생과 소명",
+        "passages": [
+          { "book": "출애굽기", "bookId": 2, "chapter": 2, "startVerse": 1, "endVerse": 15, "summary": "모세의 출생" },
+          { "book": "출애굽기", "bookId": 2, "chapter": 3, "startVerse": 1, "endVerse": 22, "summary": "불붙는 떨기나무" }
+        ]
+      },
+      {
+        "title": "모세의 겸손",
+        "passages": [
+          { "book": "민수기", "bookId": 4, "chapter": 12, "startVerse": 1, "endVerse": 16, "summary": "'모세는 온유함이 지면의 모든 사람보다 더하더라'" }
+        ]
+      },
+      {
+        "title": "모세의 마지막",
+        "passages": [
+          { "book": "신명기", "bookId": 5, "chapter": 34, "startVerse": 1, "endVerse": 12, "summary": "모세의 죽음" }
+        ]
+      }
+    ]
+  },
+  "caleb": {
+    "title": "갈렙 - 온전한 믿음",
+    "sections": [
+      {
+        "title": "믿음의 보고",
+        "passages": [
+          { "book": "민수기", "bookId": 4, "chapter": 13, "startVerse": 26, "endVerse": 33, "summary": "갈렙의 믿음의 보고" },
+          { "book": "민수기", "bookId": 4, "chapter": 14, "startVerse": 6, "endVerse": 9, "summary": "'우리가 능히 이기리라'" }
+        ]
+      },
+      {
+        "title": "85세의 용기",
+        "passages": [
+          { "book": "여호수아", "bookId": 6, "chapter": 14, "startVerse": 6, "endVerse": 15, "summary": "'이 산지를 내게 주소서'" }
+        ]
+      }
+    ]
+  },
+  "david": {
+    "title": "다윗 - 하나님의 마음에 맞는 자",
+    "sections": [
+      {
+        "title": "다윗의 선택",
+        "passages": [
+          { "book": "사무엘상", "bookId": 9, "chapter": 16, "startVerse": 1, "endVerse": 13, "summary": "'여호와는 중심을 보느니라'" }
+        ]
+      },
+      {
+        "title": "다윗과 골리앗",
+        "passages": [
+          { "book": "사무엘상", "bookId": 9, "chapter": 17, "startVerse": 32, "endVerse": 51, "summary": "골리앗을 이기다" }
+        ]
+      },
+      {
+        "title": "다윗의 죄와 회개",
+        "passages": [
+          { "book": "사무엘하", "bookId": 10, "chapter": 12, "startVerse": 1, "endVerse": 14, "summary": "나단의 책망" },
+          { "book": "시편", "bookId": 19, "chapter": 51, "startVerse": 1, "endVerse": 19, "summary": "다윗의 회개 기도" }
+        ]
+      }
+    ]
+  },
+  "daniel": {
+    "title": "다니엘 - 은총을 입은 자",
+    "sections": [
+      {
+        "title": "신실한 결단",
+        "passages": [
+          { "book": "다니엘", "bookId": 27, "chapter": 1, "startVerse": 1, "endVerse": 21, "summary": "다니엘이 뜻을 정하다" }
+        ]
+      },
+      {
+        "title": "사자굴에서",
+        "passages": [
+          { "book": "다니엘", "bookId": 27, "chapter": 6, "startVerse": 1, "endVerse": 28, "summary": "사자굴에서 구원받다" }
+        ]
+      },
+      {
+        "title": "기도의 사람",
+        "passages": [
+          { "book": "다니엘", "bookId": 27, "chapter": 9, "startVerse": 1, "endVerse": 23, "summary": "다니엘의 기도와 70이레 계시" }
+        ]
+      }
+    ]
+  },
+  "hezekiah": {
+    "title": "히스기야 - 여호와를 의지한 왕",
+    "sections": [
+      {
+        "title": "히스기야의 개혁",
+        "passages": [
+          { "book": "열왕기하", "bookId": 12, "chapter": 18, "startVerse": 1, "endVerse": 8, "summary": "히스기야의 개혁" }
+        ]
+      },
+      {
+        "title": "산헤립의 위협과 기도",
+        "passages": [
+          { "book": "열왕기하", "bookId": 12, "chapter": 19, "startVerse": 1, "endVerse": 19, "summary": "히스기야의 기도" },
+          { "book": "열왕기하", "bookId": 12, "chapter": 19, "startVerse": 35, "endVerse": 37, "summary": "하나님의 응답" }
+        ]
+      },
+      {
+        "title": "생명 연장",
+        "passages": [
+          { "book": "열왕기하", "bookId": 12, "chapter": 20, "startVerse": 1, "endVerse": 11, "summary": "15년 수명 연장" }
+        ]
+      }
+    ]
+  },
+  "josiah": {
+    "title": "요시야 - 전심으로 돌이킨 왕",
+    "sections": [
+      {
+        "title": "율법책 발견",
+        "passages": [
+          { "book": "열왕기하", "bookId": 12, "chapter": 22, "startVerse": 1, "endVerse": 20, "summary": "율법책을 발견하다" }
+        ]
+      },
+      {
+        "title": "대대적 개혁",
+        "passages": [
+          { "book": "열왕기하", "bookId": 12, "chapter": 23, "startVerse": 1, "endVerse": 25, "summary": "'요시야와 같은 왕이 없었더라'" }
+        ]
+      }
+    ]
+  }
+}

@@ -9,10 +9,16 @@ interface Verse {
   tags: string[];
 }
 
+interface EncouragementMessage {
+  message: string;
+  closing: string;
+}
+
 interface ComfortResultProps {
   verses: Verse[];
   tags: string[];
   tagDescriptions: Record<string, string>;
+  encouragementMessages: Record<string, EncouragementMessage>;
   onRestart: () => void;
 }
 
@@ -35,10 +41,18 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
   verses,
   tags,
   tagDescriptions,
+  encouragementMessages,
   onRestart,
 }) => {
   // Get top 3 tags for display
   const topTags = tags.slice(0, 3);
+
+  // Get encouragement message based on primary tag
+  const primaryTag = tags[0] || 'default';
+  const encouragement = encouragementMessages[primaryTag] || encouragementMessages['default'] || {
+    message: '오늘 하루도 수고하셨어요. 하나님은 당신의 모든 것을 알고 계시고, 항상 함께하십니다.',
+    closing: '평안한 밤 되세요'
+  };
 
   return (
     <motion.div
@@ -86,7 +100,7 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
 
       {/* Verses */}
       <div className="space-y-4 mb-8">
-        {verses.map((verse, index) => (
+        {verses.map((verse) => (
           <motion.div
             key={verse.id}
             variants={itemVariants}
@@ -129,11 +143,10 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
           <Heart className="w-6 h-6 text-pink-500 flex-shrink-0 mt-1" />
           <div>
             <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
-              힘든 하루를 보내셨군요. 하나님은 당신의 모든 상황을 알고 계시고,
-              항상 함께하십니다. 오늘 하루도 수고하셨어요.
+              {encouragement.message}
             </p>
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
-              내일은 더 좋은 날이 될 거예요 ✨
+              {encouragement.closing} ✨
             </p>
           </div>
         </div>

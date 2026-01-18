@@ -26,13 +26,13 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
   onBack,
   fontSize,
 }) => {
-  const [verses, setVerses] = useState<VerseData[]>([]);
+  const [verses, setVerses] = useState<VerseData[] | null>(null);
   const [currentChapter, setCurrentChapter] = useState(chapter);
-  const [isLoading, setIsLoading] = useState(true);
   const [selectedVerse, setSelectedVerse] = useState<VerseData | null>(null);
 
   useEffect(() => {
-    setIsLoading(true);
+    let cancelled = false;
+
     fetch(`/biblerhv/${book.id}-${currentChapter}.txt`)
       .then((res) => {
         if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -54,13 +54,17 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
           }
         }
 
-        setVerses(parsedVerses);
-        setIsLoading(false);
+        if (!cancelled) {
+          setVerses(parsedVerses);
+        }
       })
       .catch((err) => {
         console.error('Failed to load chapter:', err);
-        setIsLoading(false);
       });
+
+    return () => {
+      cancelled = true;
+    };
   }, [book.id, currentChapter]);
 
   const goToPrevChapter = () => {
@@ -136,7 +140,7 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
 
       {/* Content */}
       <div className="px-3">
-        {isLoading ? (
+        {verses === null ? (
           <div className="flex items-center justify-center py-20">
             <motion.div
               animate={{ rotate: 360 }}

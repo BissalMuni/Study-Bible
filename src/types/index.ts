@@ -6,6 +6,17 @@ export interface Theme {
   color: string;
   books: number[];
   description: string;
+  chapters?: string[];
+  keywords?: string[];
+}
+
+export interface ThemeCategory {
+  id: string;
+  name: string;
+  icon: string;
+  color: string;
+  description: string;
+  themes: Theme[];
 }
 
 // Bible types

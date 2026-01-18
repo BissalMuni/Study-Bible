@@ -1,60 +1,1043 @@
 {
-  "themes": [
+  "categories": [
     {
-      "id": "creation",
-      "name": "창조와 시작",
-      "icon": "Sparkles",
-      "color": "#10B981",
-      "books": [1],
-      "description": "천지창조부터 족장시대까지"
-    },
-    {
-      "id": "exodus",
-      "name": "구원의 역사",
-      "icon": "Route",
-      "color": "#F59E0B",
-      "books": [2],
-      "description": "출애굽과 광야 40년"
-    },
-    {
-      "id": "law",
-      "name": "율법과 계명",
-      "icon": "Scale",
-      "color": "#8B5CF6",
-      "books": [3, 4, 5],
-      "description": "하나님의 율법과 언약"
-    },
-    {
-      "id": "conquest",
-      "name": "정복과 사사",
-      "icon": "Sword",
-      "color": "#EF4444",
-      "books": [6, 7, 8],
-      "description": "가나안 정복과 사사 시대"
-    },
-    {
-      "id": "kingdom",
-      "name": "왕국의 흥망",
-      "icon": "Crown",
-      "color": "#3B82F6",
-      "books": [9, 10, 11, 12, 13, 14],
-      "description": "이스라엘 왕국의 역사"
-    },
-    {
-      "id": "wisdom",
-      "name": "지혜 문학",
-      "icon": "BookOpen",
+      "id": "women",
+      "name": "여성 인물",
+      "icon": "Heart",
       "color": "#EC4899",
-      "books": [18, 19, 20, 21, 22],
-      "description": "삶의 지혜와 찬양"
+      "description": "구약성경의 여성 주인공들",
+      "themes": [
+        {
+          "id": "ruth",
+          "name": "룻",
+          "icon": "Heart",
+          "color": "#F472B6",
+          "books": [
+            8
+          ],
+          "chapters": [
+            "룻기 전체"
+          ],
+          "description": "모압 여인의 충성과 헌신",
+          "keywords": [
+            "충성",
+            "헌신",
+            "구속자",
+            "다윗의 조상"
+          ]
+        },
+        {
+          "id": "esther",
+          "name": "에스더",
+          "icon": "Crown",
+          "color": "#A855F7",
+          "books": [
+            17
+          ],
+          "chapters": [
+            "에스더 전체"
+          ],
+          "description": "유대 민족을 구한 왕비",
+          "keywords": [
+            "용기",
+            "구원",
+            "섭리"
+          ]
+        },
+        {
+          "id": "deborah",
+          "name": "드보라",
+          "icon": "Sword",
+          "color": "#F59E0B",
+          "books": [
+            7
+          ],
+          "chapters": [
+            "사사기 4-5장"
+          ],
+          "description": "이스라엘의 여성 사사이자 예언자",
+          "keywords": [
+            "지도력",
+            "믿음",
+            "승리"
+          ]
+        },
+        {
+          "id": "sarah",
+          "name": "사라, 리브가, 라헬, 레아",
+          "icon": "Users",
+          "color": "#10B981",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 12-35장"
+          ],
+          "description": "족장들의 아내, 12지파의 어머니들",
+          "keywords": [
+            "약속",
+            "인내",
+            "어머니"
+          ]
+        },
+        {
+          "id": "miriam",
+          "name": "미리암과 요게벳",
+          "icon": "Baby",
+          "color": "#3B82F6",
+          "books": [
+            2
+          ],
+          "chapters": [
+            "출애굽기 2장, 15장"
+          ],
+          "description": "모세를 살린 어머니와 누이",
+          "keywords": [
+            "보호",
+            "지혜",
+            "예언"
+          ]
+        },
+        {
+          "id": "hannah",
+          "name": "한나",
+          "icon": "HandHeart",
+          "color": "#8B5CF6",
+          "books": [
+            9
+          ],
+          "chapters": [
+            "사무엘상 1-2장"
+          ],
+          "description": "기도로 사무엘을 얻은 어머니",
+          "keywords": [
+            "기도",
+            "헌신",
+            "감사"
+          ]
+        }
+      ]
     },
     {
-      "id": "prophets",
-      "name": "선지서",
-      "icon": "Megaphone",
-      "color": "#14B8A6",
-      "books": [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
-      "description": "하나님의 경고와 회복의 약속"
+      "id": "firstborn",
+      "name": "장자와 차자",
+      "icon": "Users",
+      "color": "#F59E0B",
+      "description": "차자가 장자를 이긴 이야기들",
+      "themes": [
+        {
+          "id": "cain-abel",
+          "name": "가인과 아벨",
+          "icon": "Gift",
+          "color": "#EF4444",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 4장"
+          ],
+          "description": "제물의 열납과 거절",
+          "keywords": [
+            "제물",
+            "질투",
+            "살인"
+          ]
+        },
+        {
+          "id": "ishmael-isaac",
+          "name": "이스마엘과 이삭",
+          "icon": "Baby",
+          "color": "#F59E0B",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 16-21장"
+          ],
+          "description": "언약의 계승자 이삭",
+          "keywords": [
+            "약속",
+            "언약",
+            "선택"
+          ]
+        },
+        {
+          "id": "esau-jacob",
+          "name": "에서와 야곱",
+          "icon": "Soup",
+          "color": "#10B981",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 25-27장"
+          ],
+          "description": "장자권을 판 에서",
+          "keywords": [
+            "장자권",
+            "축복",
+            "속임"
+          ]
+        },
+        {
+          "id": "manasseh-ephraim",
+          "name": "므낫세와 에브라임",
+          "icon": "Hand",
+          "color": "#3B82F6",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 48장"
+          ],
+          "description": "엇갈린 축복의 손",
+          "keywords": [
+            "축복",
+            "역전"
+          ]
+        },
+        {
+          "id": "eliab-david",
+          "name": "엘리압과 다윗",
+          "icon": "Crown",
+          "color": "#8B5CF6",
+          "books": [
+            9
+          ],
+          "chapters": [
+            "사무엘상 16장"
+          ],
+          "description": "막내가 왕이 되다",
+          "keywords": [
+            "외모",
+            "중심",
+            "기름부음"
+          ]
+        },
+        {
+          "id": "adonijah-solomon",
+          "name": "아도니야와 솔로몬",
+          "icon": "Crown",
+          "color": "#EC4899",
+          "books": [
+            11
+          ],
+          "chapters": [
+            "열왕기상 1-2장"
+          ],
+          "description": "다윗의 선택을 받은 솔로몬",
+          "keywords": [
+            "왕위",
+            "계승"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "judgment",
+      "name": "하나님의 심판",
+      "icon": "Flame",
+      "color": "#EF4444",
+      "description": "죄악에 대한 하나님의 심판",
+      "themes": [
+        {
+          "id": "flood",
+          "name": "노아 홍수",
+          "icon": "CloudRain",
+          "color": "#3B82F6",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 6-8장"
+          ],
+          "description": "온 세상에 대한 심판",
+          "keywords": [
+            "홍수",
+            "방주",
+            "무지개 언약"
+          ]
+        },
+        {
+          "id": "babel",
+          "name": "바벨탑",
+          "icon": "Building",
+          "color": "#6366F1",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 11장"
+          ],
+          "description": "교만에 대한 심판",
+          "keywords": [
+            "교만",
+            "언어 혼잡",
+            "흩어짐"
+          ]
+        },
+        {
+          "id": "sodom",
+          "name": "소돔과 고모라",
+          "icon": "Flame",
+          "color": "#EF4444",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 18-19장"
+          ],
+          "description": "도시에 대한 심판",
+          "keywords": [
+            "유황불",
+            "타락",
+            "롯"
+          ]
+        },
+        {
+          "id": "plagues",
+          "name": "애굽의 10재앙",
+          "icon": "Bug",
+          "color": "#F59E0B",
+          "books": [
+            2
+          ],
+          "chapters": [
+            "출애굽기 7-12장"
+          ],
+          "description": "이집트에 대한 심판",
+          "keywords": [
+            "재앙",
+            "장자",
+            "유월절"
+          ]
+        },
+        {
+          "id": "golden-calf",
+          "name": "금송아지 사건",
+          "icon": "AlertTriangle",
+          "color": "#FBBF24",
+          "books": [
+            2
+          ],
+          "chapters": [
+            "출애굽기 32장"
+          ],
+          "description": "우상숭배에 대한 심판",
+          "keywords": [
+            "우상",
+            "진노",
+            "레위인"
+          ]
+        },
+        {
+          "id": "spies",
+          "name": "12정탐꾼 사건",
+          "icon": "Search",
+          "color": "#10B981",
+          "books": [
+            4
+          ],
+          "chapters": [
+            "민수기 13-14장"
+          ],
+          "description": "불신앙에 대한 심판",
+          "keywords": [
+            "정탐",
+            "불신앙",
+            "40년 광야"
+          ]
+        },
+        {
+          "id": "korah",
+          "name": "고라의 반역",
+          "icon": "AlertOctagon",
+          "color": "#DC2626",
+          "books": [
+            4
+          ],
+          "chapters": [
+            "민수기 16장"
+          ],
+          "description": "권위에 대한 반역 심판",
+          "keywords": [
+            "반역",
+            "땅이 갈라짐"
+          ]
+        },
+        {
+          "id": "achan",
+          "name": "아간의 죄",
+          "icon": "Package",
+          "color": "#8B5CF6",
+          "books": [
+            6
+          ],
+          "chapters": [
+            "여호수아 7장"
+          ],
+          "description": "탐욕에 대한 심판",
+          "keywords": [
+            "탐욕",
+            "바친 물건",
+            "아이 성"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praised",
+      "name": "칭찬받은 인물",
+      "icon": "Star",
+      "color": "#FBBF24",
+      "description": "하나님이 인정하신 사람들",
+      "themes": [
+        {
+          "id": "noah",
+          "name": "노아",
+          "icon": "Ship",
+          "color": "#3B82F6",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 6-9장"
+          ],
+          "description": "의인, 당대에 완전한 자",
+          "keywords": [
+            "의인",
+            "동행",
+            "순종"
+          ]
+        },
+        {
+          "id": "abraham",
+          "name": "아브라함",
+          "icon": "Star",
+          "color": "#F59E0B",
+          "books": [
+            1
+          ],
+          "chapters": [
+            "창세기 12-25장"
+          ],
+          "description": "하나님의 벗",
+          "keywords": [
+            "믿음",
+            "순종",
+            "언약"
+          ]
+        },
+        {
+          "id": "job",
+          "name": "욥",
+          "icon": "Shield",
+          "color": "#6366F1",
+          "books": [
+            18
+          ],
+          "chapters": [
+            "욥기 전체"
+          ],
+          "description": "온전하고 정직한 자",
+          "keywords": [
+            "고난",
+            "인내",
+            "신실함"
+          ]
+        },
+        {
+          "id": "moses",
+          "name": "모세",
+          "icon": "Scroll",
+          "color": "#10B981",
+          "books": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "chapters": [
+            "출애굽기-신명기"
+          ],
+          "description": "온 집에 충성한 종",
+          "keywords": [
+            "충성",
+            "겸손",
+            "대면"
+          ]
+        },
+        {
+          "id": "caleb",
+          "name": "갈렙",
+          "icon": "Mountain",
+          "color": "#8B5CF6",
+          "books": [
+            4,
+            6
+          ],
+          "chapters": [
+            "민수기 13-14장, 여호수아 14장"
+          ],
+          "description": "온전히 하나님을 따른 자",
+          "keywords": [
+            "믿음",
+            "용기",
+            "온전함"
+          ]
+        },
+        {
+          "id": "david",
+          "name": "다윗",
+          "icon": "Crown",
+          "color": "#EC4899",
+          "books": [
+            9,
+            10
+          ],
+          "chapters": [
+            "사무엘상-하"
+          ],
+          "description": "하나님의 마음에 맞는 자",
+          "keywords": [
+            "마음",
+            "회개",
+            "찬양"
+          ]
+        },
+        {
+          "id": "daniel",
+          "name": "다니엘",
+          "icon": "BookOpen",
+          "color": "#14B8A6",
+          "books": [
+            27
+          ],
+          "chapters": [
+            "다니엘 전체"
+          ],
+          "description": "크게 은총을 입은 자",
+          "keywords": [
+            "지혜",
+            "기도",
+            "신실함"
+          ]
+        },
+        {
+          "id": "hezekiah",
+          "name": "히스기야",
+          "icon": "Heart",
+          "color": "#EF4444",
+          "books": [
+            12
+          ],
+          "chapters": [
+            "열왕기하 18-20장"
+          ],
+          "description": "여호와를 의지한 왕",
+          "keywords": [
+            "개혁",
+            "기도",
+            "의지"
+          ]
+        },
+        {
+          "id": "josiah",
+          "name": "요시야",
+          "icon": "Book",
+          "color": "#F472B6",
+          "books": [
+            12
+          ],
+          "chapters": [
+            "열왕기하 22-23장"
+          ],
+          "description": "마음을 다해 돌이킨 왕",
+          "keywords": [
+            "율법",
+            "개혁",
+            "전심"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "five-empires",
+      "name": "성경과 5대제국",
+      "icon": "Globe",
+      "color": "#8B5CF6",
+      "description": "역사시대를 통한 성경읽기 - 앗수르, 바빌론, 페르시아, 그리스, 로마",
+      "themes": [
+        {
+          "id": "assyria",
+          "name": "앗수르 제국",
+          "icon": "Sword",
+          "color": "#DC2626",
+          "books": [12, 14, 23, 28, 34],
+          "chapters": [
+            "열왕기하 15-19장",
+            "이사야 10, 36-37장",
+            "나훔 전체",
+            "호세아 전체"
+          ],
+          "description": "북이스라엘을 멸망시킨 제국 (BC 911-609)",
+          "keywords": ["심판", "포로", "회개"],
+          "kings": [
+            {
+              "name": "디글랏 빌레셀 3세",
+              "originalName": "Tiglath-Pileser III",
+              "reign": "BC 745-727",
+              "biblicalRef": "열왕기하 15:29, 16:7-10",
+              "description": "북이스라엘 침략, 아하스의 조공을 받음",
+              "significance": "이스라엘 분열과 쇠퇴의 시작"
+            },
+            {
+              "name": "살만에셀 5세",
+              "originalName": "Shalmaneser V",
+              "reign": "BC 727-722",
+              "biblicalRef": "열왕기하 17:3-6, 18:9",
+              "description": "사마리아 포위 시작",
+              "significance": "북이스라엘 멸망의 직접적 원인"
+            },
+            {
+              "name": "사르곤 2세",
+              "originalName": "Sargon II",
+              "reign": "BC 722-705",
+              "biblicalRef": "이사야 20:1",
+              "description": "사마리아 함락, 북이스라엘 멸망 (BC 722)",
+              "significance": "10지파의 포로와 이산"
+            },
+            {
+              "name": "산헤립",
+              "originalName": "Sennacherib",
+              "reign": "BC 705-681",
+              "biblicalRef": "열왕기하 18-19장, 이사야 36-37장",
+              "description": "유다 침공, 예루살렘 포위, 185,000명 천사에 의해 죽음",
+              "significance": "하나님의 기적적 구원의 증거"
+            },
+            {
+              "name": "에살핫돈",
+              "originalName": "Esarhaddon",
+              "reign": "BC 681-669",
+              "biblicalRef": "열왕기하 19:37, 에스라 4:2",
+              "description": "산헤립의 아들, 이방민족을 사마리아로 이주시킴",
+              "significance": "사마리아인의 기원"
+            },
+            {
+              "name": "아슈르바니팔",
+              "originalName": "Ashurbanipal",
+              "reign": "BC 669-627",
+              "biblicalRef": "에스라 4:10 (오스납발)",
+              "description": "앗수르 최후의 강대한 왕, 니느웨 도서관 건립",
+              "significance": "앗수르 제국의 마지막 전성기"
+            }
+          ]
+        },
+        {
+          "id": "babylon",
+          "name": "바빌론 제국",
+          "icon": "Building",
+          "color": "#F59E0B",
+          "books": [12, 24, 27, 35],
+          "chapters": [
+            "열왕기하 24-25장",
+            "예레미야 25, 39, 52장",
+            "다니엘 1-5장",
+            "하박국 전체"
+          ],
+          "description": "남유다를 멸망시키고 성전을 파괴한 제국 (BC 626-539)",
+          "keywords": ["포로", "심판", "회복"],
+          "kings": [
+            {
+              "name": "나보폴라살",
+              "originalName": "Nabopolassar",
+              "reign": "BC 626-605",
+              "biblicalRef": "간접적 언급",
+              "description": "신바빌로니아 제국 창건, 앗수르 멸망에 기여",
+              "significance": "바빌론 제국의 시작"
+            },
+            {
+              "name": "느부갓네살 2세",
+              "originalName": "Nebuchadnezzar II",
+              "reign": "BC 605-562",
+              "biblicalRef": "열왕기하 24-25장, 다니엘 1-4장, 예레미야 전체",
+              "description": "예루살렘 3차례 침공, 성전 파괴 (BC 586), 바벨탑/공중정원",
+              "significance": "유다 멸망과 바벨론 포로의 주역"
+            },
+            {
+              "name": "에윌므로닥",
+              "originalName": "Evil-Merodach",
+              "reign": "BC 562-560",
+              "biblicalRef": "열왕기하 25:27-30, 예레미야 52:31-34",
+              "description": "여호야긴 왕을 옥에서 풀어줌",
+              "significance": "포로 중에도 다윗 왕조 보존"
+            },
+            {
+              "name": "나보니두스",
+              "originalName": "Nabonidus",
+              "reign": "BC 556-539",
+              "biblicalRef": "간접적 언급",
+              "description": "바빌론 마지막 왕, 달신 숭배에 집중",
+              "significance": "바빌론 제국의 쇠퇴"
+            },
+            {
+              "name": "벨사살",
+              "originalName": "Belshazzar",
+              "reign": "BC 553-539 (섭정)",
+              "biblicalRef": "다니엘 5장",
+              "description": "나보니두스의 아들, 벽의 글씨 사건, 그날 밤 죽음",
+              "significance": "하나님의 심판과 바빌론 멸망"
+            }
+          ]
+        },
+        {
+          "id": "persia",
+          "name": "페르시아 제국",
+          "icon": "Crown",
+          "color": "#3B82F6",
+          "books": [15, 16, 17, 27],
+          "chapters": [
+            "에스라 전체",
+            "느헤미야 전체",
+            "에스더 전체",
+            "다니엘 5-6장, 10-12장"
+          ],
+          "description": "유대인 귀환과 성전 재건을 허락한 제국 (BC 539-331)",
+          "keywords": ["귀환", "회복", "재건"],
+          "kings": [
+            {
+              "name": "고레스 2세 (키루스)",
+              "originalName": "Cyrus II (the Great)",
+              "reign": "BC 559-530",
+              "biblicalRef": "에스라 1장, 이사야 44:28-45:1, 다니엘 1:21, 6:28",
+              "description": "바벨론 정복, 유대인 귀환 칙령 (BC 538)",
+              "significance": "하나님의 목자, 기름부음 받은 자로 불림"
+            },
+            {
+              "name": "캄비세스 2세",
+              "originalName": "Cambyses II",
+              "reign": "BC 530-522",
+              "biblicalRef": "에스라 4:6 (아하수에로?)",
+              "description": "이집트 정복, 성전 재건 방해 시기",
+              "significance": "귀환 후 어려움의 시기"
+            },
+            {
+              "name": "다리오 1세 (다리우스)",
+              "originalName": "Darius I (the Great)",
+              "reign": "BC 522-486",
+              "biblicalRef": "에스라 4-6장, 학개, 스가랴, 다니엘 6장",
+              "description": "성전 재건 명령 재확인, 두 번째 성전 완공 (BC 516)",
+              "significance": "성전 재건의 후원자"
+            },
+            {
+              "name": "크세르크세스 1세 (아하수에로)",
+              "originalName": "Xerxes I (Ahasuerus)",
+              "reign": "BC 486-465",
+              "biblicalRef": "에스더 전체, 에스라 4:6",
+              "description": "에스더의 남편, 유대인 구원",
+              "significance": "부림절의 배경"
+            },
+            {
+              "name": "아닥사스다 1세",
+              "originalName": "Artaxerxes I",
+              "reign": "BC 465-424",
+              "biblicalRef": "에스라 7장, 느헤미야 2장",
+              "description": "에스라와 느헤미야를 예루살렘으로 보냄",
+              "significance": "예루살렘 성벽 재건의 후원자"
+            },
+            {
+              "name": "다리오 2세",
+              "originalName": "Darius II",
+              "reign": "BC 423-404",
+              "biblicalRef": "느헤미야 12:22",
+              "description": "느헤미야 시대의 페르시아 왕",
+              "significance": "포로 귀환 후 정착기"
+            },
+            {
+              "name": "아닥사스다 2세",
+              "originalName": "Artaxerxes II",
+              "reign": "BC 404-358",
+              "biblicalRef": "간접적 언급",
+              "description": "구약 역사 이후의 왕",
+              "significance": "신구약 중간기 시작"
+            }
+          ]
+        },
+        {
+          "id": "greece",
+          "name": "그리스 제국",
+          "icon": "Landmark",
+          "color": "#10B981",
+          "books": [27],
+          "chapters": [
+            "다니엘 2, 7, 8, 10-11장"
+          ],
+          "description": "헬라 문화를 전파한 제국 (BC 331-63)",
+          "keywords": ["예언", "문화", "박해"],
+          "kings": [
+            {
+              "name": "알렉산더 대왕",
+              "originalName": "Alexander the Great",
+              "reign": "BC 336-323",
+              "biblicalRef": "다니엘 8:5-8, 21, 11:3",
+              "description": "페르시아 정복, 세계 제국 건설, 33세에 사망",
+              "significance": "다니엘의 예언 성취 - '헬라 숫염소의 큰 뿔'"
+            },
+            {
+              "name": "프톨레마이오스 1세",
+              "originalName": "Ptolemy I Soter",
+              "reign": "BC 323-285 (이집트)",
+              "biblicalRef": "다니엘 11:5 (남방 왕)",
+              "description": "이집트 프톨레마이오스 왕조 창건",
+              "significance": "분열된 제국 - 남방 왕의 시작"
+            },
+            {
+              "name": "셀레우코스 1세",
+              "originalName": "Seleucus I Nicator",
+              "reign": "BC 312-281 (시리아)",
+              "biblicalRef": "다니엘 11:5 (북방 왕)",
+              "description": "셀레우코스 왕조 창건 (시리아/바빌론)",
+              "significance": "분열된 제국 - 북방 왕의 시작"
+            },
+            {
+              "name": "안티오코스 3세",
+              "originalName": "Antiochus III (the Great)",
+              "reign": "BC 223-187",
+              "biblicalRef": "다니엘 11:10-19",
+              "description": "유대를 셀레우코스 지배하에 둠",
+              "significance": "유대에 대한 지배권 변화"
+            },
+            {
+              "name": "안티오코스 4세 에피파네스",
+              "originalName": "Antiochus IV Epiphanes",
+              "reign": "BC 175-164",
+              "biblicalRef": "다니엘 8:9-14, 11:21-35",
+              "description": "성전에 제우스 제단 설치, 돼지 제사, 유대교 금지",
+              "significance": "'멸망의 가증한 것' - 마카비 혁명 촉발"
+            }
+          ]
+        },
+        {
+          "id": "rome",
+          "name": "로마 제국",
+          "icon": "Flag",
+          "color": "#EF4444",
+          "books": [40, 41, 42, 43, 44],
+          "chapters": [
+            "누가복음 2:1-7, 3:1",
+            "마태복음 2장",
+            "사도행전 전체"
+          ],
+          "description": "예수님 탄생과 초대교회 시대의 제국 (BC 63-AD 476)",
+          "keywords": ["탄생", "십자가", "복음전파"],
+          "kings": [
+            {
+              "name": "율리우스 카이사르",
+              "originalName": "Julius Caesar",
+              "reign": "BC 49-44",
+              "biblicalRef": "간접적 배경",
+              "description": "로마 공화정의 종말, 제정의 기초",
+              "significance": "로마 제국 시대의 시작"
+            },
+            {
+              "name": "아우구스투스 (가이사 아구스도)",
+              "originalName": "Augustus Caesar",
+              "reign": "BC 27-AD 14",
+              "biblicalRef": "누가복음 2:1",
+              "description": "로마 초대 황제, 호적령으로 예수님 베들레헴 탄생",
+              "significance": "예수 그리스도 탄생의 역사적 배경"
+            },
+            {
+              "name": "티베리우스",
+              "originalName": "Tiberius Caesar",
+              "reign": "AD 14-37",
+              "biblicalRef": "누가복음 3:1, 20:22-25",
+              "description": "예수님 공생애와 십자가 시기의 황제",
+              "significance": "예수님 사역과 수난의 시대"
+            },
+            {
+              "name": "헤롯 대왕",
+              "originalName": "Herod the Great",
+              "reign": "BC 37-4 (유대 왕)",
+              "biblicalRef": "마태복음 2장, 누가복음 1:5",
+              "description": "유대의 로마 위성국 왕, 베들레헴 영아 학살",
+              "significance": "예수 탄생 시 박해자"
+            },
+            {
+              "name": "헤롯 안티파스",
+              "originalName": "Herod Antipas",
+              "reign": "BC 4-AD 39 (갈릴리 분봉왕)",
+              "biblicalRef": "마태복음 14장, 누가복음 23:6-12",
+              "description": "세례 요한 참수, 예수님 재판",
+              "significance": "요한과 예수님 사역의 배경"
+            },
+            {
+              "name": "본디오 빌라도",
+              "originalName": "Pontius Pilate",
+              "reign": "AD 26-36 (유대 총독)",
+              "biblicalRef": "마태복음 27장, 누가복음 23장, 요한복음 18-19장",
+              "description": "예수님께 십자가 사형 선고",
+              "significance": "십자가 사건의 핵심 인물"
+            },
+            {
+              "name": "글라우디오",
+              "originalName": "Claudius Caesar",
+              "reign": "AD 41-54",
+              "biblicalRef": "사도행전 11:28, 18:2",
+              "description": "대기근 예언 성취, 유대인 로마 추방령",
+              "significance": "초대교회 확산의 배경"
+            },
+            {
+              "name": "네로",
+              "originalName": "Nero Caesar",
+              "reign": "AD 54-68",
+              "biblicalRef": "사도행전 25:11-12, 27:24 (가이사)",
+              "description": "바울의 상소 대상, 기독교 박해 시작",
+              "significance": "로마 대화재 후 기독교인 박해"
+            },
+            {
+              "name": "헤롯 아그립바 1세",
+              "originalName": "Herod Agrippa I",
+              "reign": "AD 41-44",
+              "biblicalRef": "사도행전 12장",
+              "description": "야고보 참수, 베드로 투옥, 천사에 의해 죽음",
+              "significance": "초대교회 박해자"
+            },
+            {
+              "name": "헤롯 아그립바 2세",
+              "originalName": "Herod Agrippa II",
+              "reign": "AD 50-100",
+              "biblicalRef": "사도행전 25-26장",
+              "description": "바울의 변론을 들음, '네가 적은 말로 나를 그리스도인이 되게 하려 하는도다'",
+              "significance": "바울의 로마 호송 배경"
+            },
+            {
+              "name": "벨릭스",
+              "originalName": "Felix",
+              "reign": "AD 52-60 (유대 총독)",
+              "biblicalRef": "사도행전 23:24-24:27",
+              "description": "바울을 2년간 구금",
+              "significance": "바울 재판의 시작"
+            },
+            {
+              "name": "베스도",
+              "originalName": "Festus",
+              "reign": "AD 60-62 (유대 총독)",
+              "biblicalRef": "사도행전 25-26장",
+              "description": "바울의 가이사 상소 허락",
+              "significance": "바울 로마행의 결정"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "name": "성경통독",
+      "icon": "BookOpen",
+      "color": "#6366F1",
+      "description": "구약성경을 시대별로 읽기",
+      "themes": [
+        {
+          "id": "creation",
+          "name": "창조와 시작",
+          "icon": "Sparkles",
+          "color": "#10B981",
+          "books": [
+            1
+          ],
+          "description": "천지창조부터 족장시대까지"
+        },
+        {
+          "id": "exodus",
+          "name": "구원의 역사",
+          "icon": "Route",
+          "color": "#F59E0B",
+          "books": [
+            2
+          ],
+          "description": "출애굽과 광야 40년"
+        },
+        {
+          "id": "law",
+          "name": "율법과 계명",
+          "icon": "Scale",
+          "color": "#8B5CF6",
+          "books": [
+            3,
+            4,
+            5
+          ],
+          "description": "하나님의 율법과 언약"
+        },
+        {
+          "id": "conquest",
+          "name": "정복과 사사",
+          "icon": "Sword",
+          "color": "#EF4444",
+          "books": [
+            6,
+            7,
+            8
+          ],
+          "description": "가나안 정복과 사사 시대"
+        },
+        {
+          "id": "kingdom",
+          "name": "왕국의 흥망",
+          "icon": "Crown",
+          "color": "#3B82F6",
+          "books": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "description": "이스라엘 왕국의 역사"
+        },
+        {
+          "id": "wisdom",
+          "name": "지혜 문학",
+          "icon": "BookOpen",
+          "color": "#EC4899",
+          "books": [
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "description": "삶의 지혜와 찬양"
+        },
+        {
+          "id": "prophets",
+          "name": "선지서",
+          "icon": "Megaphone",
+          "color": "#14B8A6",
+          "books": [
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "description": "하나님의 경고와 회복의 약속"
+        }
+      ]
     }
   ]
 }

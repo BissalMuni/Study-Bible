@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Sparkles,
   Route,
@@ -9,8 +9,28 @@ import {
   BookOpen,
   Megaphone,
   ChevronRight,
+  ChevronDown,
+  Heart,
+  Users,
+  Baby,
+  Gift,
+  Hand,
+  Flame,
+  CloudRain,
+  Building,
+  Bug,
+  AlertTriangle,
+  Search,
+  AlertOctagon,
+  Package,
+  Star,
+  Ship,
+  Shield,
+  Scroll,
+  Mountain,
+  Book,
 } from 'lucide-react';
-import { Theme } from '../../types';
+import { Theme, ThemeCategory } from '../../types';
 
 const iconMap: Record<string, React.FC<{ size?: number; color?: string }>> = {
   Sparkles,
@@ -20,6 +40,27 @@ const iconMap: Record<string, React.FC<{ size?: number; color?: string }>> = {
   Crown,
   BookOpen,
   Megaphone,
+  Heart,
+  Users,
+  Baby,
+  Gift,
+  Hand,
+  Flame,
+  CloudRain,
+  Building,
+  Bug,
+  AlertTriangle,
+  Search,
+  AlertOctagon,
+  Package,
+  Star,
+  Ship,
+  Shield,
+  Scroll,
+  Mountain,
+  Book,
+  HandHeart: Heart, // fallback
+  Soup: Gift, // fallback
 };
 
 const container = {
@@ -42,9 +83,10 @@ interface ThemeListProps {
 }
 
 export const ThemeList: React.FC<ThemeListProps> = ({ onThemeSelect }) => {
-  const [themes, setThemes] = useState<Theme[]>([]);
+  const [categories, setCategories] = useState<ThemeCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/data/themes.json')
@@ -54,7 +96,7 @@ export const ThemeList: React.FC<ThemeListProps> = ({ onThemeSelect }) => {
       })
       .then((data) => {
         console.log('Themes loaded:', data);
-        setThemes(data.themes || []);
+        setCategories(data.categories || []);
         setLoading(false);
       })
       .catch((err) => {
@@ -63,6 +105,10 @@ export const ThemeList: React.FC<ThemeListProps> = ({ onThemeSelect }) => {
         setLoading(false);
       });
   }, []);
+
+  const handleCategoryClick = (categoryId: string) => {
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+  };
 
   if (loading) {
     return (
@@ -102,38 +148,109 @@ export const ThemeList: React.FC<ThemeListProps> = ({ onThemeSelect }) => {
         animate="show"
         className="space-y-3"
       >
-        {themes.map((theme) => {
-          const Icon = iconMap[theme.icon] || BookOpen;
+        {categories.map((category) => {
+          const CategoryIcon = iconMap[category.icon] || BookOpen;
+          const isExpanded = expandedCategory === category.id;
 
           return (
-            <motion.button
-              key={theme.id}
-              variants={item}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => onThemeSelect(theme)}
-              className="w-full bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4"
-            >
-              <motion.div
-                whileHover={{ rotate: [0, -10, 10, 0] }}
-                transition={{ duration: 0.5 }}
-                className="w-14 h-14 rounded-xl flex items-center justify-center"
-                style={{ backgroundColor: theme.color + '20' }}
+            <motion.div key={category.id} variants={item}>
+              {/* Category Header */}
+              <motion.button
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                onClick={() => handleCategoryClick(category.id)}
+                className="w-full bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4"
               >
-                <Icon size={28} color={theme.color} />
-              </motion.div>
+                <motion.div
+                  whileHover={{ rotate: [0, -10, 10, 0] }}
+                  transition={{ duration: 0.5 }}
+                  className="w-14 h-14 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: category.color + '20' }}
+                >
+                  <CategoryIcon size={28} color={category.color} />
+                </motion.div>
 
-              <div className="flex-1 text-left">
-                <h3 className="font-semibold text-gray-900 dark:text-white">
-                  {theme.name}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {theme.description}
-                </p>
-              </div>
+                <div className="flex-1 text-left">
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    {category.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {category.description}
+                  </p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+                    {category.themes.length}개 테마
+                  </p>
+                </div>
 
-              <ChevronRight size={20} className="text-gray-400" />
-            </motion.button>
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ChevronDown size={20} className="text-gray-400" />
+                </motion.div>
+              </motion.button>
+
+              {/* Expanded Themes */}
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pl-4 mt-2 space-y-2">
+                      {category.themes.map((theme) => {
+                        const ThemeIcon = iconMap[theme.icon] || BookOpen;
+
+                        return (
+                          <motion.button
+                            key={theme.id}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => onThemeSelect(theme)}
+                            className="w-full bg-gray-50 dark:bg-gray-700/50 rounded-xl p-3 flex items-center gap-3 border border-gray-100 dark:border-gray-600"
+                          >
+                            <div
+                              className="w-10 h-10 rounded-lg flex items-center justify-center"
+                              style={{ backgroundColor: theme.color + '20' }}
+                            >
+                              <ThemeIcon size={20} color={theme.color} />
+                            </div>
+
+                            <div className="flex-1 text-left">
+                              <h4 className="font-medium text-gray-800 dark:text-white text-sm">
+                                {theme.name}
+                              </h4>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">
+                                {theme.description}
+                              </p>
+                              {theme.keywords && theme.keywords.length > 0 && (
+                                <div className="flex flex-wrap gap-1 mt-1">
+                                  {theme.keywords.slice(0, 3).map((keyword) => (
+                                    <span
+                                      key={keyword}
+                                      className="text-xs px-1.5 py-0.5 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300"
+                                    >
+                                      {keyword}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+
+                            <ChevronRight size={16} className="text-gray-400" />
+                          </motion.button>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           );
         })}
       </motion.div>
