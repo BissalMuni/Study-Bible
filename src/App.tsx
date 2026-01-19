@@ -26,7 +26,7 @@ function AppContent() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   // 광고 컨텍스트 사용
-  const { triggerAd } = useAdContext();
+  const { triggerAd, showBanner } = useAdContext();
 
   // 오늘 이미 환영 화면을 본 경우 스킵
   useEffect(() => {
@@ -36,6 +36,16 @@ function AppContent() {
       setShowWelcome(false);
     }
   }, []);
+
+  // 앱 시작 시 배너 광고 표시
+  useEffect(() => {
+    console.log('[App] Banner useEffect - showWelcome:', showWelcome);
+    // 환영 화면이 끝난 후 배너 표시
+    if (!showWelcome) {
+      console.log('[App] Calling showBanner()');
+      showBanner();
+    }
+  }, [showWelcome, showBanner]);
 
   const handleWelcomeComplete = (tab: TabType) => {
     const today = new Date().toDateString();

@@ -155,8 +155,16 @@ export const AdProvider: React.FC<{ children: React.ReactNode }> = ({ children }
 
   // 배너 광고 표시
   const showBanner = useCallback(() => {
+    console.log('[Ad] showBanner called', {
+      globalAdEnabled,
+      isAndroid: isAndroidApp(),
+      hasAndroidAds: !!window.AndroidAds
+    });
     if (globalAdEnabled && isAndroidApp() && window.AndroidAds) {
+      console.log('[Ad] Calling AndroidAds.showBannerAd()');
       window.AndroidAds.showBannerAd();
+    } else {
+      console.log('[Ad] showBanner skipped - conditions not met');
     }
   }, [globalAdEnabled]);
 
