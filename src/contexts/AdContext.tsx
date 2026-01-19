@@ -57,12 +57,37 @@ const isAndroidApp = (): boolean => {
   return typeof window !== 'undefined' && !!window.AndroidAds;
 };
 
+// 카운터 localStorage 키
+const AD_COUNTERS_STORAGE_KEY = 'bibleApp_adCounters';
+
+// 카운터 저장
+const saveAdCounters = (counters: Record<string, number>): void => {
+  try {
+    localStorage.setItem(AD_COUNTERS_STORAGE_KEY, JSON.stringify(counters));
+  } catch (e) {
+    console.error('Failed to save ad counters:', e);
+  }
+};
+
+// 카운터 불러오기
+const loadAdCounters = (): Record<string, number> => {
+  try {
+    const saved = localStorage.getItem(AD_COUNTERS_STORAGE_KEY);
+    if (saved) {
+      return JSON.parse(saved);
+    }
+  } catch (e) {
+    console.error('Failed to load ad counters:', e);
+  }
+  return {};
+};
+
 export const AdProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [adPoints, setAdPoints] = useState<Record<AdPointId, AdPointConfig>>(loadAdConfig);
   const [globalAdEnabled, setGlobalAdEnabled] = useState(true);
 
-  // 각 광고 포인트별 카운터 (countThreshold용)
-  const countersRef = useRef<Record<AdPointId, number>>({} as Record<AdPointId, number>);
+  // 각 광고 포인트별 카운터 (countThreshold용) - localStorage에서 불러오기
+  const countersRef = useRef<Record<AdPointId, number>>(loadAdCounters() as Record<AdPointId, number>);
 
   // 광고 완료 콜백 등록
   useEffect(() => {
@@ -129,6 +154,7 @@ export const AdProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     if (point.countThreshold) {
       const currentCount = (countersRef.current[pointId] || 0) + 1;
       countersRef.current[pointId] = currentCount;
+      saveAdCounters(countersRef.current); // localStorage에 저장
 
       if (currentCount < point.countThreshold) {
         console.log(`[Ad] Counter: ${currentCount}/${point.countThreshold} for ${pointId}`);
@@ -136,6 +162,7 @@ export const AdProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       }
       // 임계값 도달, 카운터 리셋
       countersRef.current[pointId] = 0;
+      saveAdCounters(countersRef.current); // 리셋 후 저장
     }
 
     // 확률 체크
@@ -179,6 +206,7 @@ export const AdProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   const resetToDefault = useCallback(() => {
     setAdPoints(defaultAdPoints);
     countersRef.current = {} as Record<AdPointId, number>;
+    saveAdCounters({}); // localStorage 카운터도 초기화
   }, []);
 
   const value: AdContextType = {

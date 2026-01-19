@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ChevronLeft, ChevronRight, X, Volume2, VolumeX } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { useGlobalState } from '../../contexts/GlobalStateContext';
+import { TTSSettings } from '../common/TTSSettings';
 
 interface BibleBook {
   id: number;
@@ -30,7 +32,12 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
   const [verses, setVerses] = useState<VerseData[] | null>(null);
   const [currentChapter, setCurrentChapter] = useState(chapter);
   const [selectedVerse, setSelectedVerse] = useState<VerseData | null>(null);
-  const { speak, stop, isSpeaking, currentText } = useTTS();
+  const { state } = useGlobalState();
+  const { speak, stop, isSpeaking, currentText } = useTTS({
+    rate: state.ttsRate,
+    pitch: state.ttsPitch,
+    voice: state.ttsVoice,
+  });
 
   // 장 변경 시 TTS 중지
   useEffect(() => {
@@ -134,19 +141,22 @@ export const ChapterContent: React.FC<ChapterContentProps> = ({
             </h1>
           </motion.button>
 
-          {/* 다음 장 버튼 */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={goToNextChapter}
-            disabled={currentChapter >= book.chapters}
-            className={`p-2 rounded-full ${
-              currentChapter >= book.chapters
-                ? 'text-gray-300 dark:text-gray-600'
-                : 'text-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700'
-            }`}
-          >
-            <ChevronRight size={24} />
-          </motion.button>
+          {/* 다음 장 버튼 + TTS 설정 */}
+          <div className="flex items-center gap-1">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={goToNextChapter}
+              disabled={currentChapter >= book.chapters}
+              className={`p-2 rounded-full ${
+                currentChapter >= book.chapters
+                  ? 'text-gray-300 dark:text-gray-600'
+                  : 'text-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700'
+              }`}
+            >
+              <ChevronRight size={24} />
+            </motion.button>
+            <TTSSettings />
+          </div>
         </div>
       </motion.div>
 

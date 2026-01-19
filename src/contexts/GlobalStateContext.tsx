@@ -12,6 +12,9 @@ const defaultState: GlobalState = {
   currentCollection: 'awana-recital',
   isRepeatMode: true,
   isDarkMode: false,
+  ttsRate: 1.0,
+  ttsPitch: 1.0,
+  ttsVoice: '',
 };
 
 const GlobalStateContext = createContext<GlobalStateContextType | undefined>(undefined);

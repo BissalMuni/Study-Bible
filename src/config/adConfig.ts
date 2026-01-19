@@ -27,7 +27,7 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     enabled: true,
     type: 'interstitial',
     probability: 0.5,
-    countThreshold: 3,
+    countThreshold: 5,
   },
   THEME_SELECT: {
     id: 'THEME_SELECT',
@@ -36,7 +36,7 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     enabled: true,
     type: 'interstitial',
     probability: 0.5,
-    countThreshold: 3,
+    countThreshold: 5,
   },
   THEME_BACK: {
     id: 'THEME_BACK',
@@ -45,7 +45,7 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     enabled: true,
     type: 'interstitial',
     probability: 0.5,
-    countThreshold: 3,
+    countThreshold: 5,
   },
   BIBLE_CHAPTER_SELECT: {
     id: 'BIBLE_CHAPTER_SELECT',
@@ -54,6 +54,7 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     enabled: true,
     type: 'interstitial',
     probability: 0.5,
+    countThreshold: 5,
   },
   COMFORT_RESULT: {
     id: 'COMFORT_RESULT',
@@ -62,6 +63,7 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     enabled: true,
     type: 'interstitial',
     probability: 0.5,
+    countThreshold: 3,
   },
   AWANA_VERSE_COMPLETE: {
     id: 'AWANA_VERSE_COMPLETE',

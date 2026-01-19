@@ -56,14 +56,21 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
 
   // Load theme passage data
   useEffect(() => {
+    console.log('[ThemeDetail] Loading passages for theme:', theme.id);
     fetch('/data/theme-passages.json')
       .then(res => res.json())
       .then(data => {
+        console.log('[ThemeDetail] theme-passages.json loaded, keys:', Object.keys(data));
         if (data[theme.id]) {
+          console.log('[ThemeDetail] Found data for theme:', theme.id, data[theme.id]);
           setPassageData(data[theme.id]);
+        } else {
+          console.log('[ThemeDetail] No data found for theme:', theme.id);
         }
       })
-      .catch(console.error);
+      .catch(err => {
+        console.error('[ThemeDetail] Error loading theme-passages.json:', err);
+      });
   }, [theme.id]);
 
   // Load bible theme data
@@ -77,9 +84,12 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
   }, []);
 
   const handlePassageClick = async (passage: PassageRef) => {
+    console.log('[ThemeDetail] Passage clicked:', passage);
+
     if (selectedPassage?.book === passage.book &&
         selectedPassage?.chapter === passage.chapter &&
         selectedPassage?.startVerse === passage.startVerse) {
+      console.log('[ThemeDetail] Same passage clicked, closing');
       setSelectedPassage(null);
       setVerseContent([]);
       return;
@@ -89,10 +99,13 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
     setLoadingVerses(true);
 
     try {
+      console.log('[ThemeDetail] bibleThemeData loaded:', !!bibleThemeData);
       if (bibleThemeData) {
         const bookData = bibleThemeData[passage.bookId.toString()];
+        console.log('[ThemeDetail] bookData for bookId', passage.bookId, ':', !!bookData);
         if (bookData) {
           const chapterData = bookData[passage.chapter.toString()];
+          console.log('[ThemeDetail] chapterData for chapter', passage.chapter, ':', !!chapterData, chapterData?.length, 'verses');
           if (chapterData) {
             const verses = chapterData
               .filter((v) => v.verse >= passage.startVerse && v.verse <= passage.endVerse)
@@ -100,12 +113,19 @@ export const ThemeDetail: React.FC<ThemeDetailProps> = ({ theme, onBack }) => {
                 verse: v.verse,
                 content: v.text
               }));
+            console.log('[ThemeDetail] Filtered verses:', verses.length, verses);
             setVerseContent(verses);
+          } else {
+            console.log('[ThemeDetail] No chapter data found');
           }
+        } else {
+          console.log('[ThemeDetail] No book data found');
         }
+      } else {
+        console.log('[ThemeDetail] bible_theme.json not loaded yet');
       }
     } catch (error) {
-      console.error('Failed to load verses:', error);
+      console.error('[ThemeDetail] Failed to load verses:', error);
     } finally {
       setLoadingVerses(false);
     }

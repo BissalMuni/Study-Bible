@@ -56,6 +56,10 @@ export interface GlobalState {
   currentCollection: string;
   isRepeatMode: boolean;
   isDarkMode: boolean;
+  // TTS settings
+  ttsRate: number;      // 0.5 ~ 2.0 (기본값 1.0)
+  ttsPitch: number;     // 0.5 ~ 2.0 (기본값 1.0)
+  ttsVoice: string;     // 음성 이름 (빈 문자열이면 기본 한국어 음성)
 }
 
 // Navigation types
