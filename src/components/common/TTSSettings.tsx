@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, X, Volume2, Play } from 'lucide-react';
 import { useGlobalState } from '../../contexts/GlobalStateContext';
@@ -59,23 +60,24 @@ export const TTSSettings: React.FC<TTSSettingsProps> = ({ compact = true }) => {
         <Settings size={18} />
       </motion.button>
 
-      {/* 설정 모달 */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4"
-          >
+      {/* 설정 모달 - Portal로 body에 직접 렌더링 */}
+      {createPortal(
+        <AnimatePresence>
+          {isOpen && (
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white dark:bg-gray-800 rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/50 z-[9999] flex items-center justify-center px-4"
             >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white dark:bg-gray-800 rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden"
+              >
               {/* 헤더 */}
               <div className="bg-blue-500 text-white p-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -191,7 +193,9 @@ export const TTSSettings: React.FC<TTSSettingsProps> = ({ compact = true }) => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
+      )}
     </>
   );
 };
