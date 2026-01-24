@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, RefreshCw, BookOpen, Sparkles, Volume2, VolumeX, Shuffle } from 'lucide-react';
+import { Heart, RefreshCw, BookOpen, Sparkles, Volume2, VolumeX, Shuffle, MessageCircle } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
 
 interface Verse {
@@ -15,11 +15,17 @@ interface EncouragementMessage {
   closing: string;
 }
 
+interface QuestionSummary {
+  question: string;
+  answer: string;
+}
+
 interface ComfortResultProps {
   verses: Verse[];
   tags: string[];
   tagDescriptions: Record<string, string>;
   encouragementMessages: Record<string, EncouragementMessage>;
+  questionSummary: QuestionSummary[];
   onRestart: () => void;
   onNewVerse: () => void;
 }
@@ -44,6 +50,7 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
   tags,
   tagDescriptions,
   encouragementMessages,
+  questionSummary,
   onRestart,
   onNewVerse,
 }) => {
@@ -84,6 +91,30 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
         <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
           오늘 당신을 위한 말씀
         </h1>
+      </motion.div>
+
+      {/* Question Summary */}
+      {questionSummary.length > 0 && (
+        <motion.div variants={itemVariants} className="mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <MessageCircle className="w-5 h-5 text-purple-500" />
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">나의 마음 상태</span>
+            </div>
+            <div className="space-y-2">
+              {questionSummary.map((item, index) => (
+                <div key={index} className="flex items-start gap-2 text-sm">
+                  <span className="text-gray-400 dark:text-gray-500 shrink-0">Q{index + 1}.</span>
+                  <span className="text-purple-600 dark:text-purple-400 font-medium">{item.answer}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      {/* Divider with message */}
+      <motion.div variants={itemVariants} className="text-center mb-6">
         <p className="text-gray-600 dark:text-gray-300">
           하나님께서 당신에게 전하시는 위로의 말씀이에요
         </p>

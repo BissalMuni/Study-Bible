@@ -45,6 +45,12 @@ interface ComfortData {
 interface AnswerState {
   option: Option;
   questionId: number;
+  questionText: string;
+}
+
+interface QuestionSummary {
+  question: string;
+  answer: string;
 }
 
 export const ComfortChat: React.FC = () => {
@@ -55,6 +61,7 @@ export const ComfortChat: React.FC = () => {
   const [showResult, setShowResult] = useState(false);
   const [recommendedVerses, setRecommendedVerses] = useState<Verse[]>([]);
   const [collectedTags, setCollectedTags] = useState<string[]>([]);
+  const [questionSummary, setQuestionSummary] = useState<QuestionSummary[]>([]);
 
   // 1번 질문 답변의 category (positive, negative, neutral)
   const [emotionCategory, setEmotionCategory] = useState<'positive' | 'negative' | 'neutral' | null>(null);
@@ -104,7 +111,7 @@ export const ComfortChat: React.FC = () => {
     // 답변 저장
     setAnswers(prev => ({
       ...prev,
-      [currentStep]: { option, questionId: currentQuestion.id }
+      [currentStep]: { option, questionId: currentQuestion.id, questionText: currentQuestion.question }
     }));
 
     // 1번 질문이면 category와 emotion type 저장
@@ -121,7 +128,7 @@ export const ComfortChat: React.FC = () => {
     } else {
       // 마지막 질문이면 결과 계산
       setTimeout(() => {
-        calculateResultWithAnswer(option);
+        calculateResultWithAnswer(option, currentQuestion);
       }, 300);
     }
   };
@@ -140,29 +147,44 @@ export const ComfortChat: React.FC = () => {
     }
   };
 
-  const calculateResultWithAnswer = (lastAnswer: Option) => {
+  const calculateResultWithAnswer = (lastAnswer: Option, currentQuestion: Question) => {
     if (!data) return;
+
+    // 마지막 답변을 포함한 최종 answers 객체 생성
+    const finalAnswers = {
+      ...answers,
+      [currentStep]: { option: lastAnswer, questionId: currentQuestion.id, questionText: currentQuestion.question }
+    };
 
     // 모든 이전 답변의 태그 수집
     const allTags: string[] = [];
-    Object.values(answers).forEach(answer => {
+    Object.values(finalAnswers).forEach(answer => {
       if (answer?.option?.tags) {
         allTags.push(...answer.option.tags);
       }
     });
-    // 마지막 답변 태그 추가
-    if (lastAnswer?.tags) {
-      allTags.push(...lastAnswer.tags);
-    }
 
-    processTagsAndShowResult(allTags);
+    processTagsAndShowResult(allTags, finalAnswers);
   };
 
-  const processTagsAndShowResult = (allTags: string[]) => {
+  const processTagsAndShowResult = (allTags: string[], finalAnswers: Record<number, AnswerState>) => {
     if (!data) return;
 
     // 결과 표시 전 광고 확률적 표시
     triggerAd('COMFORT_RESULT');
+
+    // 질문 요약 생성
+    const summary: QuestionSummary[] = [];
+    for (let i = 0; i <= 3; i++) {
+      const answer = finalAnswers[i];
+      if (answer) {
+        summary.push({
+          question: answer.questionText,
+          answer: answer.option.text
+        });
+      }
+    }
+    setQuestionSummary(summary);
 
     let topVerses: Verse[] = [];
     let sortedTags: string[] = [];
@@ -233,7 +255,7 @@ export const ComfortChat: React.FC = () => {
       }
     });
 
-    processTagsAndShowResult(allTags);
+    processTagsAndShowResult(allTags, answers);
   };
 
   const handleRestart = () => {
@@ -242,6 +264,7 @@ export const ComfortChat: React.FC = () => {
     setShowResult(false);
     setRecommendedVerses([]);
     setCollectedTags([]);
+    setQuestionSummary([]);
     setEmotionCategory(null);
     setEmotionType(null);
   };
@@ -308,6 +331,7 @@ export const ComfortChat: React.FC = () => {
         tags={collectedTags}
         tagDescriptions={data.tagDescriptions}
         encouragementMessages={data.encouragementMessages}
+        questionSummary={questionSummary}
         onRestart={handleRestart}
         onNewVerse={handleNewVerse}
       />
