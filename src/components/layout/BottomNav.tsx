@@ -9,10 +9,10 @@ interface BottomNavProps {
 }
 
 const tabs = [
+  { id: 'comfort' as TabType, label: '오늘의위로', icon: Heart },
   { id: 'theme' as TabType, label: '테마성경', icon: BookOpen },
   { id: 'awana' as TabType, label: '어와나암송', icon: Target },
   { id: 'bible' as TabType, label: '성경읽기', icon: BookMarked },
-  { id: 'comfort' as TabType, label: '오늘의위로', icon: Heart },
 ];
 
 export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, onTabChange }) => {

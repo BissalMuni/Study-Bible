@@ -246,6 +246,48 @@ export const ComfortChat: React.FC = () => {
     setEmotionType(null);
   };
 
+  // 새 말씀 보기 - 현재 태그 기반으로 새로운 말씀 랜덤 선택
+  const handleNewVerse = () => {
+    if (!data || collectedTags.length === 0) return;
+
+    // 현재 수집된 태그로 새로운 말씀 선택
+    const tagCounts: Record<string, number> = {};
+    collectedTags.forEach(tag => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+
+    const scoredVerses = data.verses.map(verse => {
+      let score = 0;
+      collectedTags.forEach((tag, index) => {
+        if (verse.tags.includes(tag)) {
+          score += (collectedTags.length - index) * (tagCounts[tag] || 1);
+        }
+      });
+      return { verse, score };
+    });
+
+    const top10 = scoredVerses
+      .filter(v => v.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 10)
+      .map(v => v.verse);
+
+    // Shuffle and pick 5
+    const shuffled = [...top10].sort(() => Math.random() - 0.5);
+    let topVerses = shuffled.slice(0, 5);
+
+    // If we have fewer than 5 verses, add some default comfort verses
+    if (topVerses.length < 5) {
+      const defaultVerses = data.verses
+        .filter(v => v.tags.includes('comfort') && !topVerses.some(tv => tv.id === v.id))
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 5 - topVerses.length);
+      topVerses = [...topVerses, ...defaultVerses];
+    }
+
+    setRecommendedVerses(topVerses);
+  };
+
   if (!data) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -267,6 +309,7 @@ export const ComfortChat: React.FC = () => {
         tagDescriptions={data.tagDescriptions}
         encouragementMessages={data.encouragementMessages}
         onRestart={handleRestart}
+        onNewVerse={handleNewVerse}
       />
     );
   }

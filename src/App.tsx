@@ -20,7 +20,7 @@ const pageVariants = {
 };
 
 function AppContent() {
-  const [activeTab, setActiveTab] = useState<TabType>('theme');
+  const [activeTab, setActiveTab] = useState<TabType>('comfort');
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
   const [isReadingChapter, setIsReadingChapter] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);

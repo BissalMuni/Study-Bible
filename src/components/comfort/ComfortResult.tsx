@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, RefreshCw, BookOpen, Sparkles, Volume2, VolumeX } from 'lucide-react';
+import { Heart, RefreshCw, BookOpen, Sparkles, Volume2, VolumeX, Shuffle } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
 
 interface Verse {
@@ -21,6 +21,7 @@ interface ComfortResultProps {
   tagDescriptions: Record<string, string>;
   encouragementMessages: Record<string, EncouragementMessage>;
   onRestart: () => void;
+  onNewVerse: () => void;
 }
 
 const containerVariants = {
@@ -44,6 +45,7 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
   tagDescriptions,
   encouragementMessages,
   onRestart,
+  onNewVerse,
 }) => {
   const { speak, isSpeaking, currentText } = useTTS();
 
@@ -178,17 +180,32 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
         </div>
       </motion.div>
 
-      {/* Restart Button */}
-      <motion.button
-        variants={itemVariants}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={onRestart}
-        className="w-full py-4 rounded-xl bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium flex items-center justify-center gap-2 shadow-md"
-      >
-        <RefreshCw className="w-5 h-5" />
-        다시 시작하기
-      </motion.button>
+      {/* Action Buttons */}
+      <div className="flex gap-3 mb-4">
+        {/* New Verse Button */}
+        <motion.button
+          variants={itemVariants}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={onNewVerse}
+          className="flex-1 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium flex items-center justify-center gap-2 shadow-md"
+        >
+          <Shuffle className="w-5 h-5" />
+          새 말씀
+        </motion.button>
+
+        {/* Restart Button */}
+        <motion.button
+          variants={itemVariants}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={onRestart}
+          className="flex-1 py-4 rounded-xl bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium flex items-center justify-center gap-2 shadow-md"
+        >
+          <RefreshCw className="w-5 h-5" />
+          다시 시작하기
+        </motion.button>
+      </div>
 
       {/* Footer */}
       <motion.p
