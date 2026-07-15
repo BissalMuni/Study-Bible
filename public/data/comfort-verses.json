@@ -191,13 +191,46 @@
       },
       "neutral": {
         "id": 3,
-        "question": "그 욕구로 인해 어떤 어려움이 있나요?",
+        "_theory": "CBT(Ellis REBT) 좌절 내성·사회 비교(Festinger 1954) / ACT(Hayes) 인지 융합·가치 명료화 / Bandura(1977) 자기효능감 / Frankl(1959) 의미 혼란 / Neff 자기연민 적용. 단어형 선택지 4개 → 감정 문장형 6개로 욕구에 얽힌 인지 패턴을 정밀 탐색.",
+        "question": "이 욕구나 바람을 떠올릴 때, 마음에서 가장 크게 느껴지는 것은 무엇인가요?",
         "type": "single",
         "options": [
-          { "id": "impatient", "text": "빨리 이루어지지 않아 답답해요", "tags": ["patience", "trust", "peace"] },
-          { "id": "comparison", "text": "남들과 비교하게 돼요", "tags": ["peace", "love", "wisdom"] },
-          { "id": "anxious", "text": "이룰 수 있을지 불안해요", "tags": ["trust", "faith", "hope"] },
-          { "id": "obsessed", "text": "그 생각에서 벗어나기 어려워요", "tags": ["peace", "rest", "wisdom"] }
+          {
+            "id": "desire_impatient",
+            "text": "빨리 이루어지길 원하는데 자꾸 늦어져 답답하고 초조해요",
+            "_theory": "Ellis REBT 좌절 내성 부족(Low Frustration Tolerance): '반드시 지금 이루어져야 한다'는 당위적 신념이 분노·좌절 유발",
+            "tags": ["patience", "trust", "peace"]
+          },
+          {
+            "id": "desire_comparison",
+            "text": "남들은 이미 다 가지고 있는데 나만 없다는 박탈감이 들어요",
+            "_theory": "Festinger(1954) 사회 비교 이론: 상향 비교(Upward Comparison)가 자존감 저하·상대적 박탈감을 유발 — 내적 기준 회복 필요",
+            "tags": ["peace", "gratitude", "wisdom"]
+          },
+          {
+            "id": "desire_doubt",
+            "text": "과연 내가 이걸 이룰 수 있을지 스스로를 믿기가 어려워요",
+            "_theory": "Bandura(1977) 자기효능감(Self-Efficacy) 부족: 역량에 대한 낮은 신념이 시도 자체를 억제 — 작은 성공 경험(Mastery Experience)으로 회복",
+            "tags": ["courage", "faith", "hope"]
+          },
+          {
+            "id": "desire_fusion",
+            "text": "이 생각이 너무 커져서 다른 소중한 것들을 놓치고 있는 것 같아요",
+            "_theory": "ACT(Hayes) 인지 융합(Cognitive Fusion): 욕구 생각과 자아가 합쳐져 다른 가치·관계를 보지 못함 — 탈융합(Defusion) 필요",
+            "tags": ["peace", "wisdom", "rest"]
+          },
+          {
+            "id": "desire_meaning",
+            "text": "이걸 정말 원하는 건지, 왜 원하는 건지 스스로도 혼란스러워요",
+            "_theory": "Frankl(1959) 의미 혼란 + ACT 가치 명료화(Values Clarification): 욕구가 외적 압력(인정·비교)인지 진짜 가치인지 분별 필요",
+            "tags": ["wisdom", "guidance", "faith"]
+          },
+          {
+            "id": "desire_guilt",
+            "text": "이런 걸 바라는 내 자신이 너무 탐욕스럽게 느껴져 죄책감이 들어요",
+            "_theory": "CBT 자기비판 + Neff(2011) 자기연민: 욕구 자체에 수치심을 갖는 패턴 — 인간적 욕구를 자연스럽게 수용하는 자기연민 필요",
+            "tags": ["forgiveness", "love", "peace"]
+          }
         ]
       }
     },
@@ -286,13 +319,40 @@
       },
       "neutral": {
         "id": 4,
-        "question": "지금 당신에게 가장 필요한 것은 무엇인가요?",
+        "_theory": "ACT(Hayes 2004) 가치 기반 행동·탈융합·수용 / 마음챙김(Kabat-Zinn) 현재 순간 / 자기결정이론(Deci&Ryan 1985) 자율성·내적 동기 / Frankl 의미치료 / Bandura 자기효능감. 단어형 4개 → 행동 지향 문장형 5개로 욕구와 함께 살아가는 내면 자원 탐색.",
+        "question": "이 바람을 안고 살아가기 위해, 지금 내면에서 가장 필요한 것은 무엇인가요?",
         "type": "single",
         "options": [
-          { "id": "need_guidance", "text": "방향과 지혜 🧭", "tags": ["wisdom", "guidance", "trust"] },
-          { "id": "need_patience", "text": "기다리는 마음 ⏳", "tags": ["patience", "trust", "peace"] },
-          { "id": "need_contentment", "text": "현재에 만족하는 마음 🍀", "tags": ["peace", "gratitude", "trust"] },
-          { "id": "need_courage", "text": "도전할 용기 🔥", "tags": ["courage", "strength", "faith"] }
+          {
+            "id": "want_discern",
+            "text": "이 욕구가 진짜 내 삶의 가치에서 온 것인지 분별하고 싶어요 🔍",
+            "_theory": "ACT 가치 명료화(Values Clarification) + Frankl(1959): 욕구의 원천을 파악해 외적 압력(비교·인정)과 진정한 가치 기반 욕구를 구분",
+            "tags": ["wisdom", "guidance", "faith"]
+          },
+          {
+            "id": "want_wait",
+            "text": "이루어지는 데 걸리는 시간을 평안하게 기다릴 마음의 여유가 필요해요 ⏳",
+            "_theory": "CBT 좌절 내성(Frustration Tolerance) 강화 + 정서조절 인내: 즉각적 충족을 기다리는 능력이 웰빙과 목표 달성 모두에 필수",
+            "tags": ["patience", "trust", "peace"]
+          },
+          {
+            "id": "want_content",
+            "text": "지금 이 순간, 이미 충분함을 느끼는 감사와 평화가 필요해요 🍃",
+            "_theory": "마음챙김(Kabat-Zinn) 현재 순간 수용 + 자기결정이론(Deci&Ryan) 내적 충족: 외적 목표보다 현재의 내적 풍요에서 행복이 온다",
+            "tags": ["peace", "gratitude", "rest"]
+          },
+          {
+            "id": "want_courage",
+            "text": "원하는 것을 향해 두려움을 넘어 한 걸음 내딛는 용기가 필요해요 🌟",
+            "_theory": "Bandura(1977) 자기효능감 강화 + ACT 가치 기반 행동(Committed Action): 결과 보장 없이도 가치에 따라 행동하는 용기",
+            "tags": ["courage", "faith", "strength"]
+          },
+          {
+            "id": "want_free",
+            "text": "이 욕구에 끌려다니지 않고 내 삶의 주인이 되는 자유가 필요해요 🕊️",
+            "_theory": "ACT 탈융합(Defusion) + 자기결정이론 자율성(Autonomy): 욕구를 소유하되 욕구에 지배당하지 않는 심리적 자유",
+            "tags": ["peace", "wisdom", "trust"]
+          }
         ]
       }
     }
