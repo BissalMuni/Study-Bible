@@ -103,13 +103,46 @@
     "q3": {
       "positive": {
         "id": 3,
-        "question": "이 좋은 감정을 어떻게 하고 싶으세요?",
+        "_theory": "Fredrickson(2001) Broaden-and-Build / Savoring(Bryant&Veroff 2007) / PERMA(Seligman 2011) / 사회적 공유(Gable 2004) / Lyubomirsky(2008) 의도적 행복 활동 적용. '감정을 어떻게 할 것인가' → '이 기쁨을 어떻게 더 깊이 가꿀 것인가'로 질문 심화, 4→6개 선택지로 확장.",
+        "question": "이 기쁜 마음을 어떻게 더 깊이 가꾸고 싶으세요?",
         "type": "single",
         "options": [
-          { "id": "share", "text": "다른 사람과 나누고 싶어요", "tags": ["love", "joy", "gratitude"] },
-          { "id": "remember", "text": "오래 간직하고 싶어요", "tags": ["gratitude", "peace", "joy"] },
-          { "id": "thank_god", "text": "하나님께 감사드리고 싶어요", "tags": ["faith", "gratitude", "love"] },
-          { "id": "more_joy", "text": "이 기쁨이 계속되길 원해요", "tags": ["hope", "joy", "faith"] }
+          {
+            "id": "savor",
+            "text": "이 순간을 천천히 음미하며 마음에 새기고 싶어요",
+            "_theory": "Savoring(Bryant&Veroff 2007): 긍정 경험을 의식적으로 음미·연장하는 기술 — 헤도닉 적응을 늦추고 행복감 지속",
+            "tags": ["gratitude", "peace", "rest"]
+          },
+          {
+            "id": "share_joy",
+            "text": "소중한 사람에게 이 기쁨을 표현하고 나누고 싶어요",
+            "_theory": "Gable et al.(2004) 능동적 건설적 반응(ACR): 긍정 정서의 사회적 공유가 관계 만족도와 개인 행복감을 동시에 증폭",
+            "tags": ["love", "joy", "presence"]
+          },
+          {
+            "id": "deepen_gratitude",
+            "text": "이 감사함이 더 깊어지도록 기도하고 묵상하고 싶어요",
+            "_theory": "Emmons&McCullough(2003) 감사 개입: 감사 심화 연습이 웰빙·삶의 만족도·신앙 성장 모두에 유의미한 효과",
+            "tags": ["gratitude", "faith", "love"]
+          },
+          {
+            "id": "act_good",
+            "text": "이 에너지로 누군가에게 선한 일을 하고 싶어요",
+            "_theory": "Fredrickson(2001) Broaden-and-Build: 긍정 정서가 사고-행동 레퍼토리를 확장 → 친사회적 행동 동기와 심리적 자원을 함께 키움",
+            "tags": ["love", "courage", "hope"]
+          },
+          {
+            "id": "find_meaning",
+            "text": "이 기쁨이 어디서 왔는지 그 의미를 깊이 찾고 싶어요",
+            "_theory": "Seligman PERMA의 Meaning(의미): 긍정 경험을 삶의 의미·목적과 연결할 때 일시적 쾌락이 지속적 번영(Flourishing)으로 전환",
+            "tags": ["wisdom", "faith", "gratitude"]
+          },
+          {
+            "id": "plant_seed",
+            "text": "이 행복이 내일로도 이어지도록 씨앗을 심고 싶어요",
+            "_theory": "Lyubomirsky(2008) 의도적 행복 활동(Intentional Activity): 환경·유전이 아닌 의도적 행동이 지속적 행복 수준을 결정하는 핵심 변인",
+            "tags": ["hope", "faith", "joy"]
+          }
         ]
       },
       "negative": {
@@ -171,13 +204,40 @@
     "q4": {
       "positive": {
         "id": 4,
-        "question": "오늘의 마무리로 무엇을 원하시나요?",
+        "_theory": "긍정심리학 개입(PPIs) 직접 적용: Three Good Things(Seligman 2005) / Acts of Kindness(Lyubomirsky 2005) / Positive Bedtime Review(Savoring) / Spiritual Gratitude / Snyder 희망이론. '오늘을 어떻게 닫을 것인가'로 질문을 행동 지향적으로 구체화, 4→5개 선택지로 확장.",
+        "question": "오늘 하나님이 허락하신 이 선함으로, 하루를 어떻게 마무리할까요?",
         "type": "single",
         "options": [
-          { "id": "thanksgiving", "text": "감사의 기도를 드리고 싶어요 🙏", "tags": ["gratitude", "faith", "joy"] },
-          { "id": "blessing", "text": "이 축복을 나누고 싶어요 🎁", "tags": ["love", "joy", "gratitude"] },
-          { "id": "peaceful_end", "text": "평안하게 하루를 마무리하고 싶어요 🌙", "tags": ["peace", "rest", "gratitude"] },
-          { "id": "hope_tomorrow", "text": "내일도 이런 날이길 바라요 ✨", "tags": ["hope", "faith", "joy"] }
+          {
+            "id": "three_blessings",
+            "text": "오늘 감사한 일 세 가지를 마음에 새기며 하루를 돌아보고 싶어요 📓",
+            "_theory": "Seligman(2005) Three Good Things: 잠자리 전 세 가지 감사 회상이 우울감 감소·행복감 증가에 6개월 효과 지속 확인",
+            "tags": ["gratitude", "peace", "faith"]
+          },
+          {
+            "id": "kind_word",
+            "text": "이 기쁨으로 소중한 사람에게 따뜻한 말 한마디를 건네고 싶어요 💌",
+            "_theory": "Lyubomirsky(2005) Acts of Kindness: 타인을 위한 의도적 친절 행동이 행복의 지속성을 높이는 가장 효과적인 개입 중 하나",
+            "tags": ["love", "joy", "presence"]
+          },
+          {
+            "id": "restful_close",
+            "text": "오늘의 좋은 순간들을 떠올리며 평안히 쉬고 싶어요 🌙",
+            "_theory": "Positive Bedtime Review(Savoring): 수면 전 긍정 경험 회상이 수면의 질과 다음날 기분 상태를 유의미하게 개선",
+            "tags": ["rest", "peace", "gratitude"]
+          },
+          {
+            "id": "thanksgiving_prayer",
+            "text": "하나님께 드리는 감사 기도로 오늘 하루를 마무리하고 싶어요 🙏",
+            "_theory": "Spiritual Gratitude: 수직적 감사(하나님께)가 수평적 감사보다 삶의 의미감·영적 평안을 더 깊게 강화 — 성경적 감사의 완성",
+            "tags": ["faith", "gratitude", "love"]
+          },
+          {
+            "id": "hopeful_rest",
+            "text": "내일도 이런 하루이길 소망하며 기대감으로 잠들고 싶어요 ✨",
+            "_theory": "Snyder(1994) 희망이론: 긍정적 미래 기대(Hopeful Thinking)가 현재 웰빙과 도전 동기를 동시에 강화 — 오늘의 기쁨이 내일의 에너지",
+            "tags": ["hope", "joy", "faith"]
+          }
         ]
       },
       "negative": {
