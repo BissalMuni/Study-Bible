@@ -1,3 +1,42 @@
+/**
+ * ComfortChat — 감정 분기형 마인드 체크(위안) 설문
+ *
+ * ── 적용 심리이론 ──────────────────────────────────────────────────────────
+ *
+ * [Q1] 감정 분류 — Plutchik(1980) 기본 감정 분류 + 혼합 감정 개념
+ *   기쁨(joy), 분노(anger), 슬픔(sorrow), 즐거움(pleasure), 사랑(love),
+ *   미움(hate), 욕망(desire)을 category(positive/negative/neutral)로 구분
+ *   → 이후 질문 분기를 결정하는 핵심 축
+ *
+ * [Q2] 원인 탐색 — 인지행동치료(CBT, Beck 1979)
+ *   상황-생각-감정-행동(STBA) 모델 중 '상황(Situation)' 탐색
+ *   어떤 맥락에서 감정이 촉발되었는지 확인 → 태그 수집 정밀화
+ *
+ * [Q3] 내면 목소리 탐색 (negative 분기) — 2025-07 개선
+ *   ▸ CBT(Beck): 자동적 사고(Automatic Thoughts) · 인지왜곡 패턴 식별
+ *     - 학습된 무력감(Seligman), 반추(Nolen-Hoeksema), 파국화, 자기귀인 오류
+ *   ▸ 정서조절(Gross 2015): 억압(Suppression) vs 재평가(Reappraisal)
+ *   ▸ 애착이론(Bowlby): 연결 욕구 좌절 → 정서적 고립감
+ *   → 표면적 상황이 아닌 "마음속 생각 패턴"을 탐색해 구절 매핑 정확도 향상
+ *
+ * [Q4] 내면 자원 탐색 (negative 분기) — 2025-07 개선
+ *   ▸ ACT(Hayes 2004): 심리적 유연성 · 가치 기반 행동(Committed Action)
+ *   ▸ Neff 자기연민(Self-Compassion): 자기 수용 · 공통 인간성
+ *   ▸ 긍정심리학(Seligman PERMA): 회복탄력성(Resilience) · 희망 이론(Snyder)
+ *   ▸ 애착이론(Bowlby): 안전 기지(Secure Base) 탐색
+ *   → '무엇이 없는지'가 아닌 '어떤 내면 자원이 필요한지'로 질문 전환
+ *
+ * 참고문헌:
+ *   Beck, A.T. (1979). Cognitive Therapy of Depression.
+ *   Gross, J.J. (2015). Emotion regulation: Current status and future prospects.
+ *   Hayes, S.C. (2004). Acceptance and Commitment Therapy.
+ *   Bowlby, J. (1988). A Secure Base.
+ *   Neff, K. (2011). Self-Compassion: The Proven Power of Being Kind to Yourself.
+ *   Seligman, M.E.P. (2011). Flourish (PERMA model).
+ *   Snyder, C.R. (1994). The Psychology of Hope.
+ *   Nolen-Hoeksema, S. (1991). Responses to depression and their effects on duration.
+ * ────────────────────────────────────────────────────────────────────────────
+ */
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Heart, RefreshCw } from 'lucide-react';

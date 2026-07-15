@@ -114,15 +114,46 @@
       },
       "negative": {
         "id": 3,
-        "question": "그 상황에서 가장 힘들었던 점은 무엇인가요?",
+        "_theory": "CBT(Beck 1979) 자동적사고·인지왜곡 / 정서조절(Gross) / 애착이론(Bowlby) 기반. 표면 상황이 아닌 마음속 생각 패턴을 탐색하도록 질문 전환.",
+        "question": "지금 마음속에서 가장 크게 들리는 목소리는 무엇인가요?",
         "type": "single",
         "options": [
-          { "id": "pain_misunderstood", "text": "이해받지 못하는 느낌", "tags": ["love", "presence", "comfort"] },
-          { "id": "pain_helpless", "text": "내가 할 수 있는 게 없다는 무력감", "tags": ["strength", "faith", "hope"] },
-          { "id": "pain_alone", "text": "혼자 감당해야 한다는 외로움", "tags": ["presence", "love", "comfort"] },
-          { "id": "pain_uncertain", "text": "앞이 보이지 않는 막막함", "tags": ["guidance", "hope", "trust"] },
-          { "id": "pain_worthless", "text": "나 자신이 부족하다는 느낌", "tags": ["love", "courage", "faith"] },
-          { "id": "pain_unfair", "text": "억울하고 부당하다는 분노", "tags": ["peace", "patience", "trust"] }
+          {
+            "id": "pain_unseen",
+            "text": "내 진짜 마음을 아무도 이해 못 할 것 같아요",
+            "_theory": "애착이론(Bowlby): 연결 욕구 좌절 — 정서적 고립감",
+            "tags": ["presence", "love", "comfort"]
+          },
+          {
+            "id": "pain_helpless",
+            "text": "내가 아무리 해도 달라지지 않을 것 같아요",
+            "_theory": "CBT/Seligman: 학습된 무력감(Learned Helplessness) — 통제 불가 신념",
+            "tags": ["hope", "strength", "faith"]
+          },
+          {
+            "id": "pain_rumination",
+            "text": "같은 생각이 계속 머릿속을 맴돌아요",
+            "_theory": "CBT(Nolen-Hoeksema): 반추(Rumination) — 부정 사고 고리가 감정을 악화",
+            "tags": ["peace", "rest", "healing"]
+          },
+          {
+            "id": "pain_self_blame",
+            "text": "이렇게 된 게 다 내 탓인 것 같아 자책돼요",
+            "_theory": "CBT(Beck): 자기 귀인 오류(Self-blame) / 과잉 자기비난 인지왜곡",
+            "tags": ["forgiveness", "love", "healing"]
+          },
+          {
+            "id": "pain_fear",
+            "text": "앞으로 더 나빠질 것 같아서 두려워요",
+            "_theory": "CBT: 파국화(Catastrophizing) — 최악의 결과를 기정사실화",
+            "tags": ["trust", "hope", "guidance"]
+          },
+          {
+            "id": "pain_suppressed",
+            "text": "화가 나지만 어디에도 표현할 수가 없어요",
+            "_theory": "정서조절(Gross 2015): 억압(Suppression) — 표현되지 못한 감정의 누적·신체화",
+            "tags": ["peace", "patience", "healing"]
+          }
         ]
       },
       "neutral": {
@@ -151,15 +182,46 @@
       },
       "negative": {
         "id": 4,
-        "question": "지금 당신에게 가장 필요한 것은 무엇인가요?",
+        "_theory": "ACT(Hayes 2004) 가치 기반 행동·자기연민(Neff) / 긍정심리학 회복탄력성(Seligman PERMA) / 애착이론 안전기지 / 정서조절 다운레귤레이션 적용. '무엇이 없는지'가 아닌 '어떤 내면 자원이 필요한지'로 질문 전환.",
+        "question": "지금 이 아픔을 안고, 내면에서 가장 필요한 힘은 무엇인가요?",
         "type": "single",
         "options": [
-          { "id": "need_comfort", "text": "따뜻한 위로와 공감 🤗", "tags": ["comfort", "love", "presence"] },
-          { "id": "need_strength", "text": "다시 일어설 힘 💪", "tags": ["strength", "courage", "faith"] },
-          { "id": "need_peace", "text": "마음의 평안과 쉼 🕊️", "tags": ["peace", "rest", "trust"] },
-          { "id": "need_direction", "text": "방향과 지혜 🧭", "tags": ["wisdom", "guidance", "trust"] },
-          { "id": "need_hope", "text": "희망과 새로운 시작 ✨", "tags": ["hope", "faith", "courage"] },
-          { "id": "need_healing", "text": "상처의 치유 💚", "tags": ["healing", "comfort", "love"] }
+          {
+            "id": "need_acceptance",
+            "text": "흔들려도 괜찮다는 자기 수용과 연민 🌿",
+            "_theory": "ACT(Hayes) + Neff 자기연민(Self-Compassion): 완벽해야 한다는 압박에서 벗어나 있는 그대로 받아들이기",
+            "tags": ["love", "healing", "comfort"]
+          },
+          {
+            "id": "need_peace",
+            "text": "복잡한 마음이 고요해질 수 있는 안정과 쉼 🕊️",
+            "_theory": "정서조절(Gross): 과활성화된 감정 시스템을 다운레귤레이션하는 안정화",
+            "tags": ["peace", "rest", "trust"]
+          },
+          {
+            "id": "need_direction",
+            "text": "다음 한 걸음을 볼 수 있는 빛과 방향 🧭",
+            "_theory": "CBT 행동활성화(BA) + Snyder 희망이론: 목표-경로-의지력 3요소 중 경로감각 회복",
+            "tags": ["guidance", "hope", "wisdom"]
+          },
+          {
+            "id": "need_courage",
+            "text": "다시 일어설 수 있다는 믿음과 용기 💪",
+            "_theory": "긍정심리학(Seligman PERMA): 회복탄력성(Resilience) — 역경을 통해 강점이 단련됨",
+            "tags": ["courage", "strength", "faith"]
+          },
+          {
+            "id": "need_presence",
+            "text": "이 마음을 알아주고 곁에 있어줄 누군가 🤗",
+            "_theory": "애착이론(Bowlby): 안전 기지(Secure Base) 탐색 — 연결과 사회적 지지의 욕구",
+            "tags": ["presence", "love", "comfort"]
+          },
+          {
+            "id": "need_healing",
+            "text": "상처가 천천히 아물어갈 수 있는 치유의 시간 💚",
+            "_theory": "정서조절: 치유는 즉각적이지 않으며 시간과 과정이 필요함을 수용 — ACT의 수용(Acceptance)",
+            "tags": ["healing", "comfort", "patience"]
+          }
         ]
       },
       "neutral": {
