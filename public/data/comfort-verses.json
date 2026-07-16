@@ -72,14 +72,46 @@
       },
       "anger": {
         "id": 2,
-        "question": "화나고 억울한 감정의 원인은 무엇인가요?",
+        "_theory": "Lazarus(1991) 인지 평가 이론: 분노는 '부당한 침해'로 평가된 상황에서 발생 — 권리 침해, 목표 차단, 신뢰 파괴, 존엄성 훼손이 핵심 유발 인식. CBT STBA 모델: 상황(Situation) 탐색이 이후 Q3의 인지 패턴(Thought) 탐색에 맥락을 제공함. '원인은 무엇인가요?'(진단형) → '어디서 왔다고 느껴지나요?'(공감형)으로 질문 전환.",
+        "question": "이 화나고 억울한 마음이 어디서 왔다고 느껴지나요?",
         "type": "single",
         "options": [
-          { "id": "unfair", "text": "부당한 대우를 받았어요", "tags": ["patience", "peace", "trust"] },
-          { "id": "betrayal", "text": "믿었던 사람에게 배신당했어요", "tags": ["forgiveness", "healing", "trust"] },
-          { "id": "misunderstood", "text": "오해를 받았어요", "tags": ["patience", "peace", "comfort"] },
-          { "id": "ignored", "text": "무시당하거나 존중받지 못했어요", "tags": ["love", "courage", "strength"] },
-          { "id": "helpless_anger", "text": "상황을 바꿀 수 없는 무력감", "tags": ["strength", "trust", "hope"] }
+          {
+            "id": "unfair",
+            "_theory": "Lazarus(1991) 권리 침해 평가(Demeaning Offense): '내가 받아야 마땅한 것을 빼앗겼다'는 인식이 분노의 핵심 — 정의감(sense of justice) 손상에서 기인",
+            "text": "마땅히 받아야 할 것을 부당하게 빼앗기거나 무시당한 것 같아요",
+            "tags": ["patience", "peace", "trust"]
+          },
+          {
+            "id": "betrayal",
+            "_theory": "애착이론(Bowlby 1988): 신뢰 관계에서의 배신 — 안전기지(Secure Base) 파괴로 분노와 슬픔이 동시에 유발됨. 친밀감이 깊을수록 배신의 충격도 깊어짐",
+            "text": "믿고 신뢰했던 사람이 그 믿음을 깨뜨린 것 같아요",
+            "tags": ["forgiveness", "healing", "trust"]
+          },
+          {
+            "id": "misunderstood",
+            "_theory": "CBT 귀인 오류(Attribution Error): 내 의도가 잘못 해석된 것에 대한 억울함 — '왜 내 마음을 모를까'라는 좌절이 분노로 전환되는 패턴",
+            "text": "내 진짜 마음이나 의도가 왜곡되어 오해받은 것 같아요",
+            "tags": ["patience", "peace", "comfort"]
+          },
+          {
+            "id": "ignored",
+            "_theory": "자기결정이론(Deci&Ryan 1985) 관계성 욕구 좌절: 존재와 감정이 인정받지 못할 때 분노와 수치심이 함께 유발 — 기본 심리 욕구(관계성) 침해",
+            "text": "내 존재나 감정이 없는 것처럼 무시당하거나 존중받지 못했어요",
+            "tags": ["love", "courage", "strength"]
+          },
+          {
+            "id": "helpless_anger",
+            "_theory": "Lazarus 목표 차단(Goal Blocking) + 좌절-공격 가설(Dollard 1939): 바꾸고 싶지만 통제할 수 없는 상황이 무력감과 분노를 동시에 유발",
+            "text": "바꾸고 싶은데 아무것도 할 수 없는 막막함이 화로 느껴져요",
+            "tags": ["strength", "trust", "hope"]
+          },
+          {
+            "id": "anger_self",
+            "_theory": "CBT 내향적 분노(Inward Anger): 타인이 아닌 자신을 향한 분노가 자기비난·죄책감으로 내면화되는 패턴 — Neff(2011) 자기연민이 해결 경로",
+            "text": "남이 아니라 스스로에게 화가 나는데 어디에 두어야 할지 모르겠어요",
+            "tags": ["forgiveness", "healing", "love"]
+          }
         ]
       },
       "sorrow": {
