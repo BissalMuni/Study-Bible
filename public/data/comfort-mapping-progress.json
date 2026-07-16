@@ -1,9 +1,9 @@
 {
   "lastBook": 1,
   "lastBookName": "창세기",
-  "lastChapter": 4,
-  "totalAdded": 11,
-  "totalInFile": 111,
+  "lastChapter": 9,
+  "totalAdded": 16,
+  "totalInFile": 116,
   "processedSections": [
     {
       "book": 1,
@@ -18,6 +18,13 @@
       "chapters": [3, 4],
       "addedIds": [107, 108, 109, 110, 111],
       "note": "타락·형제 섹션: 하나님이 먼저 부르심(3:9), 원시복음 승리약속(3:15), 가죽옷 돌봄(3:21), 죄를 다스릴찌니라(4:7), 가인의 보호표(4:15)"
+    },
+    {
+      "book": 1,
+      "bookName": "창세기",
+      "chapters": [6, 7, 8, 9],
+      "addedIds": [112, 113, 114, 115, 116],
+      "note": "홍수 섹션: 은혜 입은 노아(6:8), 권념하심-기억(8:1), 홍수 언약(9:11), 무지개 언약(9:13), 영원한 기억(9:16)"
     }
   ],
   "notes": {
