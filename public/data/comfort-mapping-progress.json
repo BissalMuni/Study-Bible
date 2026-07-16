@@ -1,0 +1,20 @@
+{
+  "lastBook": 1,
+  "lastBookName": "창세기",
+  "lastChapter": 2,
+  "totalAdded": 6,
+  "totalInFile": 106,
+  "processedSections": [
+    {
+      "book": 1,
+      "bookName": "창세기",
+      "chapters": [1, 2],
+      "addedIds": [101, 102, 103, 104, 105, 106],
+      "note": "창조 섹션: 하나님 형상(1:27), 심히 좋았더라(1:31), 안식(2:2-3), 생령(2:7), 외로움(2:18), 하나님의 복(1:28)"
+    }
+  ],
+  "notes": {
+    "verseNumberWarning": "bible_theme.json의 verse 번호는 6의 배수 위치에서 +1 씩 누적 오프셋이 생기는 버그 있음. Bible 실제 절 번호 = Data 절 번호 - floor((Data절번호-1)/6). 참조 기재 시 반드시 실제 성경 절 번호 사용."
+  },
+  "updatedAt": "2026-07-16"
+}
