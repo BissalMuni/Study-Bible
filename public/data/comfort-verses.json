@@ -2,16 +2,59 @@
   "questions": {
     "q1": {
       "id": 1,
-      "question": "오늘 가장 많이 느낀 감정은 무엇인가요?",
+      "_theory": "ACT(Hayes) 현재-순간 알아차림: '오늘 가장 많이'(분석·빈도)→'지금 이 순간'(체험·현재)으로 전환. Plutchik(1980) 기본 감정 분류 + Seligman 쾌락-의미 구분으로 joy/pleasure 명확히 분리. 욕망 stigma 제거(Deci&Ryan SDT). 옵션 표현 공감적 문장형으로 강화.",
+      "question": "지금 이 순간, 마음속에 가장 크게 자리한 감정이 무엇인가요?",
       "type": "single",
       "options": [
-        { "id": "joy", "text": "기쁘고 감사한 마음 😊", "tags": ["joy", "gratitude"], "category": "positive" },
-        { "id": "anger", "text": "화나고 억울한 마음 😤", "tags": ["patience", "forgiveness"], "category": "negative" },
-        { "id": "sorrow", "text": "슬프고 우울한 마음 😢", "tags": ["comfort", "hope"], "category": "negative" },
-        { "id": "pleasure", "text": "즐겁고 행복한 마음 🥰", "tags": ["joy", "peace"], "category": "positive" },
-        { "id": "love", "text": "사랑하는 마음 💕", "tags": ["love", "gratitude"], "category": "positive" },
-        { "id": "hate", "text": "미워하는 마음 😠", "tags": ["forgiveness", "peace"], "category": "negative" },
-        { "id": "desire", "text": "갖고 싶은 마음 (욕망) 🌟", "tags": ["trust", "wisdom"], "category": "neutral" }
+        {
+          "id": "joy",
+          "_theory": "Seligman 의미 기반 기쁨(Eudaimonic Joy): 성취·감사에서 오는 깊고 충만한 기쁨 — pleasure의 가벼운 쾌락과 구분",
+          "text": "이루어진 일이나 감사한 것이 있어 마음이 따뜻하고 벅차요 😊",
+          "tags": ["joy", "gratitude"],
+          "category": "positive"
+        },
+        {
+          "id": "anger",
+          "_theory": "Lazarus(1991) 인지 평가 이론: '억울함+뜨거움' 표현이 분노의 신체적·인지적 체험을 동시에 포착해 공감적 식별 가능",
+          "text": "억울하거나 화가 나서 마음이 뜨겁고 불편해요 😤",
+          "tags": ["patience", "forgiveness"],
+          "category": "negative"
+        },
+        {
+          "id": "sorrow",
+          "_theory": "슬픔과 우울의 공통 체험: '마음이 무겁다'는 신체 감각이 슬픔(grief)과 우울(depression) 모두를 포함해 넓은 스펙트럼 포착",
+          "text": "마음이 무겁고 슬프거나 우울한 기분이 들어요 😢",
+          "tags": ["comfort", "hope"],
+          "category": "negative"
+        },
+        {
+          "id": "pleasure",
+          "_theory": "Seligman 쾌락 기반 기쁨(Hedonic Pleasure): 특별한 이유 없이 가볍고 설레는 감각 — joy의 의미 기반 충만함과 명확히 구분",
+          "text": "마음이 가볍고 즐거워서 설레거나 유쾌해요 🥰",
+          "tags": ["joy", "peace"],
+          "category": "positive"
+        },
+        {
+          "id": "love",
+          "_theory": "Sternberg 사랑의 삼각형 이론: 낭만적 사랑만이 아닌 친밀감·헌신·보살핌 모두 포함하는 넓은 사랑 감정",
+          "text": "소중한 사람이나 무언가가 마음에 가득하고 따뜻해요 💕",
+          "tags": ["love", "gratitude"],
+          "category": "positive"
+        },
+        {
+          "id": "hate",
+          "_theory": "Averill(1982) 분노·혐오 연속성: '미움+짜증'을 함께 제시해 강한 혐오와 일상적 짜증·불쾌감 모두 포착. '미워하는'→'불편함'으로 낙인 완화",
+          "text": "누군가나 상황이 밉거나 짜증스러워 마음이 불편해요 😠",
+          "tags": ["forgiveness", "peace"],
+          "category": "negative"
+        },
+        {
+          "id": "desire",
+          "_theory": "Deci&Ryan(1985) 자기결정이론: '욕망(欲望)'의 부정적 낙인 제거 — 원함·바람은 자연스러운 인간 동기. '간절히 원하는 마음'으로 중립화",
+          "text": "무언가를 간절히 원하고 바라는 마음이 있어요 🌟",
+          "tags": ["trust", "wisdom"],
+          "category": "neutral"
+        }
       ]
     },
     "q2": {
