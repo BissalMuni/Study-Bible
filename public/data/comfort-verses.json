@@ -116,14 +116,46 @@
       },
       "sorrow": {
         "id": 2,
-        "question": "슬픔의 원인은 무엇인가요?",
+        "_theory": "Bowlby(1988) 애착이론: 슬픔은 소중한 연결의 상실 반응 — 사람·관계·꿈·자아상 모두 포함. Boss(1999) 모호한 상실(Ambiguous Loss): 이유를 설명하기 어려운 슬픔도 실제 고통임을 인정. CBT 부정 귀인: 실패·후회를 자기 탓으로 돌리는 내부 귀인이 우울감을 심화시킴. '원인은 무엇인가요?'(진단형) → '어디서 왔다고 느껴지나요?'(공감형)으로 질문 전환.",
+        "question": "이 슬프고 무거운 마음이 어디서 왔다고 느껴지나요?",
         "type": "single",
         "options": [
-          { "id": "loss", "text": "소중한 사람/것을 잃었어요", "tags": ["comfort", "hope", "presence", "healing"] },
-          { "id": "separation", "text": "이별이나 관계의 끝을 겪었어요", "tags": ["comfort", "healing", "hope"] },
-          { "id": "failure", "text": "실패나 좌절을 경험했어요", "tags": ["hope", "courage", "strength"] },
-          { "id": "regret", "text": "후회되는 일이 있어요", "tags": ["forgiveness", "healing", "peace"] },
-          { "id": "loneliness", "text": "외로움과 고독함을 느껴요", "tags": ["presence", "love", "comfort"] }
+          {
+            "id": "loss",
+            "_theory": "Bowlby(1988) 애착 대상 상실: 사람·소중한 것·삶의 국면 상실이 애도(Grief) 반응을 유발 — 슬픔은 사랑의 반대가 아닌, 사랑했던 것에 대한 증거",
+            "text": "소중한 사람이나 귀한 것을 잃은 아픔이 있어요",
+            "tags": ["comfort", "hope", "presence", "healing"]
+          },
+          {
+            "id": "separation",
+            "_theory": "사회적 고통 중복 이론(Eisenberger 2003): 가까운 관계의 단절은 신체 통증과 동일한 뇌 영역을 활성화 — 이별의 아픔은 실제 아픔임을 인정",
+            "text": "가까운 사람과의 이별이나 관계가 멀어진 아픔이 있어요",
+            "tags": ["comfort", "healing", "hope"]
+          },
+          {
+            "id": "failure",
+            "_theory": "CBT 내부 귀인(Internal Attribution): 실패를 능력·성격 탓으로 돌리는 패턴이 우울감을 심화 — 상황·맥락 귀인으로의 전환이 회복 경로",
+            "text": "열심히 했는데 뜻대로 되지 않아 좌절과 실망감이 남아요",
+            "tags": ["hope", "courage", "strength"]
+          },
+          {
+            "id": "regret",
+            "_theory": "CBT 반사실적 사고(Counterfactual Thinking): '그때 달랐더라면'이라는 생각이 자기비난과 연결됨 — Neff(2011) 자기연민으로 과거를 있는 그대로 수용하는 것이 치유 경로",
+            "text": "그때 다르게 했더라면 하는 후회가 마음에 남아요",
+            "tags": ["forgiveness", "healing", "peace"]
+          },
+          {
+            "id": "loneliness",
+            "_theory": "Cacioppo&Patrick(2008) 외로움 연구: 사회적 연결 욕구 미충족이 신체·정신 건강 모두에 심각한 영향 — 외로움은 의지가 아닌 근본적 인간 욕구의 신호",
+            "text": "아무도 내 곁에 없는 것 같은 외로움과 고독함을 느껴요",
+            "tags": ["presence", "love", "comfort"]
+          },
+          {
+            "id": "sorrow_unknown",
+            "_theory": "Boss(1999) 모호한 상실(Ambiguous Loss) + 기분저하(Dysthymia): 이유를 정확히 설명하기 어렵지만 마음이 무거운 것도 실제적인 고통 — 원인을 몰라도 위로받을 자격이 있음",
+            "text": "뚜렷한 이유는 모르겠는데 그냥 마음이 가라앉고 무거워요",
+            "tags": ["comfort", "rest", "healing"]
+          }
         ]
       },
       "pleasure": {
