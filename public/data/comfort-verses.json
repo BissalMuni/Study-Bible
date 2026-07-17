@@ -184,14 +184,46 @@
       },
       "hate": {
         "id": 2,
-        "question": "미움의 감정은 어디서 왔나요?",
+        "_theory": "Averill(1982) 혐오-분노 구분: hate는 특정 대상에 대한 지속적 부정 태도로 상황적 분노와 다름 — 관계·패턴에 고착. Haidt(2003) 도덕 정서: 불의에 대한 혐오는 자연스러운 도덕적 분노. Festinger(1954) 상향 비교 → 시기심. Gottman(1999) Negative Sentiment Override: 축적된 갈등이 관계 전체를 부정적으로 채색. CBT 자기비판 + Neff 자기연민. '미움의 감정은 어디서 왔나요?'(진단형) → '어디서 왔다고 느껴지나요?'(공감형).",
+        "question": "이 밉고 불편한 마음이 어디서 왔다고 느껴지나요?",
         "type": "single",
         "options": [
-          { "id": "hurt_by", "text": "그 사람에게 상처받았어요", "tags": ["healing", "forgiveness", "comfort"] },
-          { "id": "envy", "text": "시기심이나 질투를 느껴요", "tags": ["peace", "trust", "wisdom"] },
-          { "id": "conflict", "text": "해결되지 않는 갈등이 있어요", "tags": ["forgiveness", "patience", "peace"] },
-          { "id": "injustice", "text": "불의한 행동을 보았어요", "tags": ["courage", "wisdom", "patience"] },
-          { "id": "self_hate", "text": "나 자신이 미워요", "tags": ["love", "healing", "comfort"] }
+          {
+            "id": "hurt_by",
+            "_theory": "애착 상처(Attachment Wound): 상처받은 관계에서 방어적 혐오가 형성됨 — 마음을 닫음으로써 추가 상처를 막으려는 자기보호 반응",
+            "text": "그 사람에게 깊이 상처를 받아 마음이 닫혀버린 것 같아요",
+            "tags": ["healing", "forgiveness", "comfort"]
+          },
+          {
+            "id": "envy",
+            "_theory": "Festinger(1954) 상향 사회 비교(Upward Comparison): 타인이 가진 것에 대한 박탈감이 시기심·미움으로 전환 — 외부 기준이 아닌 내적 기준으로의 전환이 필요",
+            "text": "저 사람이 가진 것이 나에게 없다는 박탈감이 미움으로 느껴져요",
+            "tags": ["peace", "trust", "wisdom"]
+          },
+          {
+            "id": "conflict",
+            "_theory": "Gottman(1999) 부정적 감정 지배(Negative Sentiment Override): 해결 안 된 갈등이 쌓이면 상대의 중립적 행동도 부정적으로 해석되어 관계 자체가 불편해짐",
+            "text": "풀리지 않는 갈등이 쌓여 그 관계 자체가 힘들고 불편해요",
+            "tags": ["forgiveness", "patience", "peace"]
+          },
+          {
+            "id": "injustice",
+            "_theory": "Haidt(2003) 도덕 정서(Moral Emotions): 불의에 대한 혐오는 도덕적 분노 — 옳고 그름에 대한 감각에서 비롯된 자연스러운 반응임을 인정",
+            "text": "부당하거나 옳지 않은 일을 보거나 겪어 마음이 불편하고 화가 나요",
+            "tags": ["courage", "wisdom", "patience"]
+          },
+          {
+            "id": "self_hate",
+            "_theory": "CBT 자기비판(Self-Criticism) + Neff(2011) 자기연민: 자신을 향한 혐오는 높은 기대와 자기비난에서 기인 — 자기연민으로의 전환이 치유 경로",
+            "text": "남이 아니라 내 자신이 마음에 들지 않고 스스로가 미워요",
+            "tags": ["love", "healing", "comfort"]
+          },
+          {
+            "id": "hate_overflow",
+            "_theory": "대체 공격(Displaced Aggression, Marcus-Newhall 2000): 쌓인 피로·스트레스가 특정 대상이나 모든 것에 대한 짜증·미움으로 전이 — 진짜 원인은 소진(Burnout)에 있을 수 있음",
+            "text": "딱히 이유는 모르겠는데 모든 게 짜증스럽고 불편하게 느껴져요",
+            "tags": ["rest", "peace", "healing"]
+          }
         ]
       },
       "desire": {
