@@ -228,14 +228,46 @@
       },
       "desire": {
         "id": 2,
-        "question": "어떤 것을 원하고 있나요?",
+        "_theory": "Deci&Ryan(1985) 자기결정이론 3대 심리 욕구: 유능감(Competence)·자율성(Autonomy)·관계성(Relatedness). Maslow(1943) 욕구 위계: 안전→소속→존중→자아실현. Frankl(1959) 의미 의지(Will to Meaning): 의미·목적에 대한 욕구는 물질·관계와 구분되는 실존적 층위. '어떤 것을 원하나요?'(나열형) → '들여다보면 어떤 마음인가요?'(탐색형)으로 질문 전환.",
+        "question": "지금 간절히 원하는 것을 조금 더 들여다보면 어떤 마음인가요?",
         "type": "single",
         "options": [
-          { "id": "success", "text": "성공과 성취를 원해요", "tags": ["wisdom", "guidance", "strength"] },
-          { "id": "recognition", "text": "인정받고 싶어요", "tags": ["love", "courage", "trust"] },
-          { "id": "material", "text": "물질적인 것이 필요해요", "tags": ["trust", "wisdom", "peace"] },
-          { "id": "relationship_desire", "text": "좋은 관계를 원해요", "tags": ["love", "hope", "patience"] },
-          { "id": "change", "text": "현재 상황의 변화를 원해요", "tags": ["hope", "courage", "guidance"] }
+          {
+            "id": "success",
+            "_theory": "SDT(Deci&Ryan) 유능감 욕구(Competence Need): 역량 발휘와 성취는 자기결정이론의 기본 심리 욕구 — 내적 동기에서 온 성취욕은 건강하고 자연스러운 인간 동기",
+            "text": "어떤 분야에서 성취하거나 내 역량을 발휘하고 싶어요",
+            "tags": ["wisdom", "guidance", "strength"]
+          },
+          {
+            "id": "recognition",
+            "_theory": "Maslow(1943) 존중 욕구(Esteem Needs): 인정받고 싶은 마음은 자연스럽지만, 타인 평가에 전적으로 의존하면 불안정한 자존감으로 이어질 수 있음 — 내면 기준 발견이 필요",
+            "text": "누군가에게 인정받고 가치 있는 존재로 여겨지고 싶어요",
+            "tags": ["love", "courage", "trust"]
+          },
+          {
+            "id": "material",
+            "_theory": "Maslow(1943) 안전 욕구(Safety Needs): 물질적 안정에 대한 욕구는 생존 본능 — 이 욕구를 있는 그대로 인정하는 것이 더 깊은 영적 탐색의 실제적 출발점",
+            "text": "생활의 안정이나 필요한 물질적 자원이 있었으면 해요",
+            "tags": ["trust", "wisdom", "peace"]
+          },
+          {
+            "id": "relationship_desire",
+            "_theory": "SDT(Deci&Ryan) 관계성 욕구(Relatedness Need): 타인과의 진정한 연결은 인간의 가장 근본적인 심리 욕구 중 하나 — 고립과 단절은 심신 건강 모두에 깊은 영향을 미침",
+            "text": "가깝고 따뜻한 관계가 더 풍성해졌으면 해요",
+            "tags": ["love", "hope", "patience"]
+          },
+          {
+            "id": "change",
+            "_theory": "SDT 자율성 욕구(Autonomy Need): 현재 상황에서 벗어나 스스로 선택한 삶을 살고자 하는 욕구 — 변화 자체보다 '자기답게 살고 싶다'는 더 깊은 자율성 갈망",
+            "text": "지금의 상황에서 벗어나 다른 삶이 시작되었으면 해요",
+            "tags": ["hope", "courage", "guidance"]
+          },
+          {
+            "id": "meaning_desire",
+            "_theory": "Frankl(1959) 의미 의지(Will to Meaning): 물질·성취·관계 너머 삶의 목적과 의미에 대한 실존적 갈망 — ACT 가치 명료화와 연결되는 가장 깊은 층위의 욕구",
+            "text": "내 삶의 방향이나 존재의 의미를 더 분명히 알고 싶어요",
+            "tags": ["wisdom", "faith", "guidance"]
+          }
         ]
       }
     },
