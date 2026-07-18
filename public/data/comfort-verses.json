@@ -60,14 +60,46 @@
     "q2": {
       "joy": {
         "id": 2,
-        "question": "기쁨과 감사의 이유는 무엇인가요?",
+        "_theory": "Seligman PERMA 모델: Positive Emotions(P)·Achievement(A)·Relationships(R)·Meaning(M) 각각이 의미 기반 기쁨(Eudaimonic Joy)의 독립된 원천. Csikszentmihalyi(1990) 몰입(Flow). Lyubomirsky(2008) 친사회적 행동의 기쁨. Emmons(2003) 감사 심화. Q1에서 이미 '이루어진 일·감사'로 joy를 식별했으므로, Q2는 '기쁨과 감사의 이유'(중복)→'어디서 왔다고 느껴지나요?'(출처 탐색)로 전환.",
+        "question": "이 충만하고 따뜻한 기쁨이 어디서 왔다고 느껴지나요?",
         "type": "single",
         "options": [
-          { "id": "achievement", "text": "목표를 이루거나 성취했어요", "tags": ["gratitude", "joy", "faith"] },
-          { "id": "relationship", "text": "소중한 사람과 좋은 시간을 보냈어요", "tags": ["love", "gratitude", "presence"] },
-          { "id": "blessing", "text": "예상치 못한 축복을 받았어요", "tags": ["gratitude", "joy", "faith"] },
-          { "id": "growth", "text": "내면의 성장을 느꼈어요", "tags": ["wisdom", "hope", "faith"] },
-          { "id": "peace_found", "text": "마음의 평안을 찾았어요", "tags": ["peace", "rest", "gratitude"] }
+          {
+            "id": "achievement",
+            "_theory": "Seligman PERMA Achievement(A): 목표 달성·역량 발휘에서 오는 의미 기반 기쁨 — 단순 쾌락이 아닌 자신의 성장을 확인하는 Eudaimonic 충만감",
+            "text": "원하던 일을 이루거나 노력이 결실을 맺어 마음이 벅차요",
+            "tags": ["gratitude", "joy", "faith"]
+          },
+          {
+            "id": "relationship",
+            "_theory": "Seligman PERMA Relationships(R): 타인과의 진정한 연결에서 오는 기쁨 — 사회적 유대가 웰빙의 가장 일관된 예측 변인임(Relationships as strongest predictor of flourishing)",
+            "text": "소중한 사람과 깊이 연결되어 따뜻한 충만함을 느꼈어요",
+            "tags": ["love", "gratitude", "presence"]
+          },
+          {
+            "id": "blessing",
+            "_theory": "Emmons(2003) 영적 감사(Spiritual Gratitude): 기대하지 않은 선물·돌보심이 수직적 감사(하나님께)를 유발 — 영적 감사는 삶의 의미감을 가장 깊이 강화함",
+            "text": "기대하지 않았던 하나님의 돌보심이나 선물을 받은 것 같아요",
+            "tags": ["gratitude", "joy", "faith"]
+          },
+          {
+            "id": "growth",
+            "_theory": "Dweck(2006) 성장 마음가짐(Growth Mindset) + Seligman PERMA: 과거의 자신과 비교해 성장을 확인하는 순간의 기쁨 — 외부 기준이 아닌 내적 발전에서 오는 충만감",
+            "text": "어느새 이전의 나보다 성장했다는 것을 느끼며 뿌듯해요",
+            "tags": ["wisdom", "hope", "faith"]
+          },
+          {
+            "id": "peace_found",
+            "_theory": "정서조절 회복(ER Recovery) + ACT 수용: 불안·혼란 이후 찾아오는 평안의 기쁨 — 평안 자체가 하나의 깊은 Eudaimonic 기쁨 형태",
+            "text": "오랫동안 찾지 못했던 마음의 평안을 마침내 찾은 것 같아요",
+            "tags": ["peace", "rest", "gratitude"]
+          },
+          {
+            "id": "giving",
+            "_theory": "Lyubomirsky(2008) 친사회적 행동(Acts of Kindness): 타인을 돕거나 선한 영향을 주는 것이 기쁨의 지속성을 높이는 가장 강력한 의도적 활동 중 하나 — 줌으로써 받는 Eudaimonic 기쁨",
+            "text": "누군가에게 도움이 되거나 선한 영향을 주어서 기쁜 마음이 생겼어요",
+            "tags": ["love", "joy", "gratitude"]
+          }
         ]
       },
       "anger": {
