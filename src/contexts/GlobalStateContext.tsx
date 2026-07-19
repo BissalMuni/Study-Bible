@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { GlobalState } from '../types';
+import { safeParse } from '../utils/storage';
 
 interface GlobalStateContextType {
   state: GlobalState;
@@ -22,7 +23,10 @@ const GlobalStateContext = createContext<GlobalStateContextType | undefined>(und
 export const GlobalStateProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [state, setState] = useState<GlobalState>(() => {
     const saved = localStorage.getItem('bibleApp_globalState');
-    return saved ? { ...defaultState, ...JSON.parse(saved) } : defaultState;
+    // 손상된 저장값(부분 기록·스키마 변경 잔재 등)이 있어도 앱이 부팅 불능이 되지 않도록
+    // 무방어 JSON.parse 대신 safeParse로 방어한다. 손상 시 defaultState로 안전 부팅되고
+    // 다음 저장(useEffect)에서 정상값으로 자가 치유된다.
+    return { ...defaultState, ...safeParse<Partial<GlobalState>>(saved, {}) };
   });
 
   useEffect(() => {

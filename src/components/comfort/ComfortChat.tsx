@@ -37,11 +37,12 @@
  *   Nolen-Hoeksema, S. (1991). Responses to depression and their effects on duration.
  * ────────────────────────────────────────────────────────────────────────────
  */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Heart, RefreshCw } from 'lucide-react';
 import { ComfortResult } from './ComfortResult';
 import { useAdContext } from '../../contexts/AdContext';
+import { selectVersesByTags } from './selectVerses';
 
 interface Option {
   id: string;
@@ -62,6 +63,8 @@ interface Verse {
   reference: string;
   text: string;
   tags: string[];
+  priority?: number; // 1=최고연관 (수기 큐레이션). 스코어 가산점에 반영.
+  reason?: string;   // 이 구절이 위로가 되는 이유 (결과 화면 노출).
 }
 
 interface EncouragementMessage {
@@ -106,6 +109,9 @@ export const ComfortChat: React.FC = () => {
   const [emotionCategory, setEmotionCategory] = useState<'positive' | 'negative' | 'neutral' | null>(null);
   // 1번 질문 답변의 id (joy, anger, sorrow, etc.)
   const [emotionType, setEmotionType] = useState<string | null>(null);
+  // 최초 결과 산출에 쓰인 "원시 태그"(중복 포함). '새 말씀 보기'가 빈도 가중치를
+  // 보존하도록 재사용한다(dedup된 collectedTags를 쓰면 가중치가 소실됨).
+  const rawTagsRef = useRef<string[]>([]);
 
   useEffect(() => {
     // Load questions/messages and verses separately
@@ -225,58 +231,9 @@ export const ComfortChat: React.FC = () => {
     }
     setQuestionSummary(summary);
 
-    let topVerses: Verse[] = [];
-    let sortedTags: string[] = [];
-
-    if (allTags.length > 0) {
-      // Count tag frequencies
-      const tagCounts: Record<string, number> = {};
-      allTags.forEach(tag => {
-        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-      });
-
-      // Sort tags by frequency
-      sortedTags = Object.entries(tagCounts)
-        .sort((a, b) => b[1] - a[1])
-        .map(([tag]) => tag);
-
-      // Score verses based on matching tags
-      const scoredVerses = data.verses.map(verse => {
-        let score = 0;
-        sortedTags.forEach((tag, index) => {
-          if (verse.tags.includes(tag)) {
-            // Higher weight for more frequent tags
-            score += (sortedTags.length - index) * (tagCounts[tag] || 1);
-          }
-        });
-        return { verse, score };
-      });
-
-      // Sort by score and take top 10, then randomly select 5
-      const top10 = scoredVerses
-        .filter(v => v.score > 0)
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 10)
-        .map(v => v.verse);
-
-      // Shuffle and pick 5
-      const shuffled = [...top10].sort(() => Math.random() - 0.5);
-      topVerses = shuffled.slice(0, 5);
-    }
-
-    // If we have fewer than 5 verses, add some default comfort verses
-    if (topVerses.length < 5) {
-      const defaultVerses = data.verses
-        .filter(v => v.tags.includes('comfort') && !topVerses.some(tv => tv.id === v.id))
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 5 - topVerses.length);
-      topVerses.push(...defaultVerses);
-    }
-
-    // 태그가 없으면 기본 태그 설정
-    if (sortedTags.length === 0) {
-      sortedTags = ['comfort'];
-    }
+    // 원시 태그를 보존해 '새 말씀 보기'가 동일한 빈도 가중치로 재선택하도록 한다.
+    rawTagsRef.current = allTags;
+    const { verses: topVerses, sortedTags } = selectVersesByTags(data.verses, allTags);
 
     setCollectedTags(sortedTags);
     setRecommendedVerses(topVerses);
@@ -308,46 +265,12 @@ export const ComfortChat: React.FC = () => {
     setEmotionType(null);
   };
 
-  // 새 말씀 보기 - 현재 태그 기반으로 새로운 말씀 랜덤 선택
+  // 새 말씀 보기 - 최초 결과와 동일한 원시 태그(빈도 가중치 보존)로 재선택.
+  // 이전엔 dedup된 collectedTags를 써서 결과 화면과 랭킹 기준이 달라지는 버그가 있었다.
   const handleNewVerse = () => {
     if (!data || collectedTags.length === 0) return;
-
-    // 현재 수집된 태그로 새로운 말씀 선택
-    const tagCounts: Record<string, number> = {};
-    collectedTags.forEach(tag => {
-      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-    });
-
-    const scoredVerses = data.verses.map(verse => {
-      let score = 0;
-      collectedTags.forEach((tag, index) => {
-        if (verse.tags.includes(tag)) {
-          score += (collectedTags.length - index) * (tagCounts[tag] || 1);
-        }
-      });
-      return { verse, score };
-    });
-
-    const top10 = scoredVerses
-      .filter(v => v.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 10)
-      .map(v => v.verse);
-
-    // Shuffle and pick 5
-    const shuffled = [...top10].sort(() => Math.random() - 0.5);
-    let topVerses = shuffled.slice(0, 5);
-
-    // If we have fewer than 5 verses, add some default comfort verses
-    if (topVerses.length < 5) {
-      const defaultVerses = data.verses
-        .filter(v => v.tags.includes('comfort') && !topVerses.some(tv => tv.id === v.id))
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 5 - topVerses.length);
-      topVerses = [...topVerses, ...defaultVerses];
-    }
-
-    setRecommendedVerses(topVerses);
+    const { verses } = selectVersesByTags(data.verses, rawTagsRef.current);
+    setRecommendedVerses(verses);
   };
 
   if (!data) {

@@ -55,9 +55,10 @@ export const TTSSettings: React.FC<TTSSettingsProps> = ({ compact = true }) => {
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(true)}
         className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
-        title="TTS 설정"
+        title="음성 설정"
+        aria-label="음성 설정 열기"
       >
-        <Settings size={18} />
+        <Settings size={18} aria-hidden />
       </motion.button>
 
       {/* 설정 모달 - Portal로 body에 직접 렌더링 */}
@@ -81,15 +82,16 @@ export const TTSSettings: React.FC<TTSSettingsProps> = ({ compact = true }) => {
               {/* 헤더 */}
               <div className="bg-blue-500 text-white p-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Volume2 size={20} />
+                  <Volume2 size={20} aria-hidden />
                   <h2 className="text-lg font-bold">음성 설정</h2>
                 </div>
                 <motion.button
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsOpen(false)}
                   className="p-1 rounded-full hover:bg-blue-400"
+                  aria-label="닫기"
                 >
-                  <X size={20} />
+                  <X size={20} aria-hidden />
                 </motion.button>
               </div>
 

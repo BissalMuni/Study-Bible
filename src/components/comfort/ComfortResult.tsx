@@ -8,6 +8,8 @@ interface Verse {
   reference: string;
   text: string;
   tags: string[];
+  priority?: number;
+  reason?: string; // 이 구절이 위로가 되는 이유 (있으면 표시)
 }
 
 interface EncouragementMessage {
@@ -160,13 +162,14 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
                 <motion.button
                   whileTap={{ scale: 0.9 }}
                   onClick={(e) => handleTTSClick(e, verse.text)}
+                  aria-label={isCurrentlySpeaking ? '낭독 멈추기' : '구절 낭독'}
                   className={`p-2 rounded-full ${
                     isCurrentlySpeaking
                       ? 'bg-white text-purple-500'
                       : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
-                  {isCurrentlySpeaking ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                  {isCurrentlySpeaking ? <VolumeX size={18} aria-hidden /> : <Volume2 size={18} aria-hidden />}
                 </motion.button>
               </div>
 
@@ -175,6 +178,13 @@ export const ComfortResult: React.FC<ComfortResultProps> = ({
                 <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-base">
                   "{verse.text}"
                 </p>
+
+                {/* 이 구절이 위로가 되는 이유 (수기 큐레이션) */}
+                {verse.reason && (
+                  <p className="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    💡 {verse.reason}
+                  </p>
+                )}
 
                 {/* Verse Tags */}
                 <div className="flex flex-wrap gap-1 mt-4">

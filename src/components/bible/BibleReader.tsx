@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, Book } from 'lucide-react';
 import { useGlobalState } from '../../contexts/GlobalStateContext';
 import { useAdContext } from '../../contexts/AdContext';
+import { useFetchJson } from '../../hooks/useFetchJson';
+import { AsyncBoundary } from '../common/AsyncBoundary';
 import { SettingsBox } from '../common/SettingsBox';
 import { ChapterContent } from './ChapterContent';
 
@@ -26,18 +28,11 @@ interface BibleReaderProps {
 export const BibleReader: React.FC<BibleReaderProps> = ({ onChapterViewChange }) => {
   const { state } = useGlobalState();
   const { triggerAd } = useAdContext();
-  const [bibleData, setBibleData] = useState<BibleData | null>(null);
+  const { data: bibleData, loading, error, reload } = useFetchJson<BibleData>('/data/bible.json');
   const [expandedTestament, setExpandedTestament] = useState<'구약' | '신약' | null>('구약');
   const [selectedBook, setSelectedBook] = useState<BibleBook | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
   const [expandedBook, setExpandedBook] = useState<number | null>(null);
-
-  useEffect(() => {
-    fetch('/data/bible.json')
-      .then((res) => res.json())
-      .then((data) => setBibleData(data))
-      .catch(console.error);
-  }, []);
 
   const handleBookClick = (book: BibleBook) => {
     if (expandedBook === book.id) {
@@ -60,16 +55,9 @@ export const BibleReader: React.FC<BibleReaderProps> = ({ onChapterViewChange })
     onChapterViewChange?.(false);
   };
 
+  // 로딩/에러(빈 화면·무한 스피너 대신 재시도 가능한 상태)를 표준 UI로 처리
   if (!bibleData) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-          className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full"
-        />
-      </div>
-    );
+    return <AsyncBoundary loading={loading} error={error} onRetry={reload} />;
   }
 
   if (selectedBook && selectedChapter) {
